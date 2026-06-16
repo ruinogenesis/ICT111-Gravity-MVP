@@ -1,25 +1,24 @@
-
 # Initial IT Venture Idea Log
 
-## Idea 1: Web3 Airdrop and Quest Tracker
+## Idea 1: Shared Expense Splitter
 
 ### Problem Area
-Crypto users who farm airdrops follow dozens of protocols at the same time. Each protocol has its own tasks, eligibility rules, snapshot dates, and quest checklists, and this information is scattered across Twitter/X threads, Discord announcements, and project documentation. It is easy to miss a deadline, forget a required task, or lose track of which wallet did what. There is no single place to see the status of every airdrop campaign a person is working on.
+When friends, roommates, or classmates share costs for trips, meals, rent, or group projects, it is hard to keep track of who paid for what and who still owes money. People rely on memory or messy group-chat messages, which leads to forgotten debts, confusion, and awkward conversations. There is no simple shared place that shows each person's balance clearly.
 
 ### Target Users
-Retail crypto users, airdrop hunters, and active DeFi participants, including students who are exploring Web3 as a side activity.
+University students, roommates, friend groups, and anyone who regularly shares expenses within a small group.
 
 ### Current Alternative
-Users currently rely on manual spreadsheets, saved Twitter/X bookmarks, scattered Discord notifications, and memory. These methods are messy, easy to forget, and do not show overall progress or upcoming deadlines clearly.
+Groups currently track shared costs using chat messages, notes apps, or a manual spreadsheet that one person maintains. These methods are easy to forget, hard to keep updated, and do not automatically calculate who owes whom.
 
 ### Proposed IT Solution
-A web-based dashboard where a user adds the protocols they are farming, tracks the required tasks for each one as a checklist, records snapshot/deadline dates, and keeps short eligibility notes per wallet. The dashboard shows overall status at a glance and highlights tasks that are due soon.
+A web-based expense splitter where a group creates a shared list, each member adds the expenses they paid for, and the app automatically calculates each person's balance and the simplest way to settle up. The dashboard shows all expenses and current balances at a glance.
 
 ### Possible Technology
-HTML/CSS/JavaScript front end, a simple database or Google Sheet backend for storing campaigns and tasks, a checklist and status component, and optional read-only wallet lookups using public block-explorer APIs later in the semester.
+HTML/CSS/JavaScript front end, a simple database or Google Sheet backend to store groups and expenses, and calculation logic to split costs and compute balances.
 
 ### Why This Is Suitable
-The core of this idea is a clickable, data-driven web dashboard that can be prototyped within 14 labs using web development, simple data storage, and UI/UX design. The team has direct domain experience in on-chain crypto mechanics, which makes validation with real crypto-active users realistic and fast.
+A shared expense tracker is a clear, well-scoped web prototype that can be built within 14 labs using web development, simple data storage, and UI/UX design. Almost every student shares group costs, so validation with real users is fast and easy.
 
 ---
 
