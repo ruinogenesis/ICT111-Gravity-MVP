@@ -14,7 +14,7 @@ Gravity
 ## Team Skills Inventory
 | Member | Technical Skills | Design Skills | Business/Communication Skills |
 |---|---|---|---|
-| Hein Htet Aung | HTML/CSS/JS, SQL, data analysis | dashboard layout | team cordination, technical building |
+| Hein Htet Aung | HTML/CSS/JS, SQL, data analysis | dashboard layout | team cordination, technical coordination |
 | [Teammate 1 Name] | [e.g. JavaScript beginner, Git] | [e.g. Figma beginner] | [e.g. team coordination] |
 | [Teammate 2 Name] | [e.g. spreadsheets, basic web] | [e.g. UI layout, wireframing] | [e.g. interviewing, survey design] |
 
