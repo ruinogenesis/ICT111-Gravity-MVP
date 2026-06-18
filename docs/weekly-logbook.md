@@ -55,7 +55,8 @@ We rejected the Cafe Inventory Tracker (NUF total 8) and the Content Planner (NU
 - Opportunity scan file: docs/opportunity-scan.md
 - NUF scoring file: data/opportunity-scoring.xlsx
 - Selected opportunity file: docs/selected-opportunity.md
-- GitHub issue screenshot: [paste screenshot link here]
+- GitHub issue screenshot: <img width="2844" height="1430" alt="image" src="https://github.com/user-attachments/assets/b5dc4d52-abdb-42a4-8cdf-71fdcf9833d4" />
+
 - Commit link: https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/
 
 ### Plan for Lab 03
