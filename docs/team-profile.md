@@ -1,14 +1,14 @@
 # Team Profile
 
-## Team Name - Gravity
+## Team Name
+Gravity
 
 ## Team Members and Roles
-| Student ID | Name | Role | Main Responsibility | Github Profile |
+| Student ID | Name | Role | Main Responsibility | GitHub Profile |
 |---|---|---|---|---|
 | 6704806 | Hein Htet Aung | Product Lead + Documentation Lead | Define problem, target users, value proposition; maintain README and logbook | https://github.com/ruinogenesis |
 | 6610285 | Thiri Shoon Lae Oo | UX/UI Lead + Validation Lead | Design wireframes and user flow; run customer discovery and collect evidence | https://github.com/thirishoonl66-droid |
-| Eimyat Yadanar Mon | 6602963 | Technical and Business Lead | Manage repository structure and prototype feasibility, business aspects | https://github.com/Eimyat481 |
-
+| 6602963 | Eimyat Yadanar Mon | Technical and Business Lead | Manage repository structure and prototype feasibility, business aspects | https://github.com/Eimyat481 |
 
 ## Team Skills Inventory
 | Member | Technical Skills | Design Skills | Business/Communication Skills |
