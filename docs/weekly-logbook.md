@@ -17,10 +17,10 @@
 2. Getting used to GitHub's web editor and commit workflow took some practice for the whole team.
 
 ### Evidence of Work
-- GitHub repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
+- GitHub repository link: [paste your repository URL here]
 - Screenshot: folder structure and Issues screenshots saved in /screenshots
 - File created: README.md, docs/team-profile.md, docs/idea-log.md, docs/weekly-logbook.md, docs/problem-notes.md
-- Commit link: https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/
+- Commit link: [paste a link to your commit history here]
 
 ### Decision Made This Week
 We will pursue a lightweight web-based tracking dashboard, with the degree progress and prerequisite tracker as the leading candidate, and confirm the final direction after Lab 2 opportunity scanning.
@@ -55,9 +55,44 @@ We rejected the Cafe Inventory Tracker (NUF total 8) and the Content Planner (NU
 - Opportunity scan file: docs/opportunity-scan.md
 - NUF scoring file: data/opportunity-scoring.xlsx
 - Selected opportunity file: docs/selected-opportunity.md
-- GitHub issue screenshot: <img width="2844" height="1430" alt="image" src="https://github.com/user-attachments/assets/b5dc4d52-abdb-42a4-8cdf-71fdcf9833d4" />
-
-- Commit link: https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/
+- GitHub issue screenshot: [paste screenshot link here]
+- Commit link: [paste a link to your commit history here]
 
 ### Plan for Lab 03
 We will prepare customer discovery questions focused on how RSU students currently buy and sell used items when moving, and how frustrating the scattered Facebook/LINE groups are. We will identify target respondents (recent movers, dorm residents, graduating and international students), run short interviews or a survey, and collect evidence to confirm the problem is real before designing the prototype.
+
+---
+
+## Lab 03: Customer Problem Discovery
+
+### What We Completed
+1. Defined our target respondents for Gravity and prepared 8-10 non-leading customer discovery questions.
+2. Collected 15 early responses from students who buy and sell used items when moving, and recorded them in /data/raw-responses.xlsx.
+3. Separated our assumptions from the evidence, documented the repeated pain points, and wrote an evidence-based customer discovery summary and updated problem statement.
+
+### What We Learned About the Problem
+1. The biggest pain is not "no marketplace" but scattered, unsearchable channels — 11 of 15 respondents struggle to list or find items across Facebook and LINE.
+2. The problem peaks during move-in and move-out periods and is worst for higher-value items (furniture, appliances, textbooks); small items barely matter.
+3. A trust and safety concern about meeting strangers affects whether students will complete a deal, which we had not fully considered.
+
+### What Evidence We Collected
+- Number of respondents/interviews: 15 early survey and interview responses
+- Evidence file: /data/raw-responses.xlsx (Raw Responses + Pattern Summary)
+- Key repeated pattern: scattered, unsearchable buy/sell channels (11 of 15), plus usable items given away or discarded under time pressure (7 of 15)
+
+### What We Changed Based on Evidence
+We narrowed our target segment to students moving in/out who deal with higher-value items, and we added a safer contact step (in-app message or reveal-contact-after-both-agree) instead of immediately exchanging personal accounts. We kept the overall problem direction because the evidence confirmed it is real.
+
+### Problems or Difficulties
+1. Writing questions that did not accidentally pitch the marketplace took a few tries; our first drafts asked for approval instead of behavior.
+2. Most evidence so far is interest-based, not behavior-based, so we still need an adoption test in a later lab.
+
+### Evidence of Work
+- GitHub repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
+- Customer questions file: /docs/customer-questions.md
+- Raw responses file: /data/raw-responses.xlsx
+- Assumption-evidence table: /docs/assumption-evidence-table.md
+- Commit link: https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/
+
+### Plan for Lab 04
+We will define our customer segment and persona in detail (the moving student with higher-value items), and write user stories based on the discovery evidence, so we can turn the validated problem into clear MVP requirements.
