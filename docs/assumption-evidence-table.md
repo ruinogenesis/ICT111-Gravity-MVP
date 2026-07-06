@@ -14,4 +14,4 @@
 
 ## What the Revisions Mean
 - Assumption 3 → we will **narrow** the focus to higher-value items (furniture, appliances, textbooks) and to move-in/move-out periods, rather than assuming every item needs the platform.
-- Assumption 4 → we will **add a safer contact step** (in-app message, or reveal contact only after both sides agree) instead of immediately swapping personal accounts.
+- Assumption 4 → we will **add a safer contact step** (in-app message, or reveal contact only after both sides agree) instead of immediately swapping personal accounts, and we will **limit access to verified RSU students** (university email plus a one-time in-person student ID check, with no ID images stored) so users know they are dealing with real students.
