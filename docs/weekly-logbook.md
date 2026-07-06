@@ -96,3 +96,42 @@ We narrowed our target segment to students moving in/out who deal with higher-va
 
 ### Plan for Lab 04
 We will define our customer segment and persona in detail (the moving student with higher-value items), and write user stories based on the discovery evidence, so we can turn the validated problem into clear MVP requirements.
+
+## Lab 04: User Persona, Requirements, and User Stories
+
+### Group Information
+- Course: ICT111 Introduction to Information Technology
+- Lab: Lab 04 - User Persona, Requirements, and User Stories
+- Group Name: Gravity
+- Repository Link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
+- Date: (fill in lab date)
+
+### 1. Work Completed Today
+| Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
+|---|---|---|
+| Hein Htet Aung | Wrote user persona and updated README + logbook; reviewed traceability | (paste commit/issue link) |
+| Thiri Shoon Lae Oo | Wrote user stories with acceptance criteria; drew user flow and use case diagrams | (paste commit/issue link) |
+| Eimyat Yadanar Mon | Mapped fixed FR-01–16 to Gravity in system-requirements.md; built MVP feature list | (paste commit/issue link) |
+
+### 2. Main Decisions
+- **Primary target user:** RSU student sellers moving out under time pressure (especially graduating and international students) — buyers are served by the same MVP screens.
+- **Main persona:** Su Su, Year 4 international student who must sell a desk, mini fridge, and textbooks within days before her flight home.
+- **Most important problem:** post once, be found fast — scattered, unsearchable channels (11/15) combined with move-out time pressure (6/15) causing items to be discarded (7/15).
+- **Must-have requirements:** all fixed FR-01–FR-16 plus NFR-01 (mobile usability), NFR-02 (no public personal contact details), NFR-04 (RSU-verified students only).
+- **Features included in MVP:** landing page, RSU email verification, create-listing form, listings page, search/filter, detail page, status tracking (Available/Reserved/Sold), contact request with reveal-after-agree, admin panel, validation/feedback, mobile layout, dashboard summary.
+- **Features postponed:** AI listing helper (Could — only if time allows), natural-language AI search, payments/escrow, ratings and reviews.
+
+### 3. Requirement Changes / Clarifications
+The lecturer's system-requirements.md (FR-01–FR-16) is fixed and adopted as-is; we added a mapping column showing how Gravity satisfies each requirement plus five group NFRs based on Lab 03 evidence. The Lab 02/03 decision that Gravity is a connector only (no payments, no inventory, no ID image storage) is reconfirmed and now formally recorded as out of scope.
+
+### 4. Problems Encountered
+- Technical problem: deciding how to demonstrate "reveal contact after both agree" (F08) in a simple prototype — we will simulate the agreement step with a status change rather than building real-time chat.
+- Team coordination problem: aligning three documents (requirements, stories, features) that cross-reference each other required agreeing on IDs first.
+- Evidence/requirement problem: trust/safety evidence is only 3/15 responses, so we kept verification lightweight (email + one-time in-person check) instead of building heavy verification features.
+
+### 5. Next Actions Before Lab 05
+| Task | Owner | Deadline | GitHub Issue |
+|---|---|---|---|
+| Export user-flow.png and use-case-diagram.png from draw.io and commit to /diagrams | Thiri Shoon Lae Oo | Before Lab 05 | Issue 4 |
+| Verify traceability: every FR maps to a story, feature, and planned screen | Hein Htet Aung | Before Lab 05 | Issue 6 |
+| Choose prototype platform and prepare initial screen skeleton per FR-13 | Eimyat Yadanar Mon | Before Lab 05 | (create new issue) |
