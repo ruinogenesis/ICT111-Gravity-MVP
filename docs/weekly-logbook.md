@@ -182,3 +182,41 @@ Product Concept and UI/UX Wireframe
 
 ---
 ---
+
+# Lab 06: IT Business Model Canvas and Technical Architecture
+
+### Group Name
+Gravity
+
+### Project Title
+Gravity — RSU Student Secondhand Marketplace
+
+### Date
+(fill in lab date)
+
+### Members Present
+
+| Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
+|---|---|---|
+| Hein Htet Aung | Business Model Canvas, README + logbook update | docs/business-model-canvas.md (paste commit link) |
+| Thiri Shoon Lae Oo | Feature-value mapping, system architecture + data flow diagrams | docs/feature-value-mapping.md, diagrams/*.mmd (paste commit link) |
+| Eimyat Yadanar Mon | Technical architecture decision, data structure, sample datasets | docs/technical-architecture.md, docs/data-structure.md, data/*.csv (paste commit link) |
+
+### Decisions Made Today
+
+1. **Business model decision:** Gravity stays free for students; sustainability is based on operational value (waste reduction, student savings) and institutional value (university sustainability goals), with featured listings/sponsorship as future options only. Payments between users remain permanently out of scope.
+2. **Technical architecture decision:** Frontend + localStorage/JSON, extending the Lab 05 wireframe into the final prototype, deployed free on GitHub Pages. Chosen for skill match, zero cost, continuity with graded wireframes, and full coverage of FR-01–16 (FR-04 explicitly allows local storage/JSON).
+3. **Data structure decision:** Three entities — Users, Listings, ContactRequests — with defined fields, validation rules, and two status lifecycles (listing: Available/Reserved/Sold/Removed; request: Pending/Accepted/Declined).
+4. **Diagram decision:** Both diagrams written in Mermaid (.mmd) so they render directly on GitHub and stay editable as the prototype evolves; PNG exports added for submission.
+
+### Problems or Risks Found
+- localStorage is per-browser: demo data could reset or diverge between browsers. Mitigation: JSON seed on first load + "Reset demo data" button + demo from one prepared browser.
+- The mutual-agreement contact reveal cannot be truly real-time without a backend — documented as a simulated flow in technical-architecture.md section 5.
+- Photo upload is not feasible in localStorage at realistic sizes — placeholder images in the prototype.
+
+### Next Actions Before Lab 07
+- Convert sample-listings.csv into the JSON seed and implement localStorage save/load in the prototype.
+- Implement the create-listing flow end to end (form → validation → saved → visible in list).
+- Enable GitHub Pages so the prototype has a live URL for the demo.
+
+### Lecturer / TA Notes
