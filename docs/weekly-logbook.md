@@ -219,4 +219,104 @@ Gravity — RSU Student Secondhand Marketplace
 - Implement the create-listing flow end to end (form → validation → saved → visible in list).
 - Enable GitHub Pages so the prototype has a live URL for the demo.
 
-### Lecturer / TA Notes
+## Lab 07: MVP Experiment Design
+
+### Group Information
+- Group name: Gravity
+- Project title: Gravity — RSU Student Secondhand Marketplace
+- Date: (fill in lab date)
+- Repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
+
+### What We Completed Today
+- [x] Reviewed requirements, user stories, MVP features, architecture, and wireframes
+- [x] Identified critical assumptions (A-01–A-07, ranked by risk and evidence)
+- [x] Selected MVP experiment type (simple web prototype + form-based simulation)
+- [x] Defined test users (5 testers matching seller/buyer segments) and success metrics (M-01–M-08)
+- [x] Prepared experiment script (T1–T6) and neutral feedback form
+- [x] Built the working experiment demo (/prototype/mvp-demo.html) and updated GitHub + README
+
+### Member Contributions
+| Member Name | Contribution | Evidence/Commit/Issue Link |
+|---|---|---|
+| Hein Htet Aung | Experiment plan, critical assumptions, README + logbook | (paste commit link) |
+| Thiri Shoon Lae Oo | Experiment script, feedback form, test-user recruitment plan | (paste commit link) |
+| Eimyat Yadanar Mon | Success metrics, demo prototype, CSV templates, experiment flow diagram | (paste commit link) |
+
+### Key Decisions
+| Decision | Reason | Evidence/Requirement Link |
+|---|---|---|
+| Experiment type: simple web prototype + form simulation | Riskiest assumptions are the submission workflow (A-01) and findability (A-02); this type collects task completion, valid submissions, validation behaviour, and feedback | FR-03, FR-05, FR-06 |
+| Test the reveal-after-agree contact flow explicitly (T6, M-06) | Trust differentiator rests on only 3/15 evidence (E05) — highest risk-to-evidence gap (A-04) | FR-15 / US-06 |
+| Admin and dashboard excluded from the tester experiment | Team-facing features; tested internally during the implementation sprint | FR-09, FR-12 |
+| 5 testers: 2 seller-side, 2 buyer-side, 1 no-experience | Mirrors both marketplace sides plus first-time clarity | Personas / CS01–CS02 |
+
+### Problems and Next Action
+| Problem | Next Action | Responsible Member |
+|---|---|---|
+| Testers need a link that works on phones | Enable GitHub Pages and verify the demo URL loads on mobile | Eimyat Yadanar Mon |
+| Results must be recorded consistently across observers | All observers use the same experiment-results.csv columns; one dry-run first | Thiri Shoon Lae Oo |
+| Experiment design must connect cleanly to Lab 08 validation | Run all 5 sessions and record results for the Lab 08 analytics sheet | Whole team |
+
+## Lab 08: Customer Validation and Analytics Sheet
+
+### Group Information
+- Group name: Gravity
+- Project title: Gravity — RSU Student Secondhand Marketplace
+- Repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
+- Lab date: (fill in)
+
+### Work Completed Today
+- [x] Reviewed Lab 07 MVP experiment plan and success metrics
+- [x] Ran validation sessions with 5 real RSU student testers (tasks T1-T6)
+- [x] Recorded results in /data/validation-results.csv and qualitative notes in /docs/test-user-notes.md
+- [x] Calculated metrics (task success 93.3%, feedback 4.30, interest 4.40, post time 56 s)
+- [x] Wrote customer-validation-summary.md, analytics-insights.md, mvp-decision.md
+- [x] Decision: Continue with minor revisions
+- [x] Created improvement issues for FR-02/15, FR-08, FR-06, FR-03/07
+
+### Member Contributions
+| Member Name | Contribution | GitHub Evidence |
+|---|---|---|
+| Hein Htet Aung | Ran sessions, validation summary, README/logbook | (commit link) |
+| Thiri Shoon Lae Oo | Observer/recorder, test-user notes, feedback capture | (commit link) |
+| Eimyat Yadanar Mon | Metrics, analytics insights, MVP decision | (commit link) |
+
+### Problems Found
+Recruiting on short notice meant tester roles differ slightly from the Lab 07 plan, and two sessions (TU-04, TU-05) were rapid (~15-25s/task) with lighter qualitative depth — both flagged in the data. Testers disagreed sharply on the contact flow, which became the key design finding rather than a data problem.
+
+### Next Actions
+Implement the four minor revisions before Lab 10 (contact flow, Reserved status, filter/min-price, categories/photos), each tracked as a GitHub issue.
+
+---
+---
+
+# README — Lab 08 section (append to README.md)
+
+## Lab 08: Customer Validation and Analytics Sheet
+
+### Validation Objective
+Test the core Gravity workflow with 5 RSU student testers and make an evidence-based decision before the implementation sprint.
+
+### Prototype Version Tested
+- Version: v0.1 (working localStorage demo)
+- Link: /prototype/mvp-demo.html
+
+### Analytics Summary
+| Metric | Result |
+|---|---:|
+| Total test users | 5 |
+| Task success rate | 93.3% (28/30) |
+| Average feedback score | 4.30 / 5 |
+| Average interest level | 4.40 / 5 |
+| Main confusion points | Contact flow and Search/filter (4 each) |
+
+### MVP Decision
+**Continue with minor revisions.** The core concept validated (high task success, trust, and interest); the contact flow, "Reserved" status, filter, and category set need targeted fixes before implementation.
+
+### Files Added
+- /data/validation-results.csv
+- /docs/customer-validation-summary.md
+- /docs/analytics-insights.md
+- /docs/mvp-decision.md
+- /docs/test-user-notes.md
+
