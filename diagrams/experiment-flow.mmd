@@ -1,0 +1,11 @@
+flowchart TD
+    A[Review baseline: FR-01-16, user stories, MVP features, wireframes] --> B[Identify critical assumptions A-01 to A-07]
+    B --> C[Select experiment type: simple web prototype + form simulation]
+    C --> D[Recruit 5 testers matching seller and buyer segments]
+    D --> E[Run tasks T1-T6 with think-aloud protocol]
+    E --> F[Record results CSV + feedback form ratings]
+    F --> G{Check against success metrics M-01 to M-08}
+    G -->|Metrics met| H[Build: Implementation Sprint 1 - Lab 10]
+    G -->|Some fail| I[Revise labels, fields, or flow first]
+    G -->|Core metrics fail| J[Revisit requirements and evidence]
+    I --> H
