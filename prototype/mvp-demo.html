@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity MVP Experiment Demo</title>
+<style>
+body { font-family: Verdana, Arial, sans-serif; margin: 0; background: #eef4f0; color: #222; }
+.topbar { background: #14594a; color: white; padding: 20px; }
+.topbar h1 { margin: 0; }
+.topbar p { margin: 4px 0 0 0; font-size: 14px; }
+.page { max-width: 980px; margin: 20px auto; padding: 0 15px; }
+.note { background: #fff7d9; border-left: 5px solid #c9a227; padding: 12px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.box { background: white; border: 1px solid #cfe0d6; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+h2 { margin-top: 0; color: #14594a; }
+label { display: block; font-weight: bold; font-size: 14px; margin-top: 10px; }
+input, select, textarea { width: 100%; box-sizing: border-box; padding: 9px; margin-top: 5px; border: 1px solid #9db8ab; border-radius: 6px; font-family: inherit; font-size: 14px; }
+button { background: #1e8a6e; color: white; border: none; padding: 10px 16px; border-radius: 6px; font-weight: bold; font-size: 14px; margin-top: 12px; cursor: pointer; }
+button.gray { background: #e2e8e4; color: #444; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { border-bottom: 1px solid #e0e8e3; padding: 8px 6px; text-align: left; font-size: 13px; }
+th { color: #14594a; }
+tr.item-row { cursor: pointer; }
+tr.item-row:hover { background: #eef7f2; }
+.status { font-size: 12px; font-weight: bold; padding: 3px 9px; border-radius: 20px; white-space: nowrap; }
+.st-available { background: #ddf2e4; color: #1a7a4e; }
+.st-reserved { background: #fdeed7; color: #9c6410; }
+.st-sold { background: #ececec; color: #666; }
+.msg { padding: 9px; border-radius: 6px; font-size: 13px; margin-top: 10px; display: none; }
+.msg.err { background: #fbe3e3; color: #a33; display: block; }
+.msg.ok { background: #ddf2e4; color: #1a7a4e; display: block; }
+.check { color: #1a7a4e; font-weight: bold; font-size: 13px; }
+.small { font-size: 12px; color: #777; }
+#detail { display: none; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<h1>Gravity</h1>
+<p>MVP experiment demo - post a listing, search items, check status, request contact. RSU students only.</p>
+</div>
+
+<div class="page">
+
+<div class="note">This demo is for the Lab 07 MVP experiment. Records are saved in your browser only. Use the tasks from the experiment script. <button class="gray" onclick="resetData()" style="margin:0 0 0 8px; padding:5px 10px; font-size:12px;">Reset demo data</button></div>
+
+<div class="grid">
+
+<div class="box">
+<h2>Sell an Item</h2>
+<p class="small">Fields with * are required.</p>
+<label>Item title *</label>
+<input id="f-title" placeholder="e.g. Wooden study desk">
+<label>Category *</label>
+<select id="f-cat">
+<option value="">-- select category --</option>
+<option>Furniture</option>
+<option>Appliances</option>
+<option>Textbooks</option>
+<option>Other</option>
+</select>
+<label>Price (THB) *</label>
+<input id="f-price" type="number" placeholder="e.g. 800">
+<label>Condition *</label>
+<select id="f-cond">
+<option value="">-- select condition --</option>
+<option>Like new</option>
+<option>Good</option>
+<option>Fair</option>
+</select>
+<label>Pickup area *</label>
+<input id="f-area" placeholder="e.g. Dorm A lobby">
+<p id="form-msg" class="msg"></p>
+<button onclick="postListing()">Post listing</button>
+</div>
+
+<div class="box">
+<h2>Browse Listings</h2>
+<input id="search" placeholder="Search by item or pickup area..." oninput="renderList()">
+<label>Category filter</label>
+<select id="filter-cat" onchange="renderList()">
+<option>All</option>
+<option>Furniture</option>
+<option>Appliances</option>
+<option>Textbooks</option>
+<option>Other</option>
+</select>
+<table>
+<thead><tr><th>Item</th><th>Category</th><th>Price</th><th>Status</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+<p class="small" id="empty-msg" style="display:none;">No items match - try a different keyword or category.</p>
+<p class="small">Tip: click an item to open its detail.</p>
+</div>
+
+</div>
+
+<div class="box" id="detail">
+<h2 id="d-title"></h2>
+<p><b>Price:</b> <span id="d-price"></span> THB &nbsp; <span id="d-status" class="status"></span></p>
+<p><b>Category:</b> <span id="d-cat"></span> &nbsp; <b>Condition:</b> <span id="d-cond"></span></p>
+<p><b>Pickup area:</b> <span id="d-area"></span></p>
+<p><b>Seller:</b> <span id="d-seller"></span> <span class="check">RSU verified</span></p>
+<p id="contact-msg" class="msg"></p>
+<button id="contact-btn" onclick="requestContact()">Request contact</button>
+<p class="small">No phone or social accounts are shown. Contact details are revealed only after the seller accepts your request.</p>
+</div>
+
+</div>
+
+<script>
+var seedListings = [
+  {title:"Wooden study desk", cat:"Furniture", price:800, cond:"Good", area:"Dorm A lobby", seller:"Su Su", status:"Available"},
+  {title:"Mini fridge 45L", cat:"Appliances", price:1500, cond:"Like new", area:"Building 6", seller:"Su Su", status:"Reserved"},
+  {title:"ICT111 textbook", cat:"Textbooks", price:250, cond:"Good", area:"ICT building", seller:"Kaung M.", status:"Available"},
+  {title:"Office chair with wheels", cat:"Furniture", price:450, cond:"Fair", area:"Dorm B", seller:"Nine", status:"Sold"},
+  {title:"Electric kettle 1.5L", cat:"Appliances", price:200, cond:"Good", area:"Dorm A", seller:"Kaung M.", status:"Available"},
+  {title:"Calculus textbook set", cat:"Textbooks", price:400, cond:"Like new", area:"Library meetup", seller:"Nine", status:"Reserved"}
+];
+
+var listings = JSON.parse(localStorage.getItem("gravityDemoListings") || "null") || seedListings.slice();
+
+function save() {
+  localStorage.setItem("gravityDemoListings", JSON.stringify(listings));
+}
+
+function resetData() {
+  listings = seedListings.slice();
+  save();
+  document.getElementById("detail").style.display = "none";
+  renderList();
+}
+
+function postListing() {
+  var title = document.getElementById("f-title").value.trim();
+  var cat = document.getElementById("f-cat").value;
+  var price = document.getElementById("f-price").value;
+  var cond = document.getElementById("f-cond").value;
+  var area = document.getElementById("f-area").value.trim();
+  var msg = document.getElementById("form-msg");
+
+  if (!title || !cat || !price || !cond || !area) {
+    msg.className = "msg err";
+    msg.textContent = "Please complete required fields.";
+    return;
+  }
+  if (Number(price) <= 0) {
+    msg.className = "msg err";
+    msg.textContent = "Price must be a positive number.";
+    return;
+  }
+
+  listings.push({title:title, cat:cat, price:Number(price), cond:cond, area:area, seller:"You (verified)", status:"Available"});
+  save();
+  msg.className = "msg ok";
+  msg.textContent = "Listing posted successfully - status: Available.";
+  document.getElementById("f-title").value = "";
+  document.getElementById("f-cat").value = "";
+  document.getElementById("f-price").value = "";
+  document.getElementById("f-cond").value = "";
+  document.getElementById("f-area").value = "";
+  renderList();
+}
+
+function statusClass(s) {
+  if (s === "Available") return "status st-available";
+  if (s === "Reserved") return "status st-reserved";
+  return "status st-sold";
+}
+
+function renderList() {
+  var q = document.getElementById("search").value.toLowerCase();
+  var cat = document.getElementById("filter-cat").value;
+  var tbody = document.getElementById("rows");
+  tbody.innerHTML = "";
+  var shown = 0;
+  for (var i = 0; i < listings.length; i++) {
+    var l = listings[i];
+    var text = (l.title + " " + l.area).toLowerCase();
+    if (cat !== "All" && l.cat !== cat) continue;
+    if (q && text.indexOf(q) === -1) continue;
+    var tr = document.createElement("tr");
+    tr.className = "item-row";
+    tr.innerHTML = "<td>" + l.title + "</td><td>" + l.cat + "</td><td>" + l.price + "</td><td><span class='" + statusClass(l.status) + "'>" + l.status + "</span></td>";
+    tr.onclick = (function(idx){ return function(){ showDetail(idx); }; })(i);
+    tbody.appendChild(tr);
+    shown++;
+  }
+  document.getElementById("empty-msg").style.display = shown === 0 ? "block" : "none";
+}
+
+function showDetail(i) {
+  var l = listings[i];
+  document.getElementById("d-title").textContent = l.title;
+  document.getElementById("d-price").textContent = l.price;
+  document.getElementById("d-cat").textContent = l.cat;
+  document.getElementById("d-cond").textContent = l.cond;
+  document.getElementById("d-area").textContent = l.area;
+  document.getElementById("d-seller").textContent = l.seller;
+  var st = document.getElementById("d-status");
+  st.textContent = l.status;
+  st.className = statusClass(l.status);
+  var btn = document.getElementById("contact-btn");
+  var cmsg = document.getElementById("contact-msg");
+  cmsg.className = "msg";
+  cmsg.textContent = "";
+  if (l.status === "Sold") {
+    btn.disabled = true;
+    btn.textContent = "Item sold";
+  } else {
+    btn.disabled = false;
+    btn.textContent = "Request contact";
+  }
+  document.getElementById("detail").style.display = "block";
+  document.getElementById("detail").scrollIntoView({behavior:"smooth"});
+}
+
+function requestContact() {
+  var cmsg = document.getElementById("contact-msg");
+  cmsg.className = "msg ok";
+  cmsg.textContent = "Contact request sent - you will see the seller's contact once they accept.";
+  var btn = document.getElementById("contact-btn");
+  btn.disabled = true;
+  btn.textContent = "Request sent";
+}
+
+renderList();
+</script>
+
+</body>
+</html>
