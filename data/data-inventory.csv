@@ -1,0 +1,19 @@
+Data_Field,Example_Value,Purpose,Personal_Data,Sensitive_Data,Visibility,Keep_Remove_Replace,Responsible_Action
+display_name,Su Su,Identify seller on listings and requests without full legal name,Yes,No,Public,Keep,Nickname allowed; never require full legal name
+rsu_email,su.su@rsu.ac.th,Verification (NFR-04) and only contact channel revealed after mutual agreement,Yes,No,Admin + other party after accept,Keep,Never on public pages (NFR-02); revealed only after both sides agree (FR-15)
+verified,true,Trust badge on listings (E05),No,No,Public (badge only),Keep,Boolean only; in-person check stores no ID images or numbers
+role,student,Separate admin function from users (FR-09),No,No,Internal,Keep,Admin-only screens labelled
+joined_date,2026-06-18,Account management,No,No,Admin only,Keep,Auto-set
+listing title,Wooden study desk,Core listing content (FR-03),No,No,Public,Keep,Instruction: no personal info in free text
+category,Furniture,Search and filter (FR-06),No,No,Public,Keep,No privacy issue
+price_thb,800,Core listing content,No,No,Public,Keep,Positive integer validation (FR-10)
+condition,Good,Buyer decision info,No,No,Public,Keep,No privacy issue
+pickup_area,Dorm A lobby,Meetup context (E01),Possibly,No,Public,Keep with caution,General campus zone only; never room number or private address
+description,Solid desk with drawer,Buyer decision info,Possibly,No,Public,Keep with caution,Instruction: no contact info or personal details in description
+photo (planned Sprint 1),item photo reference,Top Lab 08 tester request,Possibly,No,Public,Keep with caution,Item-only photos; no people faces or room backgrounds
+status,Available,Lifecycle tracking (FR-08),No,No,Public,Keep,Updated by seller/admin only
+date_posted,2026-06-20,Sorting and dashboard (FR-12),No,No,Public,Keep,Auto-set
+contact request status + IDs,CR-001 / Pending,Reveal-after-agree flow (FR-15),No,No,Both parties + admin,Keep,References only; no contact data stored in this table
+phone number,-,Not needed: RSU email is the single reveal channel,Yes,No,-,Remove (never collected),Excluded by Lab 09 data-minimization decision
+LINE ID / Facebook,-,Not needed: RSU email is the single reveal channel,Yes,No,-,Remove (never collected),Excluded by Lab 09 data-minimization decision
+student ID image or number,-,Verification is in-person visual check only,Yes,Yes,-,Remove (never collected),Locked decision (FR-15 / NFR-04); only boolean verified flag stored

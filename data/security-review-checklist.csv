@@ -1,0 +1,9 @@
+Area,Check_Question,Yes_No_Partial,Risk_Level,Mitigation_Action
+Input form,Are required fields validated?,Yes,Low,Required-field + positive-price checks live (FR-10; verified Lab 08 T2); duplicate warning added in Sprint 1
+Input form,Are sensitive fields avoided?,Yes,Low,No phone/LINE/ID fields exist; email-only reveal; see data-inventory.csv
+Admin function,Are admin actions separated from user actions?,Partial,Medium,Admin screen not yet built; Sprint 1 ships separate labelled Admin view (demo); no admin buttons on public screens
+Data display,Is private information hidden from public screens?,Yes,Low,Public screens show item data + display name + badge only (NFR-02); re-checked before every merge
+Status update,Can only admin/manager update status?,Partial,Medium,Status updates ship in Sprint 1 restricted to seller/admin views with confirmation (FR-11)
+Public links,Do public links expose hidden data?,No,Low,Public repo + Pages contain fictional sample data only; testers anonymized; screenshot check before upload
+Prototype data,Does the prototype use sample or masked data?,Yes,Low,JSON seed from fictional sample-listings.csv; localStorage only; Reset demo data self-heal
+Code level,Is user input rendered safely?,No,Medium,innerHTML rendering of title/pickup area = stored XSS pattern; Sprint 1 fix to textContent (risk R-04)

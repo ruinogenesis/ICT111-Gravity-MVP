@@ -1,0 +1,9 @@
+Asset_Name,Type,Source_URL,License_or_Permission,Used_In,Credit_Required,Risk_Level,Action
+Gravity code (HTML/CSS/JS) wireframes diagrams docs,Team-created,This repository,Team IP created for ICT111,Entire prototype and documentation,No,Low,None - original work
+Sample datasets (listings users requests personas),Team-created data,/data/,Team IP - all names and records fictional,Seed and demo data,No,Low,Keep fictional; never replace with real student data
+FR-01 to FR-16 requirement framework,Course material,Lecturer (Lab 04),Provided for course use,/docs/system-requirements.md baseline,Yes - attributed in the doc,Low,Already attributed as fixed by lecturer
+Verdana / Arial,System fonts,User operating system,Bundled with OS; no font files distributed,Prototype typography,No,Low,None
+Mermaid,Diagram tool,https://mermaid.js.org,MIT (tool); .mmd files team-created,/diagrams/*.mmd sources,No,Low,Recorded as tooling
+GitHub / GitHub Pages,Hosting platform,https://github.com,GitHub Terms of Service (free education use),Repository and live demo URL,No,Low,Public repo - sample data only
+AI assistance (Anthropic Claude),AI tool,https://claude.ai,Team reviewed and edited all output; team retains responsibility,Documentation drafting support (Lab 09),Yes - disclosed in register,Low,Disclosed; all content verified by team against repo evidence
+External icons / CSS frameworks / stock images / snippets,None used,-,-,-,-,-,Register-first rule: record here with license before any future use
