@@ -1,0 +1,9 @@
+flowchart TD
+    A[Review Gravity features<br>7 screens S-01 to S-07 + FR-01 to FR-16] --> B[Identify data collected<br>Users / Listings / ContactRequests<br>data-inventory.csv]
+    B --> C[Privacy and consent check<br>email-only reveal after mutual agree<br>no ID images - PDPA minimization]
+    C --> D[Ethical review<br>safer-meetups wording<br>simulated verification labelled<br>contact-flow clarity from Lab 08]
+    D --> E[IP and third-party asset review<br>zero external assets<br>AI assistance disclosed<br>register-first rule]
+    E --> F[Basic security risk check<br>innerHTML XSS found -> textContent fix<br>admin view separation]
+    F --> G[Risk register<br>R-01 to R-09<br>decision: continue with mitigation]
+    G --> H[Update requirements if needed<br>FR-01-16 unchanged<br>one FR-15 clarification]
+    H --> I[Update GitHub documentation<br>docs + data + README + logbook<br>issues for each risk]
