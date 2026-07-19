@@ -197,3 +197,31 @@ Validation structure, analytics sheet, and analysis documents are prepared and c
 - [/docs/analytics-insights.md](docs/analytics-insights.md)
 - [/docs/mvp-decision.md](docs/mvp-decision.md)
 - [/docs/test-user-notes.md](docs/test-user-notes.md)
+
+- ## Lab 09: Responsible IT Check
+
+### Responsible Design Summary
+In Lab 09 we reviewed Gravity from a legal, ethical, IP, privacy, and security perspective before the implementation sprints. Main findings: privacy is strong by design (minimal fields, no ID images, fictional sample data, contact revealed only after mutual agreement — now narrowed to RSU email only); the main ethical risks are the "meet safely" tagline reading as a guarantee and the demo's simulated verification, both fixed by wording/labelling; the project uses zero third-party assets (team-original code, data, and diagrams, with AI documentation assistance disclosed); and the security review found one code-level weakness (`innerHTML` rendering of user text in mvp-demo.html, a stored-XSS pattern) scheduled for a `textContent` fix in Sprint 1, alongside admin-view separation. Nine risks are documented in the risk register; decision: **continue with mitigation** — five mitigations land in the Lab 10 Sprint 1 backlog.
+
+### Files Added
+- docs/legal-ethical-checklist.md
+- docs/privacy-and-data-protection.md
+- docs/ip-and-third-party-assets.md
+- docs/security-risk-check.md
+- docs/risk-register.md
+- docs/updated-requirements-note.md
+- docs/user-consent-statement.md
+- docs/data-handling-policy.md
+- data/data-inventory.csv
+- data/risk-register.csv
+- data/third-party-assets-register.csv
+- diagrams/privacy-security-review.mmd
+- weekly logbook updated (Lab 09 entry)
+
+### Requirement Update
+`system-requirements.md` is unchanged. One implementation clarification to FR-15 is recorded in `docs/updated-requirements-note.md`: the contact channel revealed after mutual agreement is the RSU email only — no phone, LINE, or social handles are ever collected.
+
+### Team Contributions
+- Hein Htet Aung: legal-ethical checklist, IP/assets register, updated-requirements note, README/logbook
+- Thiri Shoon Lae Oo: privacy review, data inventory, consent statement, review diagram
+- Eimyat Yadanar Mon: security check (code review), risk register, data handling policy
