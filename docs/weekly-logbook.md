@@ -320,3 +320,42 @@ Test the core Gravity workflow with 5 RSU student testers and make an evidence-b
 - /docs/mvp-decision.md
 - /docs/test-user-notes.md
 
+# Weekly Logbook - Lab 09
+
+## Group Name
+Gravity
+
+## Date
+19 July 2026 (working dates 18–19 July 2026)
+
+## Members Present
+Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon
+
+## Work Completed Today
+- Data inventory: all fields from data-structure.md classified in `/data/data-inventory.csv`; phone/LINE/ID fields confirmed as never-collected.
+- Privacy review: `/docs/privacy-and-data-protection.md` — reveal channel narrowed to RSU email only; pickup-area and photo rules added.
+- Ethical review: `/docs/legal-ethical-checklist.md` — tagline safety wording and simulated-verification labelling flagged for revision; RSU-only scope justified.
+- IP review: `/docs/ip-and-third-party-assets.md` — zero third-party assets confirmed; AI documentation assistance disclosed; register-first rule adopted.
+- Security review: `/docs/security-risk-check.md` — `innerHTML` XSS weakness found in mvp-demo.html and scheduled for Sprint 1 fix; admin separation planned.
+- Risk register: `/docs/risk-register.md` + `/data/risk-register.csv` — 9 risks across privacy, legal, security, ethical, IP, data quality; decision: continue with mitigation.
+- Requirements update note: `/docs/updated-requirements-note.md` — no FR/NFR changed; one FR-15 implementation clarification (email-only reveal).
+
+## Member Contributions
+| Member | Contribution | GitHub Evidence |
+|---|---|---|
+| Hein Htet Aung | Legal-ethical checklist, IP/assets register, updated-requirements note, README + logbook update | Commit #TBD |
+| Thiri Shoon Lae Oo | Privacy and data protection review, data inventory, user consent statement, review diagram | Commit #TBD |
+| Eimyat Yadanar Mon | Security risk check (incl. XSS code review), risk register + CSV, data handling policy | Commit #TBD |
+
+## Decisions Made
+1. Continue building — "safe with revision"; no requirement changes.
+2. Contact reveal = RSU email only; no other contact fields ever collected.
+3. Four revision items confirmed for Sprint 1: safety wording, simulated-verification label, contact-flow explainer + Reserved wording, XSS `textContent` fix.
+4. Register-first rule for any future third-party asset.
+
+## Issues / Blockers
+GitHub issue numbers for the 9 risks and the FR-15 clarification still to be created (placeholders "#TBD" in docs — replace after creating issues).
+
+## Next Action Before Lab 10
+Create the GitHub issues, replace #TBD references, commit all Lab 09 files, then start Sprint 1 backlog (4 revision fixes + admin/dashboard/register screens from technical-architecture.md §4).
+
