@@ -1,0 +1,17 @@
+# Basic Security Risk Check — Gravity
+
+Machine-readable version: `/data/security-review-checklist.csv` (optional). Prototype reviewed: `/prototype/mvp-demo.html` v0.1 + planned Sprint 1 screens.
+
+| Area | Risk Question | Current Status | Risk Level | Mitigation | Owner |
+|---|---|---|---|---|---|
+| Form input | Can incomplete or invalid data be submitted? | Required-field and positive-price checks work (FR-10, verified in Lab 08 T2 — all 5 testers saw validation/confirmation messages). Duplicate-listing warning not built yet. | Low | Add duplicate-listing warning in Sprint 1 to complete FR-10. | Eimyat |
+| Form input (code-level) | Can typed input break the page? | **Found:** listing title and pickup area are rendered with `innerHTML`, so typed HTML/script executes when the list renders (stored XSS pattern). Low stakes in a localStorage demo, but a real weakness. | Medium | Fix in Sprint 1: build list rows with `textContent` instead of `innerHTML`. Recorded as risk R-04 in the risk register. | Eimyat |
+| Admin function | Can normal users access admin actions? | Admin screen not yet built; when built, role switching is simulated (no real authentication is possible in a frontend-only prototype — documented in technical-architecture.md §5). | Medium | Separate, clearly labelled "Admin view (demo)" screen; no admin buttons on public screens; limitation stated honestly in demo script. | Eimyat |
+| Data display | Is private information visible to everyone? | No — public screens show item data + display name + verified badge only; no emails or contact data anywhere (NFR-02, confirmed on demo v0.1). | Low | Re-verify on every new screen before merge (NFR-02 verification method). | Thiri |
+| Status update | Can records be edited without control? | In demo v0.1 anyone using the browser can post; status updates ship in Sprint 1. | Medium | Status changes only from the seller/admin views; confirmation message on every change (FR-11); delete requires confirmation (FR-10). | Eimyat |
+| Public links | Does a public link expose data that should be private? | Repo and GitHub Pages demo are public, but contain **fictional sample data only** — no real names, emails, or research-identifying data (testers are anonymized codes). | Low | Rule: real personal data never enters the repo; screenshots checked before upload. | Hein |
+| File upload | Can unsafe or unrelated files be uploaded? | No upload exists; Lab 08's photo request will ship as placeholder/reference images, not real file storage (localStorage size limits). | Low | If real upload is ever added post-course, it needs its own security review; for MVP, image guidance rule from privacy doc applies. | Thiri |
+| Data storage | Can stored data be lost or tampered with? | localStorage is per-browser and user-editable via dev tools — acceptable for a demo, self-heals from JSON seed; "Reset demo data" button restores known state. | Low | Demo runs from one prepared browser (mitigation from technical-architecture.md §6). | Eimyat |
+
+## Security Decision
+**Continue with mitigation.** No redesign needed. Two concrete items enter Sprint 1: the `textContent` XSS fix and the labelled admin-view separation; both are tracked in the risk register (R-04, R-05) and match the honest scope of a frontend-only prototype — Gravity deliberately avoids real authentication, payments, and file storage, which keeps the security surface small (Lab 02 decision, reconfirmed).
