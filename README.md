@@ -225,3 +225,43 @@ In Lab 09 we reviewed Gravity from a legal, ethical, IP, privacy, and security p
 - Hein Htet Aung: legal-ethical checklist, IP/assets register, updated-requirements note, README/logbook
 - Thiri Shoon Lae Oo: privacy review, data inventory, consent statement, review diagram
 - Eimyat Yadanar Mon: security check (code review), risk register, data handling policy
+
+# README addition — append this section to README.md
+
+## Lab 10 - MVP Implementation Sprint 1
+
+### Sprint Goal
+Build the first working version of the Gravity prototype from the approved requirements (Lab 04), wireframes (Lab 05), architecture (Lab 06), validation findings (Lab 08), and responsible-design checks (Lab 09).
+
+### Implementation Approach
+- Platform/tools: Frontend-only web prototype — HTML, CSS, JavaScript (single-page app, 7 screens)
+- Backend status: No backend — simulated data layer, explicitly allowed by FR-04
+- Data storage/simulation: JSON seed data + localStorage (self-healing, with reset button)
+- Prototype link or folder: /prototype/ (index.html, style.css, script.js) — v0.2
+
+### Features Implemented in Sprint 1
+
+| Feature | Requirement ID | Status | Evidence |
+|---|---|---|---|
+| Homepage (problem, target user, actions, safer-meetup note) | FR-01, FR-02 | Working Draft | /screenshots/homepage.png |
+| Register with RSU email check | FR-10, FR-15 | Working Draft | Rejection message for non-@rsu.ac.th |
+| Input form (validation, duplicate warning, photo placeholder, pickup zones) | FR-03, FR-10, FR-11 | Working Draft | /screenshots/input-form.png |
+| Record list (cards) + search + 6 categories + price filter | FR-05, FR-06 | Working Draft | /screenshots/record-list.png |
+| Detail view (verified badge, no contact info, status explainer) | FR-07, FR-15 | Working Draft | /screenshots/detail-view.png |
+| Status tracking with Reserved clarity fix | FR-08 | Working Draft | Browse + detail screens |
+| Contact request + what-happens-next explainer + email-only reveal | FR-02, FR-15 | Working Draft | Detail + admin screens |
+| Admin view (verify, requests, status, remove w/ confirm) | FR-08, FR-09 | Working Draft | /screenshots/admin-view.png |
+| Dashboard (totals, statuses, categories, requests) | FR-12 | Working Draft | Dashboard screen |
+| Mobile-responsive layout | FR-14 | Working Draft | ≤600px media query |
+
+All four Lab 08 minor revisions and all Sprint-1 Lab 09 mitigations (including the innerHTML→textContent XSS fix) are included — full map in /docs/feature-implementation-status.md.
+
+### Screenshots
+- Homepage: /screenshots/homepage.png
+- Input form: /screenshots/input-form.png
+- Record list: /screenshots/record-list.png
+- Detail view: /screenshots/detail-view.png
+- Admin/status view: /screenshots/admin-view.png
+
+### Team Contribution
+All members contributed to the same repository: Eimyat (script.js, data layer, admin, security fix), Thiri (layouts, mobile CSS, UX clarity fixes, screenshots), Hein (copy, planning docs, README/logbook, issues).
