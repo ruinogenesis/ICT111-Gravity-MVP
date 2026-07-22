@@ -1,0 +1,107 @@
+/* Gravity Sprint 1 (v0.2) — continues the Lab 05 wireframe visual language */
+* { box-sizing: border-box; }
+body {
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;
+  background: #eef4f0;
+  color: #222;
+}
+
+/* Top bar */
+.topbar { background: #14594a; color: white; padding: 16px 20px 10px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; max-width: 950px; margin: 0 auto; }
+.topbar h1 { margin: 0; font-size: 26px; }
+.topbar p { margin: 4px 0 8px; font-size: 13px; color: #d6f0e5; }
+.rolebox { font-size: 12px; color: #d6f0e5; }
+.rolebox select { font-size: 12px; padding: 4px; border-radius: 5px; border: none; margin-left: 4px; }
+.menu { max-width: 950px; margin: 4px auto 0; }
+.menu a { color: #d6f0e5; margin-right: 14px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block; padding: 4px 0; }
+.menu a:hover { color: white; text-decoration: underline; }
+.menu a.active { color: white; border-bottom: 3px solid #7fd6b8; }
+.menu a.admin-link { color: #ffd97a; }
+
+/* Layout */
+.page { max-width: 950px; margin: 18px auto; padding: 0 15px; }
+.screen.hidden, .hidden { display: none; }
+.box { background: white; border: 1px solid #cfe0d6; border-radius: 10px; padding: 18px; margin-bottom: 18px; }
+.admin-box { border: 2px dashed #c9a227; background: #fffdf4; }
+.note { background: #fff7d9; border-left: 5px solid #c9a227; padding: 10px 12px; border-radius: 8px; font-size: 12px; margin-bottom: 16px; }
+.footer { text-align: center; font-size: 11px; color: #777; padding: 14px; }
+
+/* Text */
+h2 { margin-top: 0; font-size: 20px; }
+h3 { font-size: 15px; margin: 18px 0 8px; }
+.small { font-size: 12px; color: #666; }
+.check { color: #1a7a4e; font-weight: bold; font-size: 12px; }
+.price { font-size: 20px; font-weight: bold; color: #14594a; margin: 4px 0; }
+.backlink { font-size: 13px; color: #14594a; text-decoration: none; font-weight: bold; }
+
+/* Buttons */
+button { font-family: inherit; cursor: pointer; }
+.mainbtn { background: #1e8a6e; color: white; border: none; padding: 11px 18px; border-radius: 6px; font-weight: bold; font-size: 14px; margin: 10px 8px 0 0; }
+.mainbtn:hover { background: #14594a; }
+.mainbtn:disabled { background: #9db8ab; cursor: default; }
+.mainbtn.light { background: white; color: #1e8a6e; border: 2px solid #1e8a6e; }
+.gray, .small-btn { background: #e4ebe7; color: #333; border: 1px solid #b8c8bf; border-radius: 6px; }
+.small-btn { padding: 4px 10px; font-size: 11px; margin-left: 8px; }
+.row-btn { font-size: 11px; padding: 4px 8px; border-radius: 5px; border: 1px solid #b8c8bf; background: #f4f8f5; margin: 2px 3px 2px 0; }
+.row-btn.danger { border-color: #c0392b; color: #c0392b; }
+
+/* Forms */
+label { display: block; font-weight: bold; font-size: 13px; margin-top: 12px; }
+input, select, textarea { width: 100%; padding: 9px; margin-top: 5px; border: 1px solid #9db8ab; border-radius: 6px; font-family: inherit; font-size: 14px; }
+.price-input { width: 90px; display: inline-block; margin: 0 4px; }
+.chk { font-size: 12px; font-weight: normal; margin-left: 14px; display: inline; }
+.chk input { width: auto; }
+
+/* Filters */
+.filter-row { margin: 10px 0; font-size: 13px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.filter-label { font-weight: bold; margin-right: 6px; }
+.cat { display: inline-block; border: 1px solid #9db8ab; border-radius: 20px; padding: 4px 12px; font-size: 12px; margin: 2px 4px 2px 0; cursor: pointer; background: white; }
+.cat.selected { background: #1e8a6e; color: white; border-color: #1e8a6e; }
+
+/* Cards */
+#cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; }
+.card { border: 1px solid #cfe0d6; border-radius: 10px; padding: 12px; cursor: pointer; background: #fbfdfc; display: flex; gap: 10px; }
+.card:hover { border-color: #1e8a6e; background: #f2faf6; }
+.card.dim { opacity: 0.6; }
+.card-photo { font-size: 30px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #eef4f0; border-radius: 8px; flex-shrink: 0; }
+.card h4 { margin: 0 0 4px; font-size: 14px; }
+.card p { margin: 2px 0; font-size: 12px; color: #555; }
+
+/* Status pills */
+.status { font-size: 11px; font-weight: bold; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.st-available { background: #d9f2e4; color: #1a7a4e; }
+.st-reserved { background: #ffe9c7; color: #a8690a; }
+.st-sold { background: #e4e4e4; color: #666; }
+.st-removed { background: #fbdcd7; color: #a03024; }
+
+/* Messages */
+.msg { padding: 10px; border-radius: 6px; font-size: 13px; margin-top: 12px; }
+.msg.ok { background: #d9f2e4; color: #14594a; }
+.msg.err { background: #fbdcd7; color: #a03024; }
+.explainer { background: #e8f2fb; border-left: 5px solid #3a7ca5; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-top: 12px; }
+.explainer ol { margin: 6px 0 2px; padding-left: 20px; }
+.safety { background: #f4f8f5; border-left: 5px solid #1e8a6e; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-top: 14px; }
+
+/* Detail */
+.detail-head { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 10px; }
+.photo-box { font-size: 54px; width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; background: #eef4f0; border-radius: 12px; flex-shrink: 0; }
+.detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.detail-table th, .detail-table td { border-bottom: 1px solid #e0e8e3; padding: 8px 6px; text-align: left; vertical-align: top; }
+.detail-table th { color: #14594a; width: 130px; }
+
+/* Dashboard */
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.stat { background: #f4f8f5; border: 1px solid #cfe0d6; border-radius: 10px; padding: 12px; text-align: center; }
+.stat b { display: block; font-size: 24px; color: #14594a; }
+.stat span { font-size: 11px; color: #666; }
+
+/* Mobile (FR-14 / NFR-01) */
+@media (max-width: 600px) {
+  .topbar-inner { flex-direction: column; }
+  .menu a { margin-right: 10px; font-size: 13px; }
+  .detail-head { flex-direction: column; }
+  #cards { grid-template-columns: 1fr; }
+  .detail-table th { width: 100px; }
+}

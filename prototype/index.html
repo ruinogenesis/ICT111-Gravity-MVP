@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity — RSU Student Secondhand Marketplace (Sprint 1)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>Gravity</h1>
+      <p>Post once. Be found fast. Meet smarter — on campus.</p>
+    </div>
+    <div class="rolebox">
+      <label for="role-select">Demo role:</label>
+      <select id="role-select">
+        <option value="buyer">Buyer — Nine (verified)</option>
+        <option value="seller">Seller — Su Su (verified)</option>
+        <option value="admin">Admin (demo)</option>
+      </select>
+    </div>
+  </div>
+  <nav class="menu" id="main-nav">
+    <a href="#" data-screen="home" class="active">Home</a>
+    <a href="#" data-screen="browse">Browse</a>
+    <a href="#" data-screen="sell">Sell an item</a>
+    <a href="#" data-screen="dashboard">Dashboard</a>
+    <a href="#" data-screen="register">Register</a>
+    <a href="#" data-screen="admin" id="nav-admin" class="admin-link">Admin view (demo)</a>
+  </nav>
+</header>
+
+<main class="page">
+
+<div class="note">
+  Lab 10 Sprint 1 prototype (v0.2). Records are saved in your browser only (localStorage) and all people shown are fictional sample data.
+  <button class="gray small-btn" id="reset-btn">Reset demo data</button>
+</div>
+
+<!-- S-01 HOMEPAGE (FR-01, FR-02) -->
+<section class="screen" id="screen-home">
+  <div class="box">
+    <h2>RSU students: sell what you can't take. Find what you need.</h2>
+    <p><b>The problem:</b> students moving out lose time and money selling used furniture, appliances, and textbooks in scattered, unsearchable Facebook and LINE groups — posts get buried and working items get thrown away.</p>
+    <p><b>Who it's for:</b> verified Rangsit University students only — sellers moving out, buyers moving in. We keep it RSU-only so both sides always know they are dealing with a real, verified student.</p>
+    <button class="mainbtn" data-goto="browse">Browse items</button>
+    <button class="mainbtn light" data-goto="sell">Sell an item</button>
+    <div class="safety">
+      <b>Safer meetups, not promises:</b> Gravity verifies students and keeps your contact private until both sides agree — but always meet in busy campus spots (library front, dorm lobbies) and bring a friend for big items. Gravity connects you; the meetup is yours.
+    </div>
+  </div>
+</section>
+
+<!-- S-03 BROWSE (FR-05, FR-06, FR-08) -->
+<section class="screen hidden" id="screen-browse">
+  <div class="box">
+    <h2>Browse listings</h2>
+    <input type="text" id="search" placeholder="Search by item name or pickup area...">
+    <div class="filter-row">
+      <span class="filter-label">Category:</span>
+      <span id="cat-chips"></span>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Price (THB):</span>
+      <input type="number" id="price-min" class="price-input" placeholder="min" min="0">
+      <span>–</span>
+      <input type="number" id="price-max" class="price-input" placeholder="max" min="0">
+      <label class="chk"><input type="checkbox" id="show-sold"> show Sold items</label>
+    </div>
+    <p class="small">Tip: <span class="status st-reserved">Reserved</span> means a buyer already agreed with the seller — it is <b>not final</b>, but the item is on hold. It becomes <span class="status st-available">Available</span> again if the deal falls through.</p>
+    <div id="cards"></div>
+    <p id="empty-msg" class="small hidden">No items match your search — try clearing the filters or check back later.</p>
+  </div>
+</section>
+
+<!-- S-02 SELL / CREATE LISTING (FR-03, FR-10, FR-11) -->
+<section class="screen hidden" id="screen-sell">
+  <div class="box">
+    <h2>Create a listing</h2>
+    <p class="small">Fields with * are required. Please do not put phone numbers or social accounts in the text — buyers reach you through Gravity, and your RSU email is shared only after you both agree.</p>
+    <label for="f-title">Item title *</label>
+    <input type="text" id="f-title" placeholder="e.g. Wooden study desk" maxlength="60">
+    <label for="f-cat">Category *</label>
+    <select id="f-cat">
+      <option value="">— choose —</option>
+    </select>
+    <label for="f-price">Price (THB) *</label>
+    <input type="number" id="f-price" placeholder="e.g. 800" min="1">
+    <label for="f-cond">Condition *</label>
+    <select id="f-cond">
+      <option value="">— choose —</option>
+      <option>Like new</option>
+      <option>Good</option>
+      <option>Fair</option>
+    </select>
+    <label for="f-area">Pickup area * <span class="small">(general campus zones only — never your room number)</span></label>
+    <select id="f-area">
+      <option value="">— choose —</option>
+      <option>Dorm A lobby</option>
+      <option>Dorm B lobby</option>
+      <option>Building 6</option>
+      <option>ICT building</option>
+      <option>Library meetup point</option>
+      <option>Student union</option>
+      <option>Other campus zone</option>
+    </select>
+    <label for="f-photo">Photo <span class="small">(demo placeholder — item only, no people or room backgrounds)</span></label>
+    <select id="f-photo">
+      <option value="">no photo</option>
+      <option value="&#128715;">furniture photo</option>
+      <option value="&#129382;">appliance photo</option>
+      <option value="&#128218;">book photo</option>
+      <option value="&#128241;">electronics photo</option>
+      <option value="&#128087;">clothing photo</option>
+      <option value="&#128230;">other item photo</option>
+    </select>
+    <label for="f-desc">Description <span class="small">(optional, max 300 characters)</span></label>
+    <textarea id="f-desc" rows="3" maxlength="300" placeholder="Condition details, size, why you're selling..."></textarea>
+    <button class="mainbtn" id="post-btn">Post listing</button>
+    <p id="form-msg" class="msg hidden"></p>
+  </div>
+</section>
+
+<!-- S-04 DETAIL (FR-07, FR-08, FR-15) -->
+<section class="screen hidden" id="screen-detail">
+  <div class="box">
+    <a href="#" data-goto="browse" class="backlink">&larr; Back to listings</a>
+    <div class="detail-head">
+      <div class="photo-box" id="d-photo"></div>
+      <div>
+        <h2 id="d-title"></h2>
+        <p class="price"><span id="d-price"></span> THB</p>
+        <p><span id="d-status" class="status"></span></p>
+        <p id="d-status-note" class="small"></p>
+      </div>
+    </div>
+    <table class="detail-table">
+      <tr><th>Category</th><td id="d-cat"></td></tr>
+      <tr><th>Condition</th><td id="d-cond"></td></tr>
+      <tr><th>Pickup area</th><td id="d-area"></td></tr>
+      <tr><th>Posted</th><td id="d-date"></td></tr>
+      <tr><th>Seller</th><td><span id="d-seller"></span> <span class="check" id="d-verified"></span></td></tr>
+      <tr><th>Description</th><td id="d-desc"></td></tr>
+    </table>
+    <p class="small">Verification = RSU email + one-time in-person student ID check (no ID stored). <i>Verification is simulated in this demo.</i> No personal contact details are shown on this page — that is by design.</p>
+    <button class="mainbtn" id="contact-btn">Request contact</button>
+    <div id="contact-explainer" class="explainer hidden">
+      <b>What happens next?</b>
+      <ol>
+        <li>The seller sees your request in their Gravity account.</li>
+        <li>If they accept, <b>both of you</b> see each other's RSU email — nothing else, and nobody else sees it.</li>
+        <li>You email each other to agree a time at the pickup area. Meet in busy campus spots.</li>
+      </ol>
+    </div>
+    <p id="contact-msg" class="msg hidden"></p>
+  </div>
+</section>
+
+<!-- S-05 DASHBOARD (FR-12) -->
+<section class="screen hidden" id="screen-dashboard">
+  <div class="box">
+    <h2>Marketplace dashboard</h2>
+    <div class="stat-row" id="stat-cards"></div>
+    <h3>Listings per category</h3>
+    <table id="cat-table" class="detail-table"><tbody></tbody></table>
+    <h3>Contact requests</h3>
+    <p id="req-summary"></p>
+  </div>
+</section>
+
+<!-- S-07 REGISTER (FR-10, FR-15) -->
+<section class="screen hidden" id="screen-register">
+  <div class="box">
+    <h2>Register — RSU students only</h2>
+    <p class="small">Why RSU-only? Every account is a real Rangsit University student, verified by RSU email plus a one-time in-person student ID check. We look at your ID once — we <b>never store</b> ID photos or numbers. This is what makes meeting a stranger from Gravity different from meeting a stranger from a Facebook group.</p>
+    <label for="r-name">Display name * <span class="small">(nickname is fine)</span></label>
+    <input type="text" id="r-name" placeholder="e.g. Su Su" maxlength="40">
+    <label for="r-email">RSU email *</label>
+    <input type="text" id="r-email" placeholder="your.name@rsu.ac.th">
+    <p class="small">We collect only your display name and RSU email. Your email is shown to exactly one person — a buyer/seller you both agreed to connect with — and never appears on public pages.</p>
+    <button class="mainbtn" id="register-btn">Register</button>
+    <p id="register-msg" class="msg hidden"></p>
+  </div>
+</section>
+
+<!-- S-06 ADMIN (FR-08, FR-09) -->
+<section class="screen hidden" id="screen-admin">
+  <div class="box admin-box">
+    <h2>Admin view (demo)</h2>
+    <p class="small">Admin-only screen, separated from all public screens. In this frontend-only prototype the admin role is simulated with the role switcher (no real authentication — stated honestly per technical-architecture.md).</p>
+
+    <h3>Accounts pending verification</h3>
+    <table class="detail-table" id="admin-users"><tbody></tbody></table>
+
+    <h3>Contact requests</h3>
+    <table class="detail-table" id="admin-requests"><tbody></tbody></table>
+
+    <h3>Manage listings</h3>
+    <table class="detail-table" id="admin-listings"><tbody></tbody></table>
+    <p id="admin-msg" class="msg hidden"></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Gravity — ICT111 group project (Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon). Prototype uses fictional sample data only.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
