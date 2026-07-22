@@ -356,6 +356,38 @@ Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon
 ## Issues / Blockers
 GitHub issue numbers for the 9 risks and the FR-15 clarification still to be created (placeholders "#TBD" in docs — replace after creating issues).
 
-## Next Action Before Lab 10
-Create the GitHub issues, replace #TBD references, commit all Lab 09 files, then start Sprint 1 backlog (4 revision fixes + admin/dashboard/register screens from technical-architecture.md §4).
+# Weekly Logbook - Lab 10
+
+## Lab Topic
+MVP Implementation Sprint 1 (working dates 20–22 July 2026)
+
+## What We Built Today
+- First working prototype v0.2 (/prototype/index.html + style.css + script.js): all 7 screens from screen-inventory-checklist.md (S-01 home, S-02 sell, S-03 browse, S-04 detail, S-05 dashboard, S-06 admin, S-07 register) as a single-page app with working navigation, localStorage data layer, and demo role switcher.
+- All 4 Lab 08 minor revisions: contact-flow explainer, Reserved clarity (text + dimmed cards), photo placeholders, expanded categories + price filter.
+- All Sprint-1 Lab 09 mitigations: textContent rendering (XSS fix, R-04), labelled admin separation (R-05), safer-meetup wording + simulated-verification labels (R-06), pickup-zone dropdown (R-02), duplicate-listing warning (R-09), RSU-email-only reveal (FR-15 clarification).
+- 14-test automated smoke check of the main flows (validation, XSS escaping, duplicate warning, register rejection/acceptance, contact flow, Reserved guard, own-listing guard, admin verify/accept/status/remove, dashboard, persistence, reset) — all passing.
+
+## Requirement IDs Addressed
+- FR-01–FR-16: all represented in v0.2 as Working Draft (see /docs/feature-implementation-status.md for the full map)
+- NFR-01 (mobile), NFR-02 (no public contact info), NFR-04 (RSU-only registration) demonstrated in the same build
+
+## Contribution by Members
+
+| Member | Contribution | Evidence |
+|---|---|---|
+| Eimyat Yadanar Mon | script.js data layer + admin logic + XSS fix | Commits to /prototype/script.js; Issue 13 |
+| Thiri Shoon Lae Oo | Screen layouts, mobile CSS, explainer/Reserved UX fixes, screenshots | Commits to /prototype/index.html, style.css; Issues 7, 8 |
+| Hein Htet Aung | Homepage/register copy, implementation plan, feature status, README/logbook | Commits to /docs/, README.md; Issue 15 |
+
+## Screenshots Added
+- /screenshots/homepage.png
+- /screenshots/input-form.png
+- /screenshots/record-list.png
+- /screenshots/detail-view.png
+- /screenshots/admin-view.png
+
+## Problems Faced
+- Strict-mode scoping bug during testing (functions not global) — resolved by loading script.js as a proper script element.
+- Real photo upload not feasible with localStorage size limits — shipped placeholder photo selection and documented the limitation for instructor feedback.
+- Two-party contact flow on one browser — solved honestly with the labelled demo role switcher.
 
