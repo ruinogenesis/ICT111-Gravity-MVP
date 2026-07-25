@@ -265,3 +265,31 @@ All four Lab 08 minor revisions and all Sprint-1 Lab 09 mitigations (including t
 
 ### Team Contribution
 All members contributed to the same repository: Eimyat (script.js, data layer, admin, security fix), Thiri (layouts, mobile CSS, UX clarity fixes, screenshots), Hein (copy, planning docs, README/logbook, issues).
+
+## Lab 11: MVP Implementation Sprint 2 and Startup Metrics
+
+### Prototype Progress
+v0.2 → v0.3. Sprint 2 closed the five gaps found in the Sprint 1 review: sellers now manage their own listings and accept/decline contact requests from a new **My Listings** screen (US-06/US-07 finally work exactly as the user stories describe, without going through admin), buyers see the live status of their sent requests (root cause of the Lab 08 contact-flow confusion), the seed data moved to an inspectable /prototype/data.json (with an identical embedded fallback for local-file use), Browse gained sort options, and the dashboard grew from simple counts into a real metrics view.
+
+### Implemented / Improved Features
+| Requirement ID | Feature | Status | Evidence |
+|---|---|---|---|
+| FR-02 | Full two-sided contact pathway (request → seller accept → mutual RSU-email reveal) | Completed | /screenshots/my-listings.png; testing notes T-09 |
+| FR-04 | data.json seed source + localStorage persistence | Completed | /prototype/data.json; T-12 |
+| FR-06 | Search + 6 categories + price range + sort | Completed | T-04 |
+| FR-08 | Status lifecycle with seller self-service + soldDate tracking | Completed | T-06 |
+| FR-12 | Dashboard with product metrics PM-01–PM-08 + bar charts | Completed | /screenshots/dashboard.png; T-07 |
+
+Full 16-requirement table: /docs/feature-implementation-status.md (15 Completed, FR-14 partially — real-device test in Lab 13).
+
+### Startup/Product Metrics
+Eight metrics defined in /docs/startup-metrics.md and computed live on the dashboard: PM-01 total listings, PM-02 status counts, PM-03 sell-through rate, PM-04 top category, PM-05 contact requests + acceptance rate, PM-06 average time to Sold, PM-07 verified users, PM-08 task success rate (93.3%, Lab 08 evidence, with 4.30 feedback / 4.40 interest).
+
+### Prototype Screenshots
+/screenshots/homepage.png, input-form.png, record-list.png, detail-view.png, my-listings.png (new), dashboard.png (new), admin-view.png
+
+### Member Contributions
+Eimyat: My Listings logic, metrics engine, data.json, sort. Thiri: My Listings + dashboard layout, chart styling, screenshots. Hein: startup-metrics.md, testing notes, feature status, README/logbook.
+
+### Remaining Work
+Lab 12 landing page + go-to-market docs; Lab 13 user re-testing (target: PM-08 above 93.3% with the contact-flow fixes) + real-device mobile test; Lab 14 final polish, final report, release.
