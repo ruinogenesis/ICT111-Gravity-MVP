@@ -391,3 +391,38 @@ MVP Implementation Sprint 1 (working dates 20–22 July 2026)
 - Real photo upload not feasible with localStorage size limits — shipped placeholder photo selection and documented the limitation for instructor feedback.
 - Two-party contact flow on one browser — solved honestly with the labelled demo role switcher.
 
+## Lab Topic
+MVP Implementation Sprint 2 and Startup Metrics (working dates 23–25 July 2026)
+
+## Group Case
+Gravity — RSU Student Secondhand Marketplace
+
+## Work Completed Today
+- Prototype upgraded to v0.3: new My Listings screen (seller status self-service US-07, seller accept/decline of contact requests US-06, buyer sent-request status), data.json seed source with file:// fallback, sort options on Browse, soldDate tracking.
+- Dashboard extended with product metrics PM-01–PM-08 and two CSS bar charts (category + status), computed live from localStorage; Lab 08 validation figures shown as labelled fixed evidence.
+- /docs/startup-metrics.md written (8 metrics with type, rationale, formula, source, screen — PM- prefix to avoid collision with Lab 07 M-IDs).
+- Full-flow testing: 13 test cases, all passing, recorded in /docs/prototype-testing-notes.md (incl. XSS regression and data.json fallback tests).
+- /docs/feature-implementation-status.md updated: 15 of 16 FRs Completed, FR-14 Partially Completed (real-device test with Lab 13).
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+|---|---|---|---|
+| Eimyat Yadanar Mon | My Listings logic, metrics engine (computeMetrics/barChart), data.json + fallback, sort | /prototype/script.js, data.json | Commit #TBD |
+| Thiri Shoon Lae Oo | My Listings screen layout, chart styling, dashboard layout, updated screenshots | /prototype/index.html, style.css; /screenshots/ | Commit #TBD |
+| Hein Htet Aung | startup-metrics.md, prototype-testing-notes.md, feature status update, README + logbook | /docs/ | Commit #TBD |
+
+## Requirements Addressed
+FR-02, FR-04, FR-06, FR-08, FR-11, FR-12 (improved); FR-01, FR-03, FR-05, FR-07, FR-09, FR-10, FR-13, FR-15, FR-16 (confirmed Completed in re-test)
+
+## Metrics Added
+PM-01 total listings, PM-02 listings by status, PM-03 sell-through rate, PM-04 top category, PM-05 contact requests + acceptance rate, PM-06 avg time to Sold, PM-07 verified users, PM-08 task success rate (Lab 08 evidence, with feedback 4.30 and interest 4.40)
+
+## Problems Found
+- fetch() cannot read data.json when the page is opened from a local file — solved with an identical embedded fallback seed and documented in code and testing notes.
+- Three-way category tie in seed data makes PM-04 ambiguous — acceptable at demo scale; noted in metrics interpretation.
+- No real-device mobile test yet — FR-14 stays Partially Completed until the Lab 13 session.
+
+## Next Action Before Lab 12
+Commit v0.3 + docs, capture the 6 updated screenshots (incl. new my-listings.png and dashboard.png), verify GitHub Pages serves /prototype/ with data.json (closes Issue 3), then start the Lab 12 landing page + go-to-market docs.
+
+
