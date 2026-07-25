@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gravity — RSU Student Secondhand Marketplace (Sprint 1)</title>
+<title>Gravity — RSU Student Secondhand Marketplace (Sprint 2)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,6 +27,7 @@
     <a href="#" data-screen="home" class="active">Home</a>
     <a href="#" data-screen="browse">Browse</a>
     <a href="#" data-screen="sell">Sell an item</a>
+    <a href="#" data-screen="mylistings" id="nav-mylistings">My listings</a>
     <a href="#" data-screen="dashboard">Dashboard</a>
     <a href="#" data-screen="register">Register</a>
     <a href="#" data-screen="admin" id="nav-admin" class="admin-link">Admin view (demo)</a>
@@ -36,7 +37,7 @@
 <main class="page">
 
 <div class="note">
-  Lab 10 Sprint 1 prototype (v0.2). Records are saved in your browser only (localStorage) and all people shown are fictional sample data.
+  Lab 11 Sprint 2 prototype (v0.3). Seed data loads from data.json; records are saved in your browser only (localStorage) and all people shown are fictional sample data.
   <button class="gray small-btn" id="reset-btn">Reset demo data</button>
 </div>
 
@@ -69,6 +70,14 @@
       <span>–</span>
       <input type="number" id="price-max" class="price-input" placeholder="max" min="0">
       <label class="chk"><input type="checkbox" id="show-sold"> show Sold items</label>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Sort:</span>
+      <select id="sort-select" class="sort-select">
+        <option value="new">Newest first</option>
+        <option value="priceAsc">Price: low → high</option>
+        <option value="priceDesc">Price: high → low</option>
+      </select>
     </div>
     <p class="small">Tip: <span class="status st-reserved">Reserved</span> means a buyer already agreed with the seller — it is <b>not final</b>, but the item is on hold. It becomes <span class="status st-available">Available</span> again if the deal falls through.</p>
     <div id="cards"></div>
@@ -159,15 +168,38 @@
   </div>
 </section>
 
-<!-- S-05 DASHBOARD (FR-12) -->
+<!-- S-08 MY LISTINGS (FR-02, FR-08 — Sprint 2: seller self-service, US-07) -->
+<section class="screen hidden" id="screen-mylistings">
+  <div class="box">
+    <h2>My listings</h2>
+    <p class="small" id="mylistings-intro"></p>
+    <h3>Items I am selling</h3>
+    <table class="detail-table" id="my-listings-table"><tbody></tbody></table>
+    <h3>Contact requests for my items</h3>
+    <p class="small">Accepting shares your RSU email with that buyer only — and shows you theirs. Nothing is shared on Decline.</p>
+    <table class="detail-table" id="my-requests-table"><tbody></tbody></table>
+    <h3>My sent requests (as buyer)</h3>
+    <table class="detail-table" id="my-sent-table"><tbody></tbody></table>
+    <p id="my-msg" class="msg hidden"></p>
+  </div>
+</section>
+
+<!-- S-05 DASHBOARD + PRODUCT METRICS (FR-12 — Sprint 2: PM-01..PM-08) -->
 <section class="screen hidden" id="screen-dashboard">
   <div class="box">
     <h2>Marketplace dashboard</h2>
     <div class="stat-row" id="stat-cards"></div>
     <h3>Listings per category</h3>
-    <table id="cat-table" class="detail-table"><tbody></tbody></table>
-    <h3>Contact requests</h3>
-    <p id="req-summary"></p>
+    <div id="cat-chart" class="chart"></div>
+    <h3>Status overview</h3>
+    <div id="status-chart" class="chart"></div>
+  </div>
+  <div class="box">
+    <h2>Startup / product metrics <span class="small">(PM-01–PM-08, /docs/startup-metrics.md)</span></h2>
+    <div class="stat-row" id="metric-cards"></div>
+    <h3>Validation metrics (Lab 08, 5 testers)</h3>
+    <div class="stat-row" id="validation-cards"></div>
+    <p class="small">Validation numbers come from /data/validation-results.csv (Lab 08); they are fixed evidence, not live prototype data. All other metrics are computed live from the records in this browser.</p>
   </div>
 </section>
 

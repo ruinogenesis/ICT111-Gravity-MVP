@@ -1,5 +1,7 @@
-/* Gravity Sprint 1 (v0.2) — ICT111 Lab 10
-   Frontend-only prototype: localStorage + JSON seed (FR-04).
+/* Gravity Sprint 2 (v0.3) — ICT111 Lab 11
+   Frontend-only prototype: data.json seed → localStorage (FR-04).
+   Sprint 2 additions: My Listings screen (seller self-service, US-07), buyer request status,
+   sort options, product metrics PM-01..PM-08 with CSS bar charts (FR-12), data.json source.
    All user text is rendered with textContent (never innerHTML) — Lab 09 risk R-04 fix.
    All people and records below are fictional sample data. */
 
@@ -19,16 +21,36 @@ var seedListings = [
   { id: "GL-001", title: "Wooden study desk",        cat: "Furniture",   price: 800,  cond: "Good",     area: "Dorm A lobby",        desc: "Solid desk with drawer. Must go before June 30 flight.", photo: "🛋", sellerId: "U001", status: "Available", date: "2026-07-14" },
   { id: "GL-002", title: "Mini fridge 45L",          cat: "Appliances",  price: 1500, cond: "Like new", area: "Building 6",          desc: "Used one semester. Includes small freezer box.",         photo: "🧊", sellerId: "U001", status: "Reserved",  date: "2026-07-15" },
   { id: "GL-003", title: "ICT111 textbook",          cat: "Textbooks",   price: 250,  cond: "Good",     area: "ICT building",        desc: "Light highlights in chapters 1-4.",                      photo: "📚", sellerId: "U002", status: "Available", date: "2026-07-15" },
-  { id: "GL-004", title: "Office chair with wheels", cat: "Furniture",   price: 450,  cond: "Fair",     area: "Dorm B lobby",        desc: "Small scratch on armrest. Very comfortable.",            photo: "🛋", sellerId: "U004", status: "Sold",      date: "2026-07-16" },
+  { id: "GL-004", title: "Office chair with wheels", cat: "Furniture",   price: 450,  cond: "Fair",     area: "Dorm B lobby",        desc: "Small scratch on armrest. Very comfortable.",            photo: "🛋", sellerId: "U004", status: "Sold",      date: "2026-07-16", soldDate: "2026-07-19" },
   { id: "GL-005", title: "Electric kettle 1.5L",     cat: "Appliances",  price: 200,  cond: "Good",     area: "Dorm A lobby",        desc: "Works perfectly.",                                       photo: "🍳", sellerId: "U002", status: "Available", date: "2026-07-16" },
   { id: "GL-006", title: "Calculus textbook set",    cat: "Textbooks",   price: 400,  cond: "Like new", area: "Library meetup point", desc: "Two volumes, no writing inside.",                       photo: "📚", sellerId: "U004", status: "Reserved",  date: "2026-07-17" },
-  { id: "GL-007", title: "Desk lamp LED",            cat: "Electronics", price: 150,  cond: "Good",     area: "Student union",       desc: "Warm/cool light modes, USB powered.",                    photo: "📱", sellerId: "U001", status: "Available", date: "2026-07-18" }
+  { id: "GL-007", title: "Desk lamp LED",            cat: "Electronics", price: 150,  cond: "Good",     area: "Student union",       desc: "Warm/cool light modes, USB powered.",                    photo: "📱", sellerId: "U001", status: "Available", date: "2026-07-18" },
+  { id: "GL-008", title: "Winter jacket size M",     cat: "Clothing",    price: 300,  cond: "Good",     area: "Dorm B lobby",        desc: "Warm jacket, perfect for exchange semester abroad.",     photo: "👕", sellerId: "U002", status: "Sold",      date: "2026-07-17", soldDate: "2026-07-21" }
 ];
 
 var seedRequests = [
   { id: "CR-001", listingId: "GL-002", buyerId: "U004", status: "Accepted", date: "2026-07-16" },
-  { id: "CR-002", listingId: "GL-001", buyerId: "U002", status: "Pending",  date: "2026-07-18" }
+  { id: "CR-002", listingId: "GL-001", buyerId: "U002", status: "Pending",  date: "2026-07-18" },
+  { id: "CR-003", listingId: "GL-008", buyerId: "U004", status: "Accepted", date: "2026-07-20" },
+  { id: "CR-004", listingId: "GL-003", buyerId: "U004", status: "Declined", date: "2026-07-19" }
 ];
+
+/* Lab 08 validation evidence (fixed numbers from /data/validation-results.csv) */
+var VALIDATION = { testers: 5, taskSuccess: 93.3, avgFeedback: 4.30, avgInterest: 4.40 };
+
+/* Sprint 2: data.json is the documented seed source (FR-04). It loads when served over
+   http(s) — e.g. GitHub Pages — and falls back to the embedded seed arrays when the
+   page is opened as a local file (fetch on file:// is blocked by browsers). */
+function tryLoadDataJson() {
+  if (window.location.protocol === "file:") { return; }
+  fetch("data.json").then(function (r) { return r.json(); }).then(function (d) {
+    if (!localStorage.getItem("gravityListings") && d && d.listings) {
+      users = d.users; listings = d.listings; requests = d.requests;
+      persist();
+      renderAll();
+    }
+  }).catch(function () { /* keep embedded seed */ });
+}
 
 /* ---------- Storage (FR-04) ---------- */
 function load(key, seed) {
@@ -93,7 +115,7 @@ function nextId(prefix, arr) {
 function today() { return new Date().toISOString().slice(0, 10); }
 
 /* ---------- Navigation (SPA screens) ---------- */
-var SCREENS = ["home", "browse", "sell", "detail", "dashboard", "register", "admin"];
+var SCREENS = ["home", "browse", "sell", "mylistings", "detail", "dashboard", "register", "admin"];
 function showScreen(name) {
   for (var i = 0; i < SCREENS.length; i++) {
     el("screen-" + SCREENS[i]).classList.toggle("hidden", SCREENS[i] !== name);
@@ -103,6 +125,7 @@ function showScreen(name) {
     links[j].classList.toggle("active", links[j].getAttribute("data-screen") === name);
   }
   if (name === "browse") { renderCards(); }
+  if (name === "mylistings") { renderMyListings(); }
   if (name === "dashboard") { renderDashboard(); }
   if (name === "admin") { renderAdmin(); }
   window.scrollTo(0, 0);
@@ -138,11 +161,20 @@ function listingMatchesFilters(l) {
   return true;
 }
 
+function sortedListings() {
+  var mode = el("sort-select") ? el("sort-select").value : "new";
+  var arr = listings.slice();
+  if (mode === "priceAsc") { arr.sort(function (a, b) { return a.price - b.price; }); }
+  else if (mode === "priceDesc") { arr.sort(function (a, b) { return b.price - a.price; }); }
+  else { arr.sort(function (a, b) { return (b.date || "").localeCompare(a.date || ""); }); }
+  return arr;
+}
+
 function renderCards() {
   var wrap = el("cards");
   wrap.textContent = "";
   var shown = 0;
-  listings.forEach(function (l) {
+  sortedListings().forEach(function (l) {
     if (!listingMatchesFilters(l)) { return; }
     shown++;
     var card = document.createElement("div");
@@ -285,48 +317,225 @@ function requestContact() {
   flash(msg, "ok", "Contact request sent to the seller.");
 }
 
-/* ---------- S-05 Dashboard (FR-12) ---------- */
-function renderDashboard() {
+/* ---------- S-08 My Listings (Sprint 2: FR-02, FR-08, US-06, US-07) ---------- */
+function setStatus(l, s) {
+  l.status = s;
+  if (s === "Sold") { l.soldDate = today(); }
+  persist();
+}
+
+function renderMyListings() {
+  var me = currentUser();
+  var intro = el("mylistings-intro");
+  var mmsg = el("my-msg");
+  var ltbody = el("my-listings-table").querySelector("tbody");
+  var rtbody = el("my-requests-table").querySelector("tbody");
+  var stbody = el("my-sent-table").querySelector("tbody");
+  ltbody.textContent = ""; rtbody.textContent = ""; stbody.textContent = "";
+
+  function emptyRow(tbody, text) {
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    td.textContent = text;
+    tr.appendChild(td);
+    tbody.appendChild(tr);
+  }
+
+  if (!me) {
+    intro.textContent = "Switch the demo role to Buyer or Seller to see your own listings and requests. (Admin manages the whole marketplace from the Admin view.)";
+    emptyRow(ltbody, "—"); emptyRow(rtbody, "—"); emptyRow(stbody, "—");
+    return;
+  }
+  intro.textContent = "Signed in as " + me.name + " (demo). Update your own item statuses here — buyers see changes immediately (FR-08).";
+
+  /* my items + status self-service (US-07: seller updates status without admin) */
+  var mine = listings.filter(function (l) { return l.sellerId === me.id && l.status !== "Removed"; });
+  if (mine.length === 0) { emptyRow(ltbody, "You have no active listings — post one from \"Sell an item\"."); }
+  mine.forEach(function (l) {
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    td1.textContent = l.title + " (" + l.price + " THB) ";
+    var st = document.createElement("span");
+    st.className = statusClass(l.status);
+    st.textContent = l.status;
+    td1.appendChild(st);
+    var td2 = document.createElement("td");
+    ["Available", "Reserved", "Sold"].forEach(function (s) {
+      if (s === l.status) { return; }
+      var b = document.createElement("button");
+      b.className = "row-btn";
+      b.textContent = "Mark " + s;
+      b.onclick = function () {
+        setStatus(l, s);
+        renderMyListings();
+        flash(mmsg, "ok", "\"" + l.title + "\" is now " + s + ". " + (s === "Reserved" ? "Buyers can no longer request contact until you make it Available again." : ""));
+      };
+      td2.appendChild(b);
+    });
+    tr.appendChild(td1); tr.appendChild(td2);
+    ltbody.appendChild(tr);
+  });
+
+  /* incoming requests on my items (US-06: seller accepts — moved out of admin in Sprint 2) */
+  var incoming = requests.filter(function (r) {
+    var l = findListing(r.listingId);
+    return l && l.sellerId === me.id;
+  });
+  if (incoming.length === 0) { emptyRow(rtbody, "No contact requests for your items yet."); }
+  incoming.forEach(function (r) {
+    var l = findListing(r.listingId);
+    var buyer = findUser(r.buyerId);
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    td1.textContent = (buyer ? buyer.name : "?") + " → " + (l ? l.title : "?") + " [" + r.status + "]" +
+      (r.status === "Accepted" && buyer ? " — buyer contact: " + buyer.email : "");
+    var td2 = document.createElement("td");
+    if (r.status === "Pending") {
+      var acc = document.createElement("button");
+      acc.className = "row-btn";
+      acc.textContent = "Accept";
+      acc.onclick = function () {
+        r.status = "Accepted";
+        persist();
+        renderMyListings();
+        flash(mmsg, "ok", "Accepted — you and " + (buyer ? buyer.name : "the buyer") + " can now see each other's RSU email (nothing else is shared, FR-15).");
+      };
+      var dec = document.createElement("button");
+      dec.className = "row-btn danger";
+      dec.textContent = "Decline";
+      dec.onclick = function () {
+        r.status = "Declined";
+        persist();
+        renderMyListings();
+        flash(mmsg, "ok", "Declined. No contact information was shared.");
+      };
+      td2.appendChild(acc); td2.appendChild(dec);
+    } else { td2.textContent = "—"; }
+    tr.appendChild(td1); tr.appendChild(td2);
+    rtbody.appendChild(tr);
+  });
+
+  /* my sent requests (Sprint 2: buyer can finally see request state — Lab 08 confusion fix) */
+  var sent = requests.filter(function (r) { return r.buyerId === me.id; });
+  if (sent.length === 0) { emptyRow(stbody, "You have not requested contact for any item."); }
+  sent.forEach(function (r) {
+    var l = findListing(r.listingId);
+    var seller = l ? findUser(l.sellerId) : null;
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    var text = (l ? l.title : "?") + " — " + r.status;
+    if (r.status === "Accepted" && seller) { text += " — seller contact: " + seller.email; }
+    if (r.status === "Pending") { text += " (waiting for the seller)"; }
+    td.textContent = text;
+    tr.appendChild(td);
+    stbody.appendChild(tr);
+  });
+}
+
+/* ---------- S-05 Dashboard + product metrics (FR-12, PM-01..PM-08) ---------- */
+function barChart(container, rows) {
+  /* rows: [[label, count], ...] — pure DOM, no innerHTML */
+  container.textContent = "";
+  var max = 1;
+  rows.forEach(function (r) { if (r[1] > max) { max = r[1]; } });
+  rows.forEach(function (r) {
+    var row = document.createElement("div");
+    row.className = "chart-row";
+    var lab = document.createElement("span");
+    lab.className = "chart-label";
+    lab.textContent = r[0];
+    var track = document.createElement("div");
+    track.className = "chart-track";
+    var bar = document.createElement("div");
+    bar.className = "chart-bar";
+    bar.style.width = Math.round((r[1] / max) * 100) + "%";
+    var val = document.createElement("span");
+    val.className = "chart-value";
+    val.textContent = r[1];
+    track.appendChild(bar);
+    row.appendChild(lab); row.appendChild(track); row.appendChild(val);
+    container.appendChild(row);
+  });
+}
+
+function computeMetrics() {
   var active = listings.filter(function (l) { return l.status !== "Removed"; });
   var counts = { Available: 0, Reserved: 0, Sold: 0 };
   active.forEach(function (l) { if (counts[l.status] !== undefined) { counts[l.status]++; } });
+  var sold = active.filter(function (l) { return l.status === "Sold"; });
+  var sellThrough = active.length ? Math.round((sold.length / active.length) * 1000) / 10 : 0;
+  var topCat = "—", topN = 0;
+  CATEGORIES.forEach(function (c) {
+    var n = active.filter(function (l) { return l.cat === c; }).length;
+    if (n > topN) { topN = n; topCat = c; }
+  });
+  var accepted = requests.filter(function (r) { return r.status === "Accepted"; }).length;
+  var decided = requests.filter(function (r) { return r.status !== "Pending"; }).length;
+  var acceptRate = decided ? Math.round((accepted / decided) * 1000) / 10 : 0;
+  var daysSum = 0, daysN = 0;
+  sold.forEach(function (l) {
+    if (l.date && l.soldDate) {
+      var d = (new Date(l.soldDate) - new Date(l.date)) / 86400000;
+      if (d >= 0) { daysSum += d; daysN++; }
+    }
+  });
+  var avgDays = daysN ? Math.round((daysSum / daysN) * 10) / 10 : null;
+  var verified = users.filter(function (u) { return u.verified; }).length;
+  return {
+    total: active.length, counts: counts, sellThrough: sellThrough,
+    topCat: topCat + (topN ? " (" + topN + ")" : ""), requests: requests.length,
+    acceptRate: acceptRate, avgDays: avgDays, verified: verified, usersTotal: users.length
+  };
+}
+
+function statCard(wrap, value, label) {
+  var d = document.createElement("div");
+  d.className = "stat";
+  var b = document.createElement("b");
+  b.textContent = value;
+  var sp = document.createElement("span");
+  sp.textContent = label;
+  d.appendChild(b); d.appendChild(sp);
+  wrap.appendChild(d);
+}
+
+function renderDashboard() {
+  var m = computeMetrics();
+  var active = listings.filter(function (l) { return l.status !== "Removed"; });
 
   var wrap = el("stat-cards");
   wrap.textContent = "";
-  var stats = [
-    ["Total listings", active.length],
-    ["Available", counts.Available],
-    ["Reserved", counts.Reserved],
-    ["Sold", counts.Sold],
-    ["Contact requests", requests.length]
-  ];
-  stats.forEach(function (s) {
-    var d = document.createElement("div");
-    d.className = "stat";
-    var b = document.createElement("b");
-    b.textContent = s[1];
-    var sp = document.createElement("span");
-    sp.textContent = s[0];
-    d.appendChild(b); d.appendChild(sp);
-    wrap.appendChild(d);
-  });
+  statCard(wrap, m.total, "Total listings");
+  statCard(wrap, m.counts.Available, "Available");
+  statCard(wrap, m.counts.Reserved, "Reserved");
+  statCard(wrap, m.counts.Sold, "Sold");
+  statCard(wrap, m.requests, "Contact requests");
 
-  var tbody = el("cat-table").querySelector("tbody");
-  tbody.textContent = "";
-  CATEGORIES.forEach(function (c) {
-    var n = active.filter(function (l) { return l.cat === c; }).length;
-    var tr = document.createElement("tr");
-    var th = document.createElement("th");
-    th.textContent = c;
-    var td = document.createElement("td");
-    td.textContent = n + (n === 1 ? " listing" : " listings");
-    tr.appendChild(th); tr.appendChild(td);
-    tbody.appendChild(tr);
-  });
+  barChart(el("cat-chart"), CATEGORIES.map(function (c) {
+    return [c, active.filter(function (l) { return l.cat === c; }).length];
+  }));
+  barChart(el("status-chart"), [
+    ["Available", m.counts.Available],
+    ["Reserved", m.counts.Reserved],
+    ["Sold", m.counts.Sold]
+  ]);
 
-  var pending = requests.filter(function (r) { return r.status === "Pending"; }).length;
-  var accepted = requests.filter(function (r) { return r.status === "Accepted"; }).length;
-  el("req-summary").textContent = requests.length + " total — " + pending + " pending, " + accepted + " accepted.";
+  var mc = el("metric-cards");
+  mc.textContent = "";
+  statCard(mc, m.total, "PM-01 Total listings");
+  statCard(mc, m.counts.Available + " / " + m.counts.Reserved + " / " + m.counts.Sold, "PM-02 Avail / Res / Sold");
+  statCard(mc, m.sellThrough + "%", "PM-03 Sell-through rate");
+  statCard(mc, m.topCat, "PM-04 Top category");
+  statCard(mc, m.requests + " (" + m.acceptRate + "% accepted)", "PM-05 Contact requests");
+  statCard(mc, m.avgDays === null ? "n/a" : m.avgDays + " days", "PM-06 Avg time to Sold");
+  statCard(mc, m.verified + " / " + m.usersTotal, "PM-07 Verified users");
+
+  var vc = el("validation-cards");
+  vc.textContent = "";
+  statCard(vc, VALIDATION.testers, "Testers");
+  statCard(vc, VALIDATION.taskSuccess + "%", "PM-08 Task success (Lab 08)");
+  statCard(vc, VALIDATION.avgFeedback + " / 5", "Avg feedback");
+  statCard(vc, VALIDATION.avgInterest + " / 5", "Avg interest");
 }
 
 /* ---------- S-07 Register (FR-10, FR-15) ---------- */
@@ -444,8 +653,7 @@ function renderAdmin() {
       b.className = "row-btn";
       b.textContent = "→ " + s;
       b.onclick = function () {
-        l.status = s;
-        persist();
+        setStatus(l, s);
         renderAdmin();
         flash(amsg, "ok", l.title + " status updated to " + s + ". Change is visible on all screens immediately (FR-08).");
       };
@@ -472,6 +680,7 @@ function renderAdmin() {
 function renderAll() {
   renderChips();
   renderCards();
+  renderMyListings();
   renderDashboard();
   renderAdmin();
 }
@@ -498,6 +707,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* role switch */
   el("role-select").onchange = function () {
     role = this.value;
+    renderMyListings();
     if (currentDetailId) { openDetail(currentDetailId); showScreen(role === "admin" ? "admin" : "detail"); }
   };
 
@@ -506,6 +716,10 @@ document.addEventListener("DOMContentLoaded", function () {
   el("price-min").oninput = renderCards;
   el("price-max").oninput = renderCards;
   el("show-sold").onchange = renderCards;
+  el("sort-select").onchange = renderCards;
+
+  /* Sprint 2: try loading seed from data.json (works on GitHub Pages) */
+  tryLoadDataJson();
 
   /* actions */
   el("post-btn").onclick = postListing;

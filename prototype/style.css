@@ -1,4 +1,4 @@
-/* Gravity Sprint 1 (v0.2) — continues the Lab 05 wireframe visual language */
+/* Gravity Sprint 2 (v0.3) — continues the Lab 05 wireframe visual language */
 * { box-sizing: border-box; }
 body {
   font-family: Verdana, Arial, sans-serif;
@@ -90,6 +90,17 @@ input, select, textarea { width: 100%; padding: 9px; margin-top: 5px; border: 1p
 .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .detail-table th, .detail-table td { border-bottom: 1px solid #e0e8e3; padding: 8px 6px; text-align: left; vertical-align: top; }
 .detail-table th { color: #14594a; width: 130px; }
+
+/* Sort */
+.sort-select { width: auto; display: inline-block; padding: 6px 9px; font-size: 13px; }
+
+/* Bar charts (Sprint 2, FR-12) */
+.chart { margin: 8px 0 4px; }
+.chart-row { display: flex; align-items: center; gap: 8px; margin: 5px 0; font-size: 12px; }
+.chart-label { width: 90px; flex-shrink: 0; text-align: right; color: #444; }
+.chart-track { flex: 1; background: #eef4f0; border-radius: 5px; height: 18px; overflow: hidden; }
+.chart-bar { background: #1e8a6e; height: 100%; border-radius: 5px; min-width: 2px; transition: width 0.3s; }
+.chart-value { width: 24px; font-weight: bold; color: #14594a; }
 
 /* Dashboard */
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
