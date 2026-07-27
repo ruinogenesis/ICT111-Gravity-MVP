@@ -65,12 +65,23 @@ Most likely for our MVP: a **web application + marketplace/digital platform**, w
 | Lab 1 | Lab setup and idea log | Repository, team profile, initial idea log, weekly logbook | Completed |
 | Lab 2 | IT opportunity scanning | Opportunity scan, NUF scoring sheet, selected opportunity | Completed |
 | Lab 3 | Customer problem discovery | Customer questions, problem notes, response data, assumption-evidence table, discovery summary | Completed |
+| Lab 4 | Requirements and user stories | Persona, system requirements (FR-01-16, NFR-01-05), user stories US-01-12, MVP feature list F01-F16 | Completed |
+| Lab 5 | Product concept and wireframes | Product concept, 7-screen wireframe (S-01-S-07), user flow, feature-requirement mapping | Completed |
+| Lab 6 | Business model and architecture | Business model canvas, technical architecture, data structure, system/data-flow diagrams | Completed |
+| Lab 7 | MVP experiment design | Experiment plan, assumptions A-01-07, metrics M-01-08, script T1-T6, working demo (mvp-demo.html) | Completed |
+| Lab 8 | Customer validation | Validation with 5 testers: 93.3% task success, 4.30 feedback, 4.40 interest -> continue with minor revisions | Completed |
+| Lab 9 | Responsible IT check | Legal-ethical checklist, privacy/data docs, IP register, security check, risk register R-01-09 | Completed |
+| Lab 10 | MVP implementation Sprint 1 | Prototype v0.2: all 7 screens, Lab 08 fixes, Lab 09 mitigations (incl. XSS fix) | Completed |
+| Lab 11 | Sprint 2 and startup metrics | Prototype v0.3: My Listings, data.json, sort; product metrics PM-01-08 + dashboard charts | Completed |
+| Lab 12 | Landing page and go-to-market | Live landing page on GitHub Pages, GTM plan (4 channels), marketing messages, acquisition metrics AM-01-06 | Completed |
 
 ## Current Status
-In Lab 3, we ran customer problem discovery for Gravity. We defined our target respondents, prepared non-leading discovery questions, and collected 15 early responses from students who buy and sell used items when moving. We separated our assumptions from the evidence, identified the repeated pain points (scattered channels, time loss, discarded items, and trust concerns), and wrote an evidence-based updated problem statement. The evidence confirms the problem is real, so we are keeping the direction and narrowing the target segment.
+Labs 1-12 are complete. The Gravity prototype (v0.3) implements all sixteen fixed requirements with a working two-sided contact flow, live product metrics, and the responsible-design decisions from Lab 09 built in. The landing page and prototype are both live on GitHub Pages:
+- Landing page: https://ruinogenesis.github.io/ICT111-Gravity-MVP/landing-page/index.html
+- Prototype: https://ruinogenesis.github.io/ICT111-Gravity-MVP/prototype/index.html
 
 ## Next Step
-In Lab 4, we will define our customer segment and persona in detail and write user stories based on the discovery evidence, then begin turning the validated problem into MVP requirements.
+Lab 13: write the sales scenario and demo script, run the user-testing session with real RSU students (re-measuring task success against the Lab 08 baseline of 93.3%), do the real-device mobile test (FR-14), and compile the final-improvement list. Then Lab 14: final polish, final report, and release (due 31 July).
 
 ## Lab 04: User Persona, Requirements, and User Stories
 
@@ -179,6 +190,26 @@ Lab 06 is the build plan: the feature-value mapping fixes which features must ex
 
 ---
 ---
+## Lab 07: MVP Experiment Design
+
+### Experiment Objective
+Design a testable MVP experiment that proves the core hypothesis: a verified RSU student can post an item once, and another student can find it, check its status, and make safe contact.
+
+### What We Prepared
+- **Experiment plan** ([/docs/mvp-experiment-plan.md](docs/mvp-experiment-plan.md)) with critical assumptions A-01-A-07 ([/docs/critical-assumptions.md](docs/critical-assumptions.md)) mapped to Lab 03 evidence.
+- **Success metrics M-01-M-08** ([/docs/success-metrics.md](docs/success-metrics.md)) with pass thresholds for task success, comprehension, and interest.
+- **Experiment script T1-T6** ([/docs/experiment-script.md](docs/experiment-script.md)): explain homepage -> post a listing -> find a textbook under 300 THB -> judge trust on the detail view -> explain statuses -> request contact.
+- **Feedback form** ([/docs/feedback-form.md](docs/feedback-form.md)) and tester selection matched to persona segments ([/data/test-users.csv](data/test-users.csv)).
+- **Working demo** ([/prototype/mvp-demo.html](prototype/mvp-demo.html)): localStorage prototype with create-listing form, validation, search/filter, detail view, and contact request - the instrument used for the Lab 08 validation sessions.
+
+### Connection Forward
+The Lab 08 validation ran exactly this experiment with 5 testers and produced the evidence (93.3% task success, contact-flow and Reserved confusions) that drove the Sprint 1-2 revisions in Labs 10-11.
+
+### Team Contribution
+Eimyat: demo build and data seeding. Thiri: experiment script, tester recruitment, feedback form. Hein: experiment plan, assumptions, success metrics, documentation.
+
+---
+---
 ## Lab 08: Customer Validation and Analytics Sheet
 
 ### Validation Objective
@@ -189,7 +220,7 @@ Test the core Gravity workflow (post a listing, search/filter, detail view, stat
 - Link: [/prototype/mvp-demo.html](prototype/mvp-demo.html)
 
 ### Status
-Validation structure, analytics sheet, and analysis documents are prepared and committed. Test sessions are scheduled for 17–18 July; the analytics summary table and MVP decision will be completed as results are entered.
+Validation complete: 5 testers, 30 task runs, **93.3% task success (28/30)**, average feedback **4.30/5**, average interest **4.40/5**. Main confusion points: contact flow and Reserved status. **Decision: continue with minor revisions** (four fixes carried into Sprint 1) - full analysis in the files below.
 
 ### Files Added
 - [/data/validation-results.csv](data/validation-results.csv)
@@ -198,7 +229,7 @@ Validation structure, analytics sheet, and analysis documents are prepared and c
 - [/docs/mvp-decision.md](docs/mvp-decision.md)
 - [/docs/test-user-notes.md](docs/test-user-notes.md)
 
-- ## Lab 09: Responsible IT Check
+## Lab 09: Responsible IT Check
 
 ### Responsible Design Summary
 In Lab 09 we reviewed Gravity from a legal, ethical, IP, privacy, and security perspective before the implementation sprints. Main findings: privacy is strong by design (minimal fields, no ID images, fictional sample data, contact revealed only after mutual agreement — now narrowed to RSU email only); the main ethical risks are the "meet safely" tagline reading as a guarantee and the demo's simulated verification, both fixed by wording/labelling; the project uses zero third-party assets (team-original code, data, and diagrams, with AI documentation assistance disclosed); and the security review found one code-level weakness (`innerHTML` rendering of user text in mvp-demo.html, a stored-XSS pattern) scheduled for a `textContent` fix in Sprint 1, alongside admin-view separation. Nine risks are documented in the risk register; decision: **continue with mitigation** — five mitigations land in the Lab 10 Sprint 1 backlog.
