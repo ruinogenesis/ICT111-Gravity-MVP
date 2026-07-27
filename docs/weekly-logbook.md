@@ -440,7 +440,7 @@ Gravity — RSU Student Secondhand Marketplace
 ## Member Contributions
 | Member Name | Contribution | File/Feature Updated | GitHub Evidence |
 |---|---|---|---|
-| Hein Htet Aung | Landing copy, marketing messages, GTM plan | /docs/landing-page-content.md, marketing-message.md, go-to-market-plan.md | Commit #TBD |
+| Hein Htet Aung | Landing copy, marketing messages, GTM plan | /docs/landing-page-content.md, marketing-message.md, go-to-market-plan.md | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commit/3587a76958fef9819e206ac784d6409e3fcad31b) |
 | Thiri Shoon Lae Oo | Landing page design + build, screenshots | /landing-page/index.html, style.css | Commit #TBD |
 | Eimyat Yadanar Mon | CTA/metrics script, acquisition metrics + CSVs, README | /landing-page/script.js, /docs/acquisition-metrics.md, /data/*.csv | Commit #TBD |
 
