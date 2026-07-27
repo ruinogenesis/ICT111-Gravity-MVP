@@ -103,7 +103,6 @@ We will define our customer segment and persona in detail (the moving student wi
 - Lab: Lab 04 - User Persona, Requirements, and User Stories
 - Group Name: Gravity
 - Repository Link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
-- Date: (fill in lab date)
 
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
@@ -190,9 +189,6 @@ Gravity
 ### Project Title
 Gravity — RSU Student Secondhand Marketplace
 
-### Date
-(fill in lab date)
-
 ### Members Present
 
 | Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
@@ -223,7 +219,6 @@ Gravity — RSU Student Secondhand Marketplace
 ### Group Information
 - Group name: Gravity
 - Project title: Gravity — RSU Student Secondhand Marketplace
-- Date: (fill in lab date)
 - Repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
 
 ### What We Completed Today
@@ -262,7 +257,6 @@ Gravity — RSU Student Secondhand Marketplace
 - Group name: Gravity
 - Project title: Gravity — RSU Student Secondhand Marketplace
 - Repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
-- Lab date: (fill in)
 
 ### Work Completed Today
 - [x] Reviewed Lab 07 MVP experiment plan and success metrics
