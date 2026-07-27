@@ -28,8 +28,8 @@
 No open defects. Two design limitations remain by scope (documented in implementation-plan.md): photo upload is placeholder-only (localStorage size limits), and roles are simulated (no real authentication in a frontend-only prototype). One environment note: seed loading from data.json requires the page to be served over http(s) — the embedded fallback covers local-file use, and the two seeds are kept identical.
 
 ## Improvements Completed During Lab 11
-1. My Listings screen (S-08): seller status self-service (US-07 now works without admin), seller accept/decline of contact requests (US-06 as designed), buyer view of sent-request status — closes the last Lab 08 contact-flow visibility gap. Commit #TBD.
-2. Product metrics PM-01–PM-08 on the dashboard with two CSS bar charts, computed live from localStorage (FR-12 strengthened). Commit #TBD.
-3. data.json as documented seed data source with file:// fallback (FR-04 strengthened). Commit #TBD.
-4. Sort options on Browse (newest / price asc / price desc) (FR-06 strengthened). Commit #TBD.
-5. soldDate tracking on status changes to power PM-06 average-time-to-Sold. Commit #TBD.
+1. My Listings screen (S-08): seller status self-service (US-07 now works without admin), seller accept/decline of contact requests (US-06 as designed), buyer view of sent-request status — closes the last Lab 08 contact-flow visibility gap. Issues #48, #49, #50.
+2. Product metrics PM-01–PM-08 on the dashboard with two CSS bar charts, computed live from localStorage (FR-12 strengthened). Issue #52.
+3. data.json as documented seed data source with file:// fallback (FR-04 strengthened). Issue #51.
+4. Sort options on Browse (newest / price asc / price desc) (FR-06 strengthened). Issue #39 follow-up.
+5. soldDate tracking on status changes to power PM-06 average-time-to-Sold. Issue #48.
