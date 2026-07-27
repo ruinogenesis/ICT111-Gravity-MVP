@@ -226,8 +226,6 @@ In Lab 09 we reviewed Gravity from a legal, ethical, IP, privacy, and security p
 - Thiri Shoon Lae Oo: privacy review, data inventory, consent statement, review diagram
 - Eimyat Yadanar Mon: security check (code review), risk register, data handling policy
 
-# README addition — append this section to README.md
-
 ## Lab 10 - MVP Implementation Sprint 1
 
 ### Sprint Goal
