@@ -426,3 +426,30 @@ PM-01 total listings, PM-02 listings by status, PM-03 sell-through rate, PM-04 t
 Commit v0.3 + docs, capture the 6 updated screenshots (incl. new my-listings.png and dashboard.png), verify GitHub Pages serves /prototype/ with data.json (closes Issue 3), then start the Lab 12 landing page + go-to-market docs.
 
 
+## Lab Topic
+Landing Page and Digital Go-to-Market (working dates 26–27 July 2026)
+
+## Group Case
+Gravity — RSU Student Secondhand Marketplace
+
+## Work Completed Today
+- Built /landing-page/ (index.html, style.css, script.js): hero + headline, evidence-based problem section (E01/E02/E03 numbers), how-it-works, 5 FR-mapped features, trust & privacy section, two demo CTAs linking to the prototype, browser-local interest counter (no personal data collected).
+- Wrote landing-page-content.md (copy + accuracy check against v0.3 — no promises beyond the prototype), go-to-market-plan.md (4 channels, launch sequence, 5 risks with mitigations), marketing-message.md (5 channel messages + quality check), acquisition-metrics.md (AM-01–AM-06 with formulas and honest-measurement note).
+- Prepared /data/acquisition-metrics.csv tracking sheet and /data/channel-plan.csv.
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+|---|---|---|---|
+| Hein Htet Aung | Landing copy, marketing messages, GTM plan | /docs/landing-page-content.md, marketing-message.md, go-to-market-plan.md | Commit #TBD |
+| Thiri Shoon Lae Oo | Landing page design + build, screenshots | /landing-page/index.html, style.css | Commit #TBD |
+| Eimyat Yadanar Mon | CTA/metrics script, acquisition metrics + CSVs, README | /landing-page/script.js, /docs/acquisition-metrics.md, /data/*.csv | Commit #TBD |
+
+## Requirements Addressed
+Landing page communicates FR-01/FR-02 value accurately; links to the v0.3 prototype (all FRs); responsible data statement follows FR-15 and Lab 09 decisions (R-06 wording, no data collection on the page).
+
+## Problems Found
+- No backend means no real cross-channel analytics — solved honestly: browser-local demo counters labelled as such, real numbers tracked manually in the CSV.
+- Course timing vs. real move-out peak season — measured with classmates/dorm students now; peak-season plan documented for the final report.
+
+## Next Action Before Lab 13
+Commit landing page + docs, capture landing-page.png and call-to-action.png, verify Pages serves /landing-page/, soft-launch to class chat, then prepare Lab 13 sales scenario, demo script, and user-testing plan (recruit from AM-04 respondents).
