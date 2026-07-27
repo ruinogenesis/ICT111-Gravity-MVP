@@ -347,7 +347,7 @@ Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon
 4. Register-first rule for any future third-party asset.
 
 ## Issues / Blockers
-GitHub issue numbers for the 9 risks and the FR-15 clarification still to be created (placeholders "#TBD" in docs — replace after creating issues).
+Resolved after this entry: all issues were created (#30–#52, including the 9 risks at #40–#46 and the FR-15 clarification at #47, approved by all three members) and the "#TBD" placeholders in the docs were replaced with the real numbers.
 
 # Weekly Logbook - Lab 10
 
@@ -384,6 +384,8 @@ MVP Implementation Sprint 1 (working dates 20–22 July 2026)
 - Real photo upload not feasible with localStorage size limits — shipped placeholder photo selection and documented the limitation for instructor feedback.
 - Two-party contact flow on one browser — solved honestly with the labelled demo role switcher.
 
+# Weekly Logbook - Lab 11
+
 ## Lab Topic
 MVP Implementation Sprint 2 and Startup Metrics (working dates 23–25 July 2026)
 
@@ -418,6 +420,8 @@ PM-01 total listings, PM-02 listings by status, PM-03 sell-through rate, PM-04 t
 ## Next Action Before Lab 12
 Commit v0.3 + docs, capture the 6 updated screenshots (incl. new my-listings.png and dashboard.png), verify GitHub Pages serves /prototype/ with data.json (closes Issue 3), then start the Lab 12 landing page + go-to-market docs.
 
+
+# Weekly Logbook - Lab 12
 
 ## Lab Topic
 Landing Page and Digital Go-to-Market (working dates 26–27 July 2026)
