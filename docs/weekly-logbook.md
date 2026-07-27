@@ -17,10 +17,10 @@
 2. Getting used to GitHub's web editor and commit workflow took some practice for the whole team.
 
 ### Evidence of Work
-- GitHub repository link: [paste your repository URL here]
+- GitHub repository link: https://github.com/ruinogenesis/ICT111-Gravity-MVP
 - Screenshot: folder structure and Issues screenshots saved in /screenshots
 - File created: README.md, docs/team-profile.md, docs/idea-log.md, docs/weekly-logbook.md, docs/problem-notes.md
-- Commit link: [paste a link to your commit history here]
+- Commit link: [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/)
 
 ### Decision Made This Week
 We will pursue a lightweight web-based tracking dashboard, with the degree progress and prerequisite tracker as the leading candidate, and confirm the final direction after Lab 2 opportunity scanning.
@@ -55,8 +55,7 @@ We rejected the Cafe Inventory Tracker (NUF total 8) and the Content Planner (NU
 - Opportunity scan file: docs/opportunity-scan.md
 - NUF scoring file: data/opportunity-scoring.xlsx
 - Selected opportunity file: docs/selected-opportunity.md
-- GitHub issue screenshot: [paste screenshot link here]
-- Commit link: [paste a link to your commit history here]
+- Commit link: [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/)
 
 ### Plan for Lab 03
 We will prepare customer discovery questions focused on how RSU students currently buy and sell used items when moving, and how frustrating the scattered Facebook/LINE groups are. We will identify target respondents (recent movers, dorm residents, graduating and international students), run short interviews or a survey, and collect evidence to confirm the problem is real before designing the prototype.
@@ -109,9 +108,9 @@ We will define our customer segment and persona in detail (the moving student wi
 ### 1. Work Completed Today
 | Member Name | Contribution | GitHub Evidence (Commit/Issue/PR Link) |
 |---|---|---|
-| Hein Htet Aung | Wrote user persona and updated README + logbook; reviewed traceability | (paste commit/issue link) |
-| Thiri Shoon Lae Oo | Wrote user stories with acceptance criteria; drew user flow and use case diagrams | (paste commit/issue link) |
-| Eimyat Yadanar Mon | Mapped fixed FR-01–16 to Gravity in system-requirements.md; built MVP feature list | (paste commit/issue link) |
+| Hein Htet Aung | Wrote user persona and updated README + logbook; reviewed traceability | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Wrote user stories with acceptance criteria; drew user flow and use case diagrams | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Mapped fixed FR-01–16 to Gravity in system-requirements.md; built MVP feature list | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ### 2. Main Decisions
 - **Primary target user:** RSU student sellers moving out under time pressure (especially graduating and international students) — buyers are served by the same MVP screens.
@@ -134,7 +133,7 @@ The lecturer's system-requirements.md (FR-01–FR-16) is fixed and adopted as-is
 |---|---|---|---|
 | Export user-flow.png and use-case-diagram.png from draw.io and commit to /diagrams | Thiri Shoon Lae Oo | Before Lab 05 | Issue 4 |
 | Verify traceability: every FR maps to a story, feature, and planned screen | Hein Htet Aung | Before Lab 05 | Issue 6 |
-| Choose prototype platform and prepare initial screen skeleton per FR-13 | Eimyat Yadanar Mon | Before Lab 05 | (create new issue) |
+| Choose prototype platform and prepare initial screen skeleton per FR-13 | Eimyat Yadanar Mon | Before Lab 05 | Issue 11 |
 
 ## Lab 05: Product Concept and UI/UX Wireframe
 
@@ -159,9 +158,9 @@ Product Concept and UI/UX Wireframe
 ### Member Contributions
 | Member Name | Contribution | Evidence / Commit Link |
 |---|---|---|
-| Hein Htet Aung | Product concept, README + logbook update, screenshot exports | (paste commit link) |
-| Thiri Shoon Lae Oo | Wireframe screens, usability checklist review, user flow | (paste commit link) |
-| Eimyat Yadanar Mon | Feature-requirement mapping, sample dataset, clickable draft testing | (paste commit link) |
+| Hein Htet Aung | Product concept, README + logbook update, screenshot exports | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Wireframe screens, usability checklist review, user flow | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Feature-requirement mapping, sample dataset, clickable draft testing | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ### Decisions Made
 | Decision | Reason | Related Requirement |
@@ -198,9 +197,9 @@ Gravity — RSU Student Secondhand Marketplace
 
 | Member Name | Contribution Today | GitHub Evidence / Commit / File Updated |
 |---|---|---|
-| Hein Htet Aung | Business Model Canvas, README + logbook update | docs/business-model-canvas.md (paste commit link) |
-| Thiri Shoon Lae Oo | Feature-value mapping, system architecture + data flow diagrams | docs/feature-value-mapping.md, diagrams/*.mmd (paste commit link) |
-| Eimyat Yadanar Mon | Technical architecture decision, data structure, sample datasets | docs/technical-architecture.md, docs/data-structure.md, data/*.csv (paste commit link) |
+| Hein Htet Aung | Business Model Canvas, README + logbook update | docs/business-model-canvas.md [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Feature-value mapping, system architecture + data flow diagrams | docs/feature-value-mapping.md, diagrams/*.mmd [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Technical architecture decision, data structure, sample datasets | docs/technical-architecture.md, docs/data-structure.md, data/*.csv [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ### Decisions Made Today
 
@@ -238,9 +237,9 @@ Gravity — RSU Student Secondhand Marketplace
 ### Member Contributions
 | Member Name | Contribution | Evidence/Commit/Issue Link |
 |---|---|---|
-| Hein Htet Aung | Experiment plan, critical assumptions, README + logbook | (paste commit link) |
-| Thiri Shoon Lae Oo | Experiment script, feedback form, test-user recruitment plan | (paste commit link) |
-| Eimyat Yadanar Mon | Success metrics, demo prototype, CSV templates, experiment flow diagram | (paste commit link) |
+| Hein Htet Aung | Experiment plan, critical assumptions, README + logbook | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Experiment script, feedback form, test-user recruitment plan | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Success metrics, demo prototype, CSV templates, experiment flow diagram | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ### Key Decisions
 | Decision | Reason | Evidence/Requirement Link |
@@ -277,9 +276,9 @@ Gravity — RSU Student Secondhand Marketplace
 ### Member Contributions
 | Member Name | Contribution | GitHub Evidence |
 |---|---|---|
-| Hein Htet Aung | Ran sessions, validation summary, README/logbook | (commit link) |
-| Thiri Shoon Lae Oo | Observer/recorder, test-user notes, feedback capture | (commit link) |
-| Eimyat Yadanar Mon | Metrics, analytics insights, MVP decision | (commit link) |
+| Hein Htet Aung | Ran sessions, validation summary, README/logbook | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Observer/recorder, test-user notes, feedback capture | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Metrics, analytics insights, MVP decision | [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ### Problems Found
 Recruiting on short notice meant tester roles differ slightly from the Lab 07 plan, and two sessions (TU-04, TU-05) were rapid (~15-25s/task) with lighter qualitative depth — both flagged in the data. Testers disagreed sharply on the contact flow, which became the key design finding rather than a data problem.
@@ -343,9 +342,9 @@ Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon
 ## Member Contributions
 | Member | Contribution | GitHub Evidence |
 |---|---|---|
-| Hein Htet Aung | Legal-ethical checklist, IP/assets register, updated-requirements note, README + logbook update | Commit #TBD |
-| Thiri Shoon Lae Oo | Privacy and data protection review, data inventory, user consent statement, review diagram | Commit #TBD |
-| Eimyat Yadanar Mon | Security risk check (incl. XSS code review), risk register + CSV, data handling policy | Commit #TBD |
+| Hein Htet Aung | Legal-ethical checklist, IP/assets register, updated-requirements note, README + logbook update | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | Privacy and data protection review, data inventory, user consent statement, review diagram | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Security risk check (incl. XSS code review), risk register + CSV, data handling policy | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ## Decisions Made
 1. Continue building — "safe with revision"; no requirement changes.
@@ -407,9 +406,9 @@ Gravity — RSU Student Secondhand Marketplace
 ## Member Contributions
 | Member Name | Contribution | File/Feature Updated | GitHub Evidence |
 |---|---|---|---|
-| Eimyat Yadanar Mon | My Listings logic, metrics engine (computeMetrics/barChart), data.json + fallback, sort | /prototype/script.js, data.json | Commit #TBD |
-| Thiri Shoon Lae Oo | My Listings screen layout, chart styling, dashboard layout, updated screenshots | /prototype/index.html, style.css; /screenshots/ | Commit #TBD |
-| Hein Htet Aung | startup-metrics.md, prototype-testing-notes.md, feature status update, README + logbook | /docs/ | Commit #TBD |
+| Eimyat Yadanar Mon | My Listings logic, metrics engine (computeMetrics/barChart), data.json + fallback, sort | /prototype/script.js, data.json | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | My Listings screen layout, chart styling, dashboard layout, updated screenshots | /prototype/index.html, style.css; /screenshots/ | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Hein Htet Aung | startup-metrics.md, prototype-testing-notes.md, feature status update, README + logbook | /docs/ | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ## Requirements Addressed
 FR-02, FR-04, FR-06, FR-08, FR-11, FR-12 (improved); FR-01, FR-03, FR-05, FR-07, FR-09, FR-10, FR-13, FR-15, FR-16 (confirmed Completed in re-test)
@@ -441,8 +440,8 @@ Gravity — RSU Student Secondhand Marketplace
 | Member Name | Contribution | File/Feature Updated | GitHub Evidence |
 |---|---|---|---|
 | Hein Htet Aung | Landing copy, marketing messages, GTM plan | /docs/landing-page-content.md, marketing-message.md, go-to-market-plan.md | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commit/3587a76958fef9819e206ac784d6409e3fcad31b) |
-| Thiri Shoon Lae Oo | Landing page design + build, screenshots | /landing-page/index.html, style.css | Commit #TBD |
-| Eimyat Yadanar Mon | CTA/metrics script, acquisition metrics + CSVs, README | /landing-page/script.js, /docs/acquisition-metrics.md, /data/*.csv | Commit #TBD |
+| Thiri Shoon Lae Oo | Landing page design + build, screenshots | /landing-page/index.html, style.css | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | CTA/metrics script, acquisition metrics + CSVs, README | /landing-page/script.js, /docs/acquisition-metrics.md, /data/*.csv | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
 
 ## Requirements Addressed
 Landing page communicates FR-01/FR-02 value accurately; links to the v0.3 prototype (all FRs); responsible data statement follows FR-15 and Lab 09 decisions (R-06 wording, no data collection on the page).
