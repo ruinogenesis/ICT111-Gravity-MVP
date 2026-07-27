@@ -293,3 +293,24 @@ Eimyat: My Listings logic, metrics engine, data.json, sort. Thiri: My Listings +
 
 ### Remaining Work
 Lab 12 landing page + go-to-market docs; Lab 13 user re-testing (target: PM-08 above 93.3% with the contact-flow fixes) + real-device mobile test; Lab 14 final polish, final report, release.
+
+## Lab 12: Landing Page and Digital Go-to-Market
+
+### Landing Page
+Live at: https://ruinogenesis.github.io/ICT111-Gravity-MVP/landing-page/ (files in /landing-page/). Consistent with the prototype's visual identity; hero headline, Lab 03 evidence-based problem section, how-it-works, 5 features mapped to FR IDs, trust & privacy statement, and two CTAs linking to the working v0.3 prototype. The page collects no personal data — the interest counter is browser-local and labelled as such.
+
+### Go-to-Market
+Four channels chosen from evidence (LINE dorm/class groups per E01, QR posters in dorm lobbies per CS01, Instagram story, ICT111 class chat as feedback loop), each with a tailored message (/docs/marketing-message.md), expected action, and tracked metric. Launch sequence and risks in /docs/go-to-market-plan.md.
+
+### Acquisition Metrics
+AM-01 views, AM-02 CTA click rate, AM-03 demo attempts, AM-04 feedback responses, AM-05 interest conversion, AM-06 best channel — formulas and honest-measurement notes in /docs/acquisition-metrics.md, tracking sheet in /data/acquisition-metrics.csv.
+
+### Files Added
+- /landing-page/index.html, style.css, script.js
+- /docs/landing-page-content.md, go-to-market-plan.md, marketing-message.md, acquisition-metrics.md
+- /data/acquisition-metrics.csv, channel-plan.csv
+- /screenshots/landing-page.png, call-to-action.png
+- Weekly logbook Lab 12 entry
+
+### Team Contribution
+Hein Htet Aung: copy, messages, GTM plan. Thiri: page design/build, screenshots. Eimyat: CTA/metrics script, metrics docs, CSVs, README.
