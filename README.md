@@ -343,3 +343,22 @@ AM-01 views, AM-02 CTA click rate, AM-03 demo attempts, AM-04 feedback responses
 
 ### Team Contribution
 Hein Htet Aung: copy, messages, GTM plan. Thiri: page design/build, screenshots. Eimyat: CTA/metrics script, metrics docs, CSVs, README.
+
+## Lab 13: Sales Scenario, Demo Script, and User Testing
+
+### Final Demo Preparation
+- Sales scenario (/docs/sales-scenario.md): Su Su's move-out situation → pain → Gravity introduction → value message → pitch conversation, all grounded in Lab 03 evidence.
+- Demo script (/docs/demo-script.md): 8-minute, 10-step walkthrough of the live v0.3 prototype with presenter roles and a requirement ID on every step; contingency plan included. Demo links in /prototype/final-demo-link.md.
+- Demo flow diagram: /diagrams/demo-flow.mmd → /screenshots/demo-flow.png.
+
+### User Testing
+Plan (/docs/user-testing-plan.md): 5 testers (incl. one returning Lab 08 tester), tasks T01–T08, explicitly re-testing the two Lab 08 confusion points against baselines plus the FR-14 real-device test. Results (29 July, /docs/user-testing-results.md + /data/user-testing-results.csv): 40 task runs, **90.0% strict task success (93.75% counting partials as half)**, average ease **4.62/5** (baseline 4.30). **Both Lab 08 fixes verified: contact-flow comprehension 4/5 (was 2/5); Reserved 5/5 (was misread). Mobile passed 5/5 on a real device — FR-14 Completed.** Evidence: /screenshots/user-testing-evidence.png.
+
+### Final Improvement List
+/docs/final-improvement-list.md: 10 items — IMP-01–05 from Labs 11–12 (IMP-02 already Done via the mobile test), IMP-06–09 from user testing (detail-view trust line, duplicate-warning confirm dialog, visual polish, My Listings request badge), IMP-10 deferred to post-course. Each has priority, owner, and a deadline before the Lab 14 release.
+
+### Final Preparation Status
+**Ready for final improvement.** Testing decision: minor revision only — no flow failures, no requirement changes. Open before release: 2 Critical (link check IMP-03, screenshots IMP-04), 2 Important fixes (IMP-06, IMP-07), all owned and scheduled for 30 July.
+
+### Team Contribution
+Hein: sales scenario, demo script, demo outline. Thiri: testing plan, session facilitation, results, screenshots. Eimyat: improvement list, demo-link doc, diagram, README.
