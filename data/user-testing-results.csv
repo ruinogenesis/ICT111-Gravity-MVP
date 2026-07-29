@@ -1,0 +1,41 @@
+tester_code,tester_type,task_id,task_description,completed_yes_no_partial,time_seconds,help_needed,confusion_or_issue,ease_1_5,comment
+UT-01,Seller-side student,T01,Explain purpose and RSU-only,yes,60,no,none,4,none
+UT-01,Seller-side student,T02,Post a listing,partial,44,no,none,4.4,smooth UI
+UT-01,Seller-side student,T03,Find textbook under 300 THB,yes,20,no,none,4,none
+UT-01,Seller-side student,T04,Trust judgment on detail view,no,93,yes,complex system,2,confused
+UT-01,Seller-side student,T05,Explain statuses incl Reserved,yes,12,no,none,5,none
+UT-01,Seller-side student,T06,Explain contact flow,partial,43,no,none,3,none
+UT-01,Seller-side student,T07,Accept request and mark Sold,yes,19,no,none,5,none
+UT-01,Seller-side student,T08,Mobile browse detail dashboard,yes,20,no,none,5,none
+UT-02,Seller-side student,T01,Explain purpose and RSU-only,yes,12,no,none,5,none
+UT-02,Seller-side student,T02,Post a listing,yes,50,no,none,5,good site
+UT-02,Seller-side student,T03,Find textbook under 300 THB,yes,33,no,none,4.9,good filter
+UT-02,Seller-side student,T04,Trust judgment on detail view,yes,9,no,none,5,none
+UT-02,Seller-side student,T05,Explain statuses incl Reserved,yes,96,no,a bit,4,clean texts
+UT-02,Seller-side student,T06,Explain contact flow,yes,50,no,none,5,none
+UT-02,Seller-side student,T07,Accept request and mark Sold,yes,20,no,none,5,none
+UT-02,Seller-side student,T08,Mobile browse detail dashboard,yes,12,no,none,5,none
+UT-03,Buyer-side student,T01,Explain purpose and RSU-only,yes,34,no,none,5,good systemflow
+UT-03,Buyer-side student,T02,Post a listing,yes,30,no,none,5,love the idea
+UT-03,Buyer-side student,T03,Find textbook under 300 THB,yes,12,no,none,5,"search box kinda useless, filter enough"
+UT-03,Buyer-side student,T04,Trust judgment on detail view,yes,34,no,none,4,none
+UT-03,Buyer-side student,T05,Explain statuses incl Reserved,yes,32,no,none,5,insane web
+UT-03,Buyer-side student,T06,Explain contact flow,yes,29,no,none,5,good
+UT-03,Buyer-side student,T07,Accept request and mark Sold,yes,18,no,none,5,fast interactive
+UT-03,Buyer-side student,T08,Mobile browse detail dashboard,yes,44,no,none,5,none
+UT-04,Buyer-side student,T01,Explain purpose and RSU-only,yes,80,no,none,5,none
+UT-04,Buyer-side student,T02,Post a listing,partial,99,yes,confused about pop up box,3,should be like lazada
+UT-04,Buyer-side student,T03,Find textbook under 300 THB,yes,28,no,none,5,none
+UT-04,Buyer-side student,T04,Trust judgment on detail view,yes,39,no,none,5,none
+UT-04,Buyer-side student,T05,Explain statuses incl Reserved,yes,32,no,none,5,none
+UT-04,Buyer-side student,T06,Explain contact flow,yes,13,no,none,5,site color boring
+UT-04,Buyer-side student,T07,Accept request and mark Sold,yes,34,no,none,4.3,none
+UT-04,Buyer-side student,T08,Mobile browse detail dashboard,yes,44,no,none,4,none
+UT-05,Returning Lab 08 tester,T01,Explain purpose and RSU-only,yes,21,no,none,5,very easy to understand
+UT-05,Returning Lab 08 tester,T02,Post a listing,yes,16,no,none,5,none
+UT-05,Returning Lab 08 tester,T03,Find textbook under 300 THB,yes,11,no,none,5,none
+UT-05,Returning Lab 08 tester,T04,Trust judgment on detail view,yes,32,no,none,5,none
+UT-05,Returning Lab 08 tester,T05,Explain statuses incl Reserved,yes,31,no,none,5,none
+UT-05,Returning Lab 08 tester,T06,Explain contact flow,yes,34,no,none,5,none
+UT-05,Returning Lab 08 tester,T07,Accept request and mark Sold,yes,89,no,none,3,UI is old school
+UT-05,Returning Lab 08 tester,T08,Mobile browse detail dashboard,yes,44,no,none,5,none
