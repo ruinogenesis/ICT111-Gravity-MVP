@@ -450,3 +450,41 @@ Landing page communicates FR-01/FR-02 value accurately; links to the v0.3 protot
 
 ## Next Action Before Lab 13
 Commit landing page + docs, capture landing-page.png and call-to-action.png, verify Pages serves /landing-page/, soft-launch to class chat, then prepare Lab 13 sales scenario, demo script, and user-testing plan (recruit from AM-04 respondents).
+
+## Lab Topic
+Sales Scenario, Demo Script, and User Testing (working dates 28–29 July 2026)
+
+## Group Case
+Gravity — RSU Student Secondhand Marketplace
+
+## Work Completed Today
+- sales-scenario.md: realistic Su Su move-out scenario with pain points from Lab 03 evidence, value message, and a pitch conversation.
+- demo-script.md: 10-step, 8-minute screen-by-screen script with presenter roles, requirement IDs on every step, timing, and a contingency plan (local fallback + reset button).
+- user-testing-plan.md: 5 testers (incl. 1 returning Lab 08 tester), tasks T01–T08 with success criteria — explicitly re-testing the two Lab 08 confusion points against baselines (contact flow 2/5, Reserved misread) and adding the FR-14 real-device test.
+- Ran the user-testing session (29 July, 5 testers incl. one returning Lab 08 tester): 40 task runs recorded in /data/user-testing-results.csv, summarized in user-testing-results.md. Results: 90.0% strict task success (93.75% counting partials), average ease 4.62/5 (baseline 4.30). **Both Lab 08 fixes verified: contact-flow comprehension 4/5 (was 2/5), Reserved 5/5 (was misread). Mobile T08 passed 5/5 on a real device — FR-14 now Completed.**
+- final-improvement-list.md: IMP-01–05 pre-seeded (metrics data, FR-14 evidence — now Done, link check, screenshots, issue cleanup); four user-test findings added as IMP-06–09 (detail-view trust line, duplicate-warning confirm dialog, visual polish, My Listings request badge) + IMP-10 deferred.
+- pitch/demo-outline.md and prototype/final-demo-link.md (updated demo access incl. version history).
+- diagrams/demo-flow.mmd for the demo-flow.png screenshot.
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+|---|---|---|---|
+| Hein Htet Aung | Sales scenario, demo script narration parts, demo outline | /docs/sales-scenario.md, demo-script.md, /pitch/demo-outline.md | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | User-testing plan + running the session, results, screenshots | /docs/user-testing-plan.md, user-testing-results.md, /data/user-testing-results.csv | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | Final-improvement list, demo link doc, demo-flow diagram, README | /docs/final-improvement-list.md, /prototype/final-demo-link.md, /diagrams/demo-flow.mmd | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+
+## Requirements Addressed
+Demo script covers FR-01–12, FR-15, FR-16 explicitly; testing tasks target FR-01–08, FR-10–12, FR-14/NFR-01 (real-device), FR-15.
+
+## Decisions Made
+1. Re-test with 5 testers including one returning Lab 08 tester for direct before/after comparison.
+2. Demo runs on live GitHub Pages with local fallback; reset-to-seed before every run.
+3. Every user-test issue becomes an IMP row with priority — nothing fixed silently.
+
+## Problems Found
+- One tester (UT-01) found the detail view information-dense and failed the trust-judgment task — the only failure of the session; fix scheduled as IMP-06.
+- The duplicate-listing warning's press-again pattern confused one tester (UT-04) — replaced with an explicit confirm dialog (IMP-07).
+- Two testers called the visual style dated — polish pass scheduled (IMP-08), no layout changes before the final demo.
+
+## Next Action Before Lab 14
+Ship IMP-06 and IMP-07 (Important) and IMP-08/09 if time allows; log acquisition soft-launch numbers (IMP-01); capture demo-flow.png and user-testing-evidence.png; final link check (IMP-03); update feature-implementation-status.md FR-14 → Completed; then Lab 14: final release, final report, reflection (due 31 July).
