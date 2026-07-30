@@ -1,4 +1,4 @@
-/* Gravity Sprint 2 (v0.3) — continues the Lab 05 wireframe visual language */
+/* Gravity Final v1.0 — continues the Lab 05 wireframe visual language (Lab 13 polish IMP-08) */
 * { box-sizing: border-box; }
 body {
   font-family: Verdana, Arial, sans-serif;
@@ -116,3 +116,10 @@ input, select, textarea { width: 100%; padding: 9px; margin-top: 5px; border: 1p
   #cards { grid-template-columns: 1fr; }
   .detail-table th { width: 100px; }
 }
+
+/* Final v1.0 polish (IMP-06/08) */
+.trust-line { background: #d9f2e4; color: #14594a; border-radius: 8px; padding: 9px 12px; font-size: 13px; font-weight: bold; }
+.card, .box { border-radius: 12px; }
+.mainbtn, .row-btn { transition: background 0.15s, transform 0.1s; }
+.mainbtn:hover { transform: translateY(-1px); }
+.card:hover { box-shadow: 0 2px 8px rgba(20,89,74,0.12); }
