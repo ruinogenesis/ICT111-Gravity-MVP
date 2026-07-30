@@ -488,3 +488,32 @@ Demo script covers FR-01–12, FR-15, FR-16 explicitly; testing tasks target FR-
 
 ## Next Action Before Lab 14
 Ship IMP-06 and IMP-07 (Important) and IMP-08/09 if time allows; log acquisition soft-launch numbers (IMP-01); capture demo-flow.png and user-testing-evidence.png; final link check (IMP-03); update feature-implementation-status.md FR-14 → Completed; then Lab 14: final release, final report, reflection (due 31 July).
+
+## Lab Topic
+Final MVP Release and Venture Pitch (working dates 30–31 July 2026)
+
+## Group Case
+Gravity — RSU Student Secondhand Marketplace
+
+## Work Completed Today
+- Released prototype v1.0: v0.3 + all four Lab 13 user-test fixes (IMP-06 detail-view trust line, IMP-07 duplicate confirm dialog, IMP-08 visual polish, IMP-09 pending-request badge + section reorder) — regression-tested (contact flow, posting, dashboard all pass).
+- Final requirement audit: /docs/requirement-traceability-matrix.md + /data/final-requirement-traceability.csv — full E→FR→US→F→S→screenshot chain; all FR-01–16 and NFR-01–05 Completed; the single FR-15 clarification (Issue #47) documented as an approved change.
+- /docs/final-prototype-report.md: problem, evidence, solution, traceability, data handling, both validation rounds, metrics, responsible design, limitations, business model.
+- /docs/final-demo-script.md (~6:45 with roles and contingency) and /pitch/final-pitch-outline.md.
+- /docs/final-reflection.md with individual contributions; /data/member-contribution.csv.
+- /docs/final-submission-checklist.md; /data/final-sample-data.csv (generated from data.json); /prototype/final-prototype-link.md; /diagrams/final-demo-flow.mmd.
+
+## Member Contributions
+| Member Name | Contribution | File/Feature Updated | GitHub Evidence |
+|---|---|---|---|
+| Hein Htet Aung | Final report, pitch outline, reflection, README final update, submission checklist | /docs, /pitch, README.md | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Thiri Shoon Lae Oo | v1.0 UI fixes (IMP-06/08/09 layout), final screenshots, demo rehearsal | /prototype/index.html, style.css, /screenshots | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+| Eimyat Yadanar Mon | v1.0 logic fixes (IMP-07/09), regression tests, traceability CSV, sample data, demo-flow diagram | /prototype/script.js, /data, /diagrams | [Commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/) |
+
+## Requirements Addressed
+Final audit of all FR-01–16 + NFR-01–05: Completed. FR-14 flipped from Partially Completed after the Lab 13 real-device pass.
+
+## Decisions Made
+1. Ship all four Lab 13 fixes in v1.0 (not just the two Important ones) — all were small and regression-tested.
+2. data.json remains the single source of truth; final-sample-data.csv is generated from it, not maintained separately.
+3. Historical prototypes (v0.1 demo, Lab 05 wireframe) stay in the repo as graded evidence.
