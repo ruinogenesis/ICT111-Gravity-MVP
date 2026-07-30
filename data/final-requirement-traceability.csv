@@ -1,0 +1,22 @@
+requirement_id,feature_or_screen,user_story_id,evidence_source,final_status,screenshot_file,notes
+FR-01,Homepage + landing page,US-03,Lab03 E01,Completed,final-homepage.png,Landing page live on GitHub Pages (Lab 12)
+FR-02,Two-sided contact pathway,US-06,Lab13 T06-T07,Completed,final-my-listings.png,Request -> seller accept -> mutual RSU-email reveal
+FR-03,Create Listing form,US-02,Lab03 E02/E03; Lab13 T02,Completed,final-input-form.png,Pickup zones dropdown; photo placeholder by scope
+FR-04,data.json seed + localStorage,US-02,technical-architecture.md,Completed,final-record-list.png,Self-healing seed + reset button
+FR-05,Browse listing cards,US-03,Lab03 E01/E04; Lab13 T03,Completed,final-record-list.png,
+FR-06,Search + 6 categories + price range + sort,US-04,Lab08 + Lab13 T03 5/5,Completed,final-record-list.png,Categories expanded per Lab 08 finding
+FR-07,Detail view with trust line,US-05,Lab13 T04; IMP-06,Completed,final-detail-view.png,v1.0 added one-line trust summary
+FR-08,Status lifecycle + seller self-service,US-07,Lab13 T05 5/5 + T07 5/5,Completed,final-my-listings.png,soldDate powers PM-06
+FR-09,Admin view (verify/moderate/status),US-08,Lab09 R-05 mitigation,Completed,final-admin-view.png,Separate labelled screen; roles simulated by documented design
+FR-10,Validation + duplicate confirm + delete confirm,US-09,Lab13 T02; IMP-07,Completed,final-input-form.png,v1.0 replaced press-again with confirm dialog
+FR-11,Confirmation/feedback messages,US-09,Lab13 session,Completed,final-input-form.png,Incl. what-happens-next contact explainer
+FR-12,Dashboard + PM-01-08 + charts,US-10,Lab11; Lab13 T08,Completed,final-dashboard.png,Metrics defined in startup-metrics.md
+FR-13,UI consistency across 8 screens,,style.css shared components,Completed,all screenshots,v1.0 polish pass (IMP-08)
+FR-14,Mobile-first responsive layout,US-11,Lab13 T08 5/5 real device,Completed,final-homepage.png,Was Partially Completed until Lab 13 device test
+FR-15,Privacy: email-only reveal / no ID storage,US-01;US-06,Lab09 review; Issue #47,Completed,final-detail-view.png,Clarification approved by all members
+FR-16,Traceability matrix + code comments,,this file + matrix md,Completed,,
+NFR-01,Mobile usability,US-11,Lab13 T08,Completed,final-homepage.png,
+NFR-02,No public personal identifiers,US-05,Labs 08+13 screen scans,Completed,final-detail-view.png,
+NFR-03,Load/filter under 3 seconds,,Lab13 avg task time 36.8s incl. thinking,Completed,,Filter response instant on demo dataset
+NFR-04,RSU-verified students only,US-01,Lab13 T01 5/5; register gate,Completed,final-input-form.png,Non-RSU email rejected with message
+NFR-05,GitHub documentation discipline,,52 issues; full commit history,Completed,,All members contribute to one repository
