@@ -74,14 +74,24 @@ Most likely for our MVP: a **web application + marketplace/digital platform**, w
 | Lab 10 | MVP implementation Sprint 1 | Prototype v0.2: all 7 screens, Lab 08 fixes, Lab 09 mitigations (incl. XSS fix) | Completed |
 | Lab 11 | Sprint 2 and startup metrics | Prototype v0.3: My Listings, data.json, sort; product metrics PM-01-08 + dashboard charts | Completed |
 | Lab 12 | Landing page and go-to-market | Live landing page on GitHub Pages, GTM plan (4 channels), marketing messages, acquisition metrics AM-01-06 | Completed |
+| Lab 13 | Sales scenario, demo script, user testing | 5-tester re-validation: Lab 08 fixes verified (contact flow 4/5 vs 2/5; Reserved 5/5), FR-14 real-device pass; final improvement list IMP-01-10 | Completed |
+| Lab 14 | Final MVP release and venture pitch | Prototype v1.0, requirement traceability matrix, final report, demo script, pitch outline, reflection | Completed |
 
 ## Current Status
-Labs 1-12 are complete. The Gravity prototype (v0.3) implements all sixteen fixed requirements with a working two-sided contact flow, live product metrics, and the responsible-design decisions from Lab 09 built in. The landing page and prototype are both live on GitHub Pages:
-- Landing page: https://ruinogenesis.github.io/ICT111-Gravity-MVP/landing-page/index.html
-- Prototype: https://ruinogenesis.github.io/ICT111-Gravity-MVP/prototype/index.html
+**FINAL RELEASE (v1.0) — all 14 labs complete.** The Gravity prototype implements all sixteen fixed requirements, verified by two rounds of user testing and a final traceability audit. Live:
+- **Prototype (v1.0):** https://ruinogenesis.github.io/ICT111-Gravity-MVP/prototype/index.html
+- **Landing page:** https://ruinogenesis.github.io/ICT111-Gravity-MVP/landing-page/index.html
+- **Final report:** [/docs/final-prototype-report.md](docs/final-prototype-report.md) · **Pitch:** [/pitch/final-pitch-outline.md](pitch/final-pitch-outline.md) · **Demo script:** [/docs/final-demo-script.md](docs/final-demo-script.md)
 
-## Next Step
-Lab 13: write the sales scenario and demo script, run the user-testing session with real RSU students (re-measuring task success against the Lab 08 baseline of 93.3%), do the real-device mobile test (FR-14), and compile the final-improvement list. Then Lab 14: final polish, final report, and release (due 31 July).
+## Folder Map
+- `/prototype/` — final v1.0 app (index.html, style.css, script.js, data.json) + final-prototype-link.md; historical v0.1 demo (mvp-demo.html) and Lab 05 wireframe preserved as evidence
+- `/landing-page/` — public landing page (Lab 12)
+- `/docs/` — all lab documentation: requirements, user stories, MVP features, architecture, validation, responsible-design check (Lab 09), sprint plans, testing, final report / reflection / submission checklist
+- `/data/` — evidence datasets: research responses, validation + user-testing results, requirement traceability CSV, final sample data, metrics sheets, member contribution table
+- `/diagrams/` — user flow, use case, architecture, data flow, privacy review, demo flow (Mermaid + PNG)
+- `/screenshots/` — evidence screenshots per lab, incl. the final-*.png set
+- `/pitch/` — demo outline (Lab 13) + final pitch outline (Lab 14)
+- `/finance/` — business model context
 
 ## Lab 04: User Persona, Requirements, and User Stories
 
@@ -362,3 +372,25 @@ Plan (/docs/user-testing-plan.md): 5 testers (incl. one returning Lab 08 tester)
 
 ### Team Contribution
 Hein: sales scenario, demo script, demo outline. Thiri: testing plan, session facilitation, results, screenshots. Eimyat: improvement list, demo-link doc, diagram, README.
+
+## Lab 14: Final MVP Release and Venture Pitch
+
+### Final Release
+Prototype **v1.0** = v0.3 + all four Lab 13 user-test fixes (detail-view trust line IMP-06, duplicate-confirm dialog IMP-07, visual polish IMP-08, pending-request badge + My Listings reorder IMP-09), regression-tested. Final requirement audit: **all FR-01–16 and NFR-01–05 Completed** — the full evidence chain (Lab 03 evidence → requirement → user story → MVP feature → screen → screenshot → test result) is in [/docs/requirement-traceability-matrix.md](docs/requirement-traceability-matrix.md) and [/data/final-requirement-traceability.csv](data/final-requirement-traceability.csv). The single approved FR-15 clarification (contact reveal = RSU email only) is documented in [/docs/updated-requirements-note.md](docs/updated-requirements-note.md) and Issue #47.
+
+### Final Documents
+- Final prototype report: [/docs/final-prototype-report.md](docs/final-prototype-report.md)
+- Final demo script (~6:45, roles + contingency): [/docs/final-demo-script.md](docs/final-demo-script.md) · Demo flow: [/diagrams/final-demo-flow.mmd](diagrams/final-demo-flow.mmd)
+- Venture pitch outline: [/pitch/final-pitch-outline.md](pitch/final-pitch-outline.md)
+- Final reflection: [/docs/final-reflection.md](docs/final-reflection.md) · Contribution table: [/data/member-contribution.csv](data/member-contribution.csv)
+- Submission checklist: [/docs/final-submission-checklist.md](docs/final-submission-checklist.md)
+- Final sample data (generated from data.json): [/data/final-sample-data.csv](data/final-sample-data.csv)
+
+### Final Screenshots
+/screenshots/final-homepage.png · final-input-form.png · final-record-list.png · final-detail-view.png · final-dashboard.png · final-admin-view.png · final-my-listings.png
+
+### Validation Trail
+Lab 08 (v0.1, 5 testers): 93.3% task success, 4.30 feedback, 4.40 interest → 4 revisions. Lab 13 (v0.3, 5 testers, stricter 8-task set): 90% strict / 93.75% with partials, ease 4.62/5, both Lab 08 defects verified fixed, mobile real-device pass → 4 fixes shipped in v1.0.
+
+### Team Contribution
+All three members contributed across all 14 labs through commits, 52 issues, documentation, testing, and screenshots — per-member summary in [/data/member-contribution.csv](data/member-contribution.csv) and [/docs/final-reflection.md](docs/final-reflection.md) §7.
