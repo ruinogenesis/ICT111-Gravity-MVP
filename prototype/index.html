@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gravity — RSU Student Secondhand Marketplace (Sprint 2)</title>
+<title>Gravity — RSU Student Secondhand Marketplace (Final v1.0)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
 <main class="page">
 
 <div class="note">
-  Lab 11 Sprint 2 prototype (v0.3). Seed data loads from data.json; records are saved in your browser only (localStorage) and all people shown are fictional sample data.
+  Final release v1.0 (Lab 14). Seed data loads from data.json; records are saved in your browser only (localStorage) and all people shown are fictional sample data.
   <button class="gray small-btn" id="reset-btn">Reset demo data</button>
 </div>
 
@@ -146,6 +146,7 @@
         <p id="d-status-note" class="small"></p>
       </div>
     </div>
+    <p class="trust-line">&#10003; This seller was verified in person by the Gravity team &mdash; RSU email checked, student ID seen once, never stored.</p>
     <table class="detail-table">
       <tr><th>Category</th><td id="d-cat"></td></tr>
       <tr><th>Condition</th><td id="d-cond"></td></tr>
@@ -173,11 +174,11 @@
   <div class="box">
     <h2>My listings</h2>
     <p class="small" id="mylistings-intro"></p>
-    <h3>Items I am selling</h3>
-    <table class="detail-table" id="my-listings-table"><tbody></tbody></table>
-    <h3>Contact requests for my items</h3>
+    <h3>Contact requests for my items <span id="req-badge" class="status st-reserved hidden"></span></h3>
     <p class="small">Accepting shares your RSU email with that buyer only — and shows you theirs. Nothing is shared on Decline.</p>
     <table class="detail-table" id="my-requests-table"><tbody></tbody></table>
+    <h3>Items I am selling</h3>
+    <table class="detail-table" id="my-listings-table"><tbody></tbody></table>
     <h3>My sent requests (as buyer)</h3>
     <table class="detail-table" id="my-sent-table"><tbody></tbody></table>
     <p id="my-msg" class="msg hidden"></p>
