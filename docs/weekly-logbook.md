@@ -451,6 +451,8 @@ Landing page communicates FR-01/FR-02 value accurately; links to the v0.3 protot
 ## Next Action Before Lab 13
 Commit landing page + docs, capture landing-page.png and call-to-action.png, verify Pages serves /landing-page/, soft-launch to class chat, then prepare Lab 13 sales scenario, demo script, and user-testing plan (recruit from AM-04 respondents).
 
+# Weekly Logbook - Lab 13
+
 ## Lab Topic
 Sales Scenario, Demo Script, and User Testing (working dates 28–29 July 2026)
 
@@ -489,6 +491,8 @@ Demo script covers FR-01–12, FR-15, FR-16 explicitly; testing tasks target FR-
 ## Next Action Before Lab 14
 Ship IMP-06 and IMP-07 (Important) and IMP-08/09 if time allows; log acquisition soft-launch numbers (IMP-01); capture demo-flow.png and user-testing-evidence.png; final link check (IMP-03); update feature-implementation-status.md FR-14 → Completed; then Lab 14: final release, final report, reflection (due 31 July).
 
+# Weekly Logbook - Lab 14
+
 ## Lab Topic
 Final MVP Release and Venture Pitch (working dates 30–31 July 2026)
 
@@ -517,3 +521,12 @@ Final audit of all FR-01–16 + NFR-01–05: Completed. FR-14 flipped from Parti
 1. Ship all four Lab 13 fixes in v1.0 (not just the two Important ones) — all were small and regression-tested.
 2. data.json remains the single source of truth; final-sample-data.csv is generated from it, not maintained separately.
 3. Historical prototypes (v0.1 demo, Lab 05 wireframe) stay in the repo as graded evidence.
+
+## Problems Found
+None blocking. Remaining pre-submission actions are tracked in /docs/final-submission-checklist.md: commit prototype/data.json and final-prototype-link.md, capture the six final-*.png screenshots, flip FR-14 to Completed in feature-implementation-status.md, replace the risk-register.csv placeholders, and run the final link check after the last Pages rebuild.
+
+## Next Action
+Submit the repository link to the lecturer before 11:59 PM, 31 July 2026. Post-course direction (final-reflection §6): real backend and authentication, real photo upload, then a pilot with one dorm building at the December move-out peak.
+
+## Semester Close
+Labs 01–14 complete. Evidence chain intact end to end: Lab 03 evidence E01–E05 → requirements FR-01–16 / NFR-01–05 → user stories US-01–12 → MVP features F01–F16 → screens S-01–S-08 → prototype v1.0 → two validation rounds → final traceability matrix.
