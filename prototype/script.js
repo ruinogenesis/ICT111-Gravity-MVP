@@ -1,4 +1,4 @@
-/* Gravity Sprint 2 (v0.3) — ICT111 Lab 11
+/* Gravity Final v1.0 — ICT111 Lab 14 (v0.3 + Lab 13 fixes IMP-06..09)
    Frontend-only prototype: data.json seed → localStorage (FR-04).
    Sprint 2 additions: My Listings screen (seller self-service, US-07), buyer request status,
    sort options, product metrics PM-01..PM-08 with CSS bar charts (FR-12), data.json source.
@@ -233,12 +233,10 @@ function postListing() {
   var dup = listings.some(function (l) {
     return l.status !== "Removed" && l.title.toLowerCase() === title.toLowerCase() && l.cat === cat;
   });
-  if (dup && !postListing.confirmedDup) {
-    postListing.confirmedDup = true;
-    flash(msg, "err", "A listing with the same title and category already exists. Press \"Post listing\" again if this is really a different item.");
+  if (dup && !window.confirm("A listing with the same title and category already exists. Post anyway as a separate item?")) {
+    flash(msg, "err", "Not posted \u2014 cancelled at the duplicate check. Edit the title if it is a different item.");
     return;
   }
-  postListing.confirmedDup = false;
 
   var seller = currentUser() || findUser("U001");
   listings.push({
@@ -381,6 +379,12 @@ function renderMyListings() {
     var l = findListing(r.listingId);
     return l && l.sellerId === me.id;
   });
+  var pendingN = incoming.filter(function (r) { return r.status === "Pending"; }).length;
+  var badge = el("req-badge");
+  if (badge) {
+    badge.textContent = pendingN + " pending";
+    badge.classList.toggle("hidden", pendingN === 0);
+  }
   if (incoming.length === 0) { emptyRow(rtbody, "No contact requests for your items yet."); }
   incoming.forEach(function (r) {
     var l = findListing(r.listingId);
