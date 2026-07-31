@@ -24,10 +24,10 @@ Gravity — RSU Student Secondhand Marketplace
 | Listings | listing_id | Text/ID | Yes | GL-001 | Unique value, auto-generated | Yes |
 | Listings | seller_id | Text/ID | Yes | U001 | Must match an existing verified user | No |
 | Listings | title | Text | Yes | Wooden study desk | 3–60 characters | Yes (keyword) |
-| Listings | category | Text/List | Yes | Furniture | Furniture / Appliances / Textbooks / Other | Yes |
+| Listings | category | Text/List | Yes | Furniture | Furniture / Appliances / Electronics / Clothing / Sneakers / Other | Yes |
 | Listings | price_thb | Number | Yes | 800 | Positive integer | Yes (range) |
 | Listings | condition | Text/List | Yes | Good | Like new / Good / Fair | No |
-| Listings | pickup_area | Text | Yes | Dorm A lobby | 3–60 characters | Yes (keyword) |
+| Listings | pickup_area | Text | Yes | The Next 2 Apartment lobby | 3–60 characters | Yes (keyword) |
 | Listings | description | Text | No | Solid desk with drawer... | Max 300 characters | No |
 | Listings | status | Text/List | Yes | Available | Available / Reserved / Sold / Removed | Yes |
 | Listings | date_posted | Date | Yes | 2026-06-20 | Valid date, auto-set | Yes (sort) |
@@ -61,6 +61,6 @@ Gravity — RSU Student Secondhand Marketplace
 
 ## 5. Data Privacy Note
 Gravity collects the minimum data needed to run a trusted marketplace (FR-15):
-- **Not collected:** student ID numbers or ID card images (the ID check is one-time and in person, nothing stored), phone numbers on public pages, addresses (only general pickup areas like "Dorm A lobby"), and no payment data of any kind.
+- **Not collected:** student ID numbers or ID card images (the ID check is one-time and in person, nothing stored), phone numbers on public pages, addresses (only general pickup areas like "The Next 2 Apartment lobby"), and no payment data of any kind.
 - **Contact details** (e.g., a LINE ID the seller chooses to share) are stored privately and revealed only to the two parties of an Accepted request — never on public pages.
 - **Sample data is fully fictional:** all names, emails, and records in /data/ are invented for the demo; no real student information is used.
