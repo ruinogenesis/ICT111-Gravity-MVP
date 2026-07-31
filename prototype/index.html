@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gravity — RSU Student Secondhand Marketplace</title>
+<title>Gravity: RSU Student Secondhand Marketplace</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,13 +12,13 @@
   <div class="topbar-inner">
     <div>
       <h1>Gravity</h1>
-      <p>Post once. Be found fast. Meet smarter — on campus.</p>
+      <p>Post once. Be found fast. Meet smarter on campus.</p>
     </div>
     <div class="rolebox">
       Demo role:
       <select id="role-select" onchange="changeRole()">
-        <option value="buyer">Buyer — Nine (verified)</option>
-        <option value="seller">Seller — Su Su (verified)</option>
+        <option value="buyer">Buyer: Nine (verified)</option>
+        <option value="seller">Seller: Su Su (verified)</option>
         <option value="admin">Admin (demo)</option>
       </select>
     </div>
@@ -44,12 +44,12 @@
 <div class="screen" id="screen-home">
   <div class="box">
     <h2>RSU students: sell what you can't take. Find what you need.</h2>
-    <p><b>The problem:</b> students moving out lose time and money selling used furniture, appliances, and textbooks in scattered, unsearchable Facebook and LINE groups — posts get buried and working items get thrown away.</p>
-    <p><b>Who it's for:</b> verified Rangsit University students only — sellers moving out, buyers moving in. We keep it RSU-only so both sides always know they are dealing with a real, verified student.</p>
+    <p><b>The problem:</b> students moving out lose time and money selling used furniture, appliances, monitors and clothes in scattered, unsearchable Facebook and LINE groups. Posts get buried and working items get thrown away.</p>
+    <p><b>Who it's for:</b> verified Rangsit University students only, sellers moving out and buyers moving in. We keep it RSU-only so both sides always know they are dealing with a real, verified student.</p>
     <button class="mainbtn" onclick="showScreen('browse')">Browse items</button>
     <button class="mainbtn light" onclick="showScreen('sell')">Sell an item</button>
     <div class="safety">
-      <b>Safer meetups, not promises:</b> Gravity verifies students and keeps your contact private until both sides agree — but always meet in busy campus spots (library front, apartment lobbies) and bring a friend for big items. Gravity connects you; the meetup is yours.
+      <b>Safer meetups, not promises:</b> Gravity verifies students and keeps your contact private until both sides agree, but always meet in busy campus spots (library front, apartment lobbies) and bring a friend for big items. Gravity connects you. The meetup is yours.
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@
     <div class="filter-row">
       <b>Price (THB):</b>
       <input type="number" id="price-min" class="price-input" placeholder="min" oninput="renderList()">
-      <span>–</span>
+      <span>to</span>
       <input type="number" id="price-max" class="price-input" placeholder="max" oninput="renderList()">
       <label class="chk"><input type="checkbox" id="show-sold" onchange="renderList()"> show Sold items</label>
     </div>
@@ -77,34 +77,34 @@
         <option value="high">Price: high to low</option>
       </select>
     </div>
-    <p class="small">Tip: <span class="status st-reserved">Reserved</span> means a buyer already agreed with the seller. It is not final — the item becomes <span class="status st-available">Available</span> again if the deal falls through.</p>
+    <p class="small">Tip: <span class="status st-reserved">Reserved</span> means a buyer already agreed with the seller. It is not final, because the item becomes <span class="status st-available">Available</span> again if the deal falls through.</p>
     <div id="cards"></div>
-    <p id="empty-msg" class="small hidden">No items match your search — try clearing the filters.</p>
+    <p id="empty-msg" class="small hidden">No items match your search. Try clearing the filters.</p>
   </div>
 </div>
 
 <div class="screen hidden" id="screen-sell">
   <div class="box">
     <h2>Create a listing</h2>
-    <p class="small">Fields with * are required. Please do not put phone numbers or social accounts in the text — buyers reach you through Gravity, and your RSU email is shared only after you both agree.</p>
+    <p class="small">Fields with * are required. Please do not put phone numbers or social accounts in the text, because buyers reach you through Gravity and your RSU email is shared only after you both agree.</p>
     <label>Item title *</label>
     <input type="text" id="f-title" maxlength="60" placeholder="e.g. Wooden study desk">
     <label>Category *</label>
-    <select id="f-cat"><option value="">— choose —</option></select>
+    <select id="f-cat"><option value="">choose one</option></select>
     <label>Price (THB) *</label>
     <input type="number" id="f-price" placeholder="e.g. 800">
     <label>Condition *</label>
     <select id="f-cond">
-      <option value="">— choose —</option>
+      <option value="">choose one</option>
       <option>Like new</option>
       <option>Good</option>
       <option>Fair</option>
     </select>
-    <label>Pickup area * <span class="small">(general campus zones only — never your room number)</span></label>
+    <label>Pickup area * <span class="small">(general campus zones only, never your room number)</span></label>
     <select id="f-area">
-      <option value="">— choose —</option>
-      <option>Dorm A lobby</option>
-      <option>Dorm B lobby</option>
+      <option value="">choose one</option>
+      <option>The Next 2 Apartment lobby</option>
+      <option>U Campus lobby</option>
       <option>Building 6</option>
       <option>ICT building</option>
       <option>Library meetup point</option>
@@ -116,9 +116,10 @@
       <option value="">no photo</option>
       <option value="&#128715;">furniture photo</option>
       <option value="&#129382;">appliance photo</option>
-      <option value="&#128218;">book photo</option>
+      <option value="&#128421;">monitor photo</option>
       <option value="&#128241;">electronics photo</option>
       <option value="&#128087;">clothing photo</option>
+      <option value="&#128095;">sneakers photo</option>
       <option value="&#128230;">other item photo</option>
     </select>
     <label>Description <span class="small">(optional, max 300 characters)</span></label>
@@ -133,7 +134,7 @@
     <h2>My listings</h2>
     <p class="small" id="mylistings-intro"></p>
     <h3>Contact requests for my items <span id="req-badge" class="status st-reserved hidden"></span></h3>
-    <p class="small">Accepting shares your RSU email with that buyer only — and shows you theirs. Nothing is shared on Decline.</p>
+    <p class="small">Accepting shares your RSU email with that buyer only, and shows you theirs. Nothing is shared on Decline.</p>
     <table class="detail-table" id="my-requests-table"></table>
     <h3>Items I am selling</h3>
     <table class="detail-table" id="my-listings-table"></table>
@@ -145,7 +146,7 @@
 
 <div class="screen hidden" id="screen-detail">
   <div class="box">
-    <a href="#" onclick="showScreen('browse'); return false;">&larr; Back to listings</a>
+    <a href="#" onclick="showScreen('browse'); return false;">Back to listings</a>
     <div class="detail-head">
       <div class="photo-box" id="d-photo"></div>
       <div>
@@ -155,7 +156,7 @@
         <p id="d-status-note" class="small"></p>
       </div>
     </div>
-    <p class="trust-line">&#10003; This seller was verified in person by the Gravity team — RSU email checked, student ID seen once, never stored.</p>
+    <p class="trust-line">&#10003; This seller was verified in person by the Gravity team. RSU email checked, student ID seen once, never stored.</p>
     <table class="detail-table">
       <tr><th>Category</th><td id="d-cat"></td></tr>
       <tr><th>Condition</th><td id="d-cond"></td></tr>
@@ -164,13 +165,13 @@
       <tr><th>Seller</th><td><span id="d-seller"></span> <span class="check" id="d-verified"></span></td></tr>
       <tr><th>Description</th><td id="d-desc"></td></tr>
     </table>
-    <p class="small">Verification is simulated in this demo. No personal contact details are shown on this page — that is by design.</p>
+    <p class="small">Verification is simulated in this demo. No personal contact details are shown on this page, and that is by design.</p>
     <button class="mainbtn" id="contact-btn" onclick="requestContact()">Request contact</button>
     <div id="contact-explainer" class="explainer hidden">
       <b>What happens next?</b>
       <ol>
         <li>The seller sees your request in their Gravity account.</li>
-        <li>If they accept, both of you see each other's RSU email — nothing else, and nobody else sees it.</li>
+        <li>If they accept, both of you see each other's RSU email. Nothing else, and nobody else sees it.</li>
         <li>You email each other to agree a time at the pickup area. Meet in busy campus spots.</li>
       </ol>
     </div>
@@ -188,7 +189,7 @@
     <div id="status-chart" class="chart"></div>
   </div>
   <div class="box">
-    <h2>Startup / product metrics</h2>
+    <h2>Startup and product metrics</h2>
     <div class="stat-row" id="metric-cards"></div>
     <h3>Validation metrics (user testing)</h3>
     <div class="stat-row" id="validation-cards"></div>
@@ -198,13 +199,13 @@
 
 <div class="screen hidden" id="screen-register">
   <div class="box">
-    <h2>Register — RSU students only</h2>
-    <p class="small">Every account is a real Rangsit University student, verified by RSU email plus a one-time in-person student ID check. We look at your ID once — we never store ID photos or numbers.</p>
+    <h2>Register: RSU students only</h2>
+    <p class="small">Every account is a real Rangsit University student, verified by RSU email plus a one-time in-person student ID check. We look at your ID once and we never store ID photos or numbers.</p>
     <label>Display name * <span class="small">(nickname is fine)</span></label>
     <input type="text" id="r-name" maxlength="40" placeholder="e.g. Su Su">
     <label>RSU email *</label>
     <input type="text" id="r-email" placeholder="your.name@rsu.ac.th">
-    <p class="small">We collect only your display name and RSU email. Your email is shown to exactly one person — a buyer or seller you both agreed to connect with — and never appears on public pages.</p>
+    <p class="small">We collect only your display name and RSU email. Your email is shown to exactly one person, a buyer or seller you both agreed to connect with, and never appears on public pages.</p>
     <button class="mainbtn" onclick="register()">Register</button>
     <p id="register-msg" class="msg hidden"></p>
   </div>
@@ -227,7 +228,7 @@
 </div>
 
 <div class="footer">
-  <p>Gravity — ICT111 group project (Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon). All sample data is fictional.</p>
+  <p>Gravity, an ICT111 group project (Hein Htet Aung, Thiri Shoon Lae Oo, Eimyat Yadanar Mon). All sample data is fictional.</p>
 </div>
 
 <script src="script.js"></script>
