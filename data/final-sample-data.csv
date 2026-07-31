@@ -1,9 +1,12 @@
 listing_id,title,category,price_thb,condition,pickup_area,description,seller_id,seller_name,status,date_posted,sold_date
-GL-001,Wooden study desk,Furniture,800,Good,Dorm A lobby,Solid desk with drawer. Must go before June 30 flight.,U001,Su Su,Available,2026-07-14,
+GL-001,Wooden study desk,Furniture,800,Good,The Next 2 Apartment lobby,Solid desk with drawer. Must go before June 30 flight.,U001,Su Su,Available,2026-07-14,
 GL-002,Mini fridge 45L,Appliances,1500,Like new,Building 6,Used one semester. Includes small freezer box.,U001,Su Su,Reserved,2026-07-15,
-GL-003,ICT111 textbook,Textbooks,250,Good,ICT building,Light highlights in chapters 1-4.,U002,Kaung M.,Available,2026-07-15,
-GL-004,Office chair with wheels,Furniture,450,Fair,Dorm B lobby,Small scratch on armrest. Very comfortable.,U004,Nine,Sold,2026-07-16,2026-07-19
-GL-005,Electric kettle 1.5L,Appliances,200,Good,Dorm A lobby,Works perfectly.,U002,Kaung M.,Available,2026-07-16,
-GL-006,Calculus textbook set,Textbooks,400,Like new,Library meetup point,"Two volumes, no writing inside.",U004,Nine,Reserved,2026-07-17,
-GL-007,Desk lamp LED,Electronics,150,Good,Student union,"Warm/cool light modes, USB powered.",U001,Su Su,Available,2026-07-18,
-GL-008,Winter jacket size M,Clothing,300,Good,Dorm B lobby,"Warm jacket, perfect for exchange semester abroad.",U002,Kaung M.,Sold,2026-07-17,2026-07-21
+GL-003,Air fryer 5L,Appliances,900,Good,ICT building,"Used for one year. Cleaned, works perfectly.",U002,Kaung M.,Available,2026-07-15,
+GL-004,Office chair with wheels,Furniture,450,Fair,U Campus lobby,Small scratch on armrest. Very comfortable.,U004,Nine,Sold,2026-07-16,2026-07-19
+GL-005,Electric kettle 1.5L,Appliances,200,Good,The Next 2 Apartment lobby,Works perfectly.,U002,Kaung M.,Available,2026-07-16,
+GL-006,Sneakers size 42,Sneakers,1200,Like new,Library meetup point,Worn three times. Original box included.,U004,Nine,Reserved,2026-07-17,
+GL-007,Desk lamp LED,Electronics,150,Good,Student union,"Warm and cool light modes, USB powered.",U001,Su Su,Available,2026-07-18,
+GL-008,Winter jacket size M,Clothing,300,Good,U Campus lobby,"Warm jacket, perfect for exchange semester abroad.",U002,Kaung M.,Sold,2026-07-17,2026-07-21
+GL-009,Monitor 24 inch,Electronics,2200,Good,ICT building,"Full HD, HDMI cable included. Great for coursework.",U001,Su Su,Available,2026-07-19,
+GL-010,UPS 800VA,Electronics,1100,Good,ICT building,Battery backup for desktop setup. Battery replaced this year.,U004,Nine,Available,2026-07-19,
+GL-011,Designer jacket size S,Clothing,1800,Like new,Student union,"Barely worn. Bought last season, moving out so it must go.",U002,Kaung M.,Available,2026-07-20,
