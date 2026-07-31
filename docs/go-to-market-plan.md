@@ -22,7 +22,7 @@ Post once, be found fast: turn the things you can't take with you into money, sa
 1. Verify GitHub Pages serves /landing-page/ and /prototype/ (Issue 3), test all links on mobile.
 2. Soft launch to ICT111 class chat — catch broken links and confusing copy with a friendly audience (target: 5 feedback responses, AM-04).
 3. Post to 3 LINE dorm/class groups with the chat message from marketing-message.md.
-4. Put up QR posters in Dorm A, Dorm B, and Building 6 lobbies (with permission), each QR carrying a channel tag.
+4. Put up QR posters in The Next 2 Apartment, U Campus, and Building 6 lobbies (with permission), each QR carrying a channel tag.
 5. Instagram story from team accounts, reshared by friends.
 6. Track daily in /data/acquisition-metrics.csv; after 5 days, review against targets and adjust headline/CTA/channel per the interpretation rules in acquisition-metrics.md.
 
