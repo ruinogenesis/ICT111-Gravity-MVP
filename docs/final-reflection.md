@@ -16,7 +16,7 @@ From Lab 08: contact-flow explainer, Reserved clarity, photo placeholders, expan
 Simulating a two-sided marketplace with no backend was the hardest honest problem: contact requests need two parties, so we built a labelled role switcher and said "simulated" on-screen rather than faking it. localStorage brought real constraints — per-browser data, no photo storage at realistic sizes, fetch() blocked on file:// — each solved with documented workarounds (seed self-heal + reset, placeholders, embedded fallback kept byte-identical to data.json). Rendering all user text via textContent after finding our own XSS was a small change with a real lesson: security bugs hide in convenient APIs.
 
 ## 6. What We Would Improve Next
-Real backend and authentication first — everything simulated today becomes real (two-browser contact flow, actual email confirmation). Then real photo upload (the single most-requested feature in both test rounds), the AI listing helper we parked in Lab 04 (F13), and ratings once transaction volume exists (F16). As a venture: pilot with one dorm building at the December move-out peak and measure PM-03 sell-through and PM-06 days-to-sold against the group-chat baseline.
+Real backend and authentication first — everything simulated today becomes real (two-browser contact flow, actual email confirmation). Then real photo upload (the single most-requested feature in both test rounds), the AI listing helper we parked in Lab 04 (F13), and ratings once transaction volume exists (F16). As a venture: pilot with one apartment building at the December move-out peak and measure PM-03 sell-through and PM-06 days-to-sold against the group-chat baseline.
 
 ## 7. Individual Contributions
 | Member | Contribution | Evidence Link/Commit/Issue |
