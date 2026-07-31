@@ -1,9 +1,214 @@
-ListingID,Category,ItemName,PriceTHB,Condition,PickupArea,DatePosted,SellerType,Status,Description
-GL-001,Furniture,Wooden study desk,800,Good,The Next 2 Apartment lobby,2026-06-20,Graduating student,Available,Solid desk with drawer. Must go before June 30 flight.
-GL-002,Appliances,Mini fridge 45L,1500,Like new,Building 6,2026-06-21,International student,Reserved,Used one semester. Includes small freezer box.
-GL-003,Appliances,Air fryer 5L,900,Good,ICT building,2026-06-21,Second-year student,Available,Used for one year. Cleaned and works perfectly.
-GL-004,Furniture,Office chair with wheels,450,Fair,U Campus,2026-06-22,Graduating student,Sold,Small scratch on armrest. Very comfortable.
-GL-005,Appliances,Electric kettle 1.5L,200,Good,The Next 2 Apartment,2026-06-23,Dorm resident,Available,Boils fast. Selling because moving to condo with kitchen.
-GL-006,Furniture,4-tier bookshelf,600,Good,Condo near Gate 4,2026-06-24,International student,Available,Easy to disassemble for transport.
-GL-007,Other,LED desk lamp,150,Like new,Library meetup,2026-06-25,First-year student,Sold,Warm and white light modes. USB powered.
-GL-008,Sneakers,Sneakers size 42,1200,Like new,Library meetup,2026-06-26,Second-year student,Reserved,Worn three times. Original box included.
+{
+  "users": [
+    {
+      "id": "U001",
+      "name": "Su Su",
+      "email": "su.su@rsu.ac.th",
+      "verified": true
+    },
+    {
+      "id": "U002",
+      "name": "Kaung M.",
+      "email": "kaung.m@rsu.ac.th",
+      "verified": true
+    },
+    {
+      "id": "U003",
+      "name": "Pim N.",
+      "email": "pim.n@rsu.ac.th",
+      "verified": false
+    },
+    {
+      "id": "U004",
+      "name": "Nine",
+      "email": "nine.k@rsu.ac.th",
+      "verified": true
+    }
+  ],
+  "listings": [
+    {
+      "id": "GL-001",
+      "title": "Wooden study desk",
+      "cat": "Furniture",
+      "price": 800,
+      "cond": "Good",
+      "area": "The Next 2 Apartment lobby",
+      "desc": "Solid desk with drawer. Must go before June 30 flight.",
+      "photo": "🛋",
+      "sellerId": "U001",
+      "status": "Available",
+      "date": "2026-07-14",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-002",
+      "title": "Mini fridge 45L",
+      "cat": "Appliances",
+      "price": 1500,
+      "cond": "Like new",
+      "area": "Building 6",
+      "desc": "Used one semester. Includes small freezer box.",
+      "photo": "🧊",
+      "sellerId": "U001",
+      "status": "Reserved",
+      "date": "2026-07-15",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-003",
+      "title": "Air fryer 5L",
+      "cat": "Appliances",
+      "price": 900,
+      "cond": "Good",
+      "area": "ICT building",
+      "desc": "Used for one year. Cleaned, works perfectly.",
+      "photo": "🧊",
+      "sellerId": "U002",
+      "status": "Available",
+      "date": "2026-07-15",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-004",
+      "title": "Office chair with wheels",
+      "cat": "Furniture",
+      "price": 450,
+      "cond": "Fair",
+      "area": "U Campus lobby",
+      "desc": "Small scratch on armrest. Very comfortable.",
+      "photo": "🛋",
+      "sellerId": "U004",
+      "status": "Sold",
+      "date": "2026-07-16",
+      "soldDate": "2026-07-19"
+    },
+    {
+      "id": "GL-005",
+      "title": "Electric kettle 1.5L",
+      "cat": "Appliances",
+      "price": 200,
+      "cond": "Good",
+      "area": "The Next 2 Apartment lobby",
+      "desc": "Works perfectly.",
+      "photo": "🍳",
+      "sellerId": "U002",
+      "status": "Available",
+      "date": "2026-07-16",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-006",
+      "title": "Sneakers size 42",
+      "cat": "Sneakers",
+      "price": 1200,
+      "cond": "Like new",
+      "area": "Library meetup point",
+      "desc": "Worn three times. Original box included.",
+      "photo": "👟",
+      "sellerId": "U004",
+      "status": "Reserved",
+      "date": "2026-07-17",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-007",
+      "title": "Desk lamp LED",
+      "cat": "Electronics",
+      "price": 150,
+      "cond": "Good",
+      "area": "Student union",
+      "desc": "Warm and cool light modes, USB powered.",
+      "photo": "📱",
+      "sellerId": "U001",
+      "status": "Available",
+      "date": "2026-07-18",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-008",
+      "title": "Winter jacket size M",
+      "cat": "Clothing",
+      "price": 300,
+      "cond": "Good",
+      "area": "U Campus lobby",
+      "desc": "Warm jacket, perfect for exchange semester abroad.",
+      "photo": "👕",
+      "sellerId": "U002",
+      "status": "Sold",
+      "date": "2026-07-17",
+      "soldDate": "2026-07-21"
+    },
+    {
+      "id": "GL-009",
+      "title": "Monitor 24 inch",
+      "cat": "Electronics",
+      "price": 2200,
+      "cond": "Good",
+      "area": "ICT building",
+      "desc": "Full HD, HDMI cable included. Great for coursework.",
+      "photo": "🖥",
+      "sellerId": "U001",
+      "status": "Available",
+      "date": "2026-07-19",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-010",
+      "title": "UPS 800VA",
+      "cat": "Electronics",
+      "price": 1100,
+      "cond": "Good",
+      "area": "ICT building",
+      "desc": "Battery backup for desktop setup. Battery replaced this year.",
+      "photo": "📱",
+      "sellerId": "U004",
+      "status": "Available",
+      "date": "2026-07-19",
+      "soldDate": ""
+    },
+    {
+      "id": "GL-011",
+      "title": "Designer jacket size S",
+      "cat": "Clothing",
+      "price": 1800,
+      "cond": "Like new",
+      "area": "Student union",
+      "desc": "Barely worn. Bought last season, moving out so it must go.",
+      "photo": "👕",
+      "sellerId": "U002",
+      "status": "Available",
+      "date": "2026-07-20",
+      "soldDate": ""
+    }
+  ],
+  "requests": [
+    {
+      "id": "CR-001",
+      "listingId": "GL-002",
+      "buyerId": "U004",
+      "status": "Accepted",
+      "date": "2026-07-16"
+    },
+    {
+      "id": "CR-002",
+      "listingId": "GL-001",
+      "buyerId": "U002",
+      "status": "Pending",
+      "date": "2026-07-18"
+    },
+    {
+      "id": "CR-003",
+      "listingId": "GL-008",
+      "buyerId": "U004",
+      "status": "Accepted",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "CR-004",
+      "listingId": "GL-003",
+      "buyerId": "U004",
+      "status": "Declined",
+      "date": "2026-07-19"
+    }
+  ]
+}
