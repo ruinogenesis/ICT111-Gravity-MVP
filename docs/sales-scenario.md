@@ -24,7 +24,7 @@ For **RSU students moving out under time pressure** who experience **buried post
 *At the dorm lobby table, Thiri (team) and Su Su (prospect):*
 
 **Su Su:** "I have a desk, a fridge, and books. I fly in two weeks. Facebook groups are hopeless."
-**Thiri:** "That's exactly why we built Gravity. You post each item once — photo, price, pickup zone like 'Dorm A lobby' — and every RSU student browsing can search and filter it. No more reposting."
+**Thiri:** "That's exactly why we built Gravity. You post each item once — photo, price, pickup zone like 'The Next 2 Apartment lobby' — and every RSU student browsing can search and filter it. No more reposting."
 **Su Su:** "And I won't get random strangers messaging my personal account?"
 **Thiri:** "No. Buyers press Request contact inside Gravity. You see the request, and only if you accept do you two see each other's RSU emails — nothing else, nobody else. Everyone on the platform is a verified RSU student — we check IDs in person once, and we never store them."
 **Su Su:** "What if someone reserves my fridge and disappears?"
