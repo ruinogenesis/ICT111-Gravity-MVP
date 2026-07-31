@@ -1,24 +1,9 @@
-{
-  "users": [
-    { "id": "U001", "name": "Su Su",    "email": "su.su@rsu.ac.th",   "role": "student", "verified": true  },
-    { "id": "U002", "name": "Kaung M.", "email": "kaung.m@rsu.ac.th", "role": "student", "verified": true  },
-    { "id": "U003", "name": "Pim N.",   "email": "pim.n@rsu.ac.th",   "role": "student", "verified": false },
-    { "id": "U004", "name": "Nine",     "email": "nine.k@rsu.ac.th",  "role": "student", "verified": true  }
-  ],
-  "listings": [
-    { "id": "GL-001", "title": "Wooden study desk",        "cat": "Furniture",   "price": 800,  "cond": "Good",     "area": "Dorm A lobby",         "desc": "Solid desk with drawer. Must go before June 30 flight.", "photo": "🛋", "sellerId": "U001", "status": "Available", "date": "2026-07-14" },
-    { "id": "GL-002", "title": "Mini fridge 45L",          "cat": "Appliances",  "price": 1500, "cond": "Like new", "area": "Building 6",           "desc": "Used one semester. Includes small freezer box.",         "photo": "🧊", "sellerId": "U001", "status": "Reserved",  "date": "2026-07-15" },
-    { "id": "GL-003", "title": "ICT111 textbook",          "cat": "Textbooks",   "price": 250,  "cond": "Good",     "area": "ICT building",         "desc": "Light highlights in chapters 1-4.",                      "photo": "📚", "sellerId": "U002", "status": "Available", "date": "2026-07-15" },
-    { "id": "GL-004", "title": "Office chair with wheels", "cat": "Furniture",   "price": 450,  "cond": "Fair",     "area": "Dorm B lobby",         "desc": "Small scratch on armrest. Very comfortable.",            "photo": "🛋", "sellerId": "U004", "status": "Sold",      "date": "2026-07-16", "soldDate": "2026-07-19" },
-    { "id": "GL-005", "title": "Electric kettle 1.5L",     "cat": "Appliances",  "price": 200,  "cond": "Good",     "area": "Dorm A lobby",         "desc": "Works perfectly.",                                       "photo": "🍳", "sellerId": "U002", "status": "Available", "date": "2026-07-16" },
-    { "id": "GL-006", "title": "Calculus textbook set",    "cat": "Textbooks",   "price": 400,  "cond": "Like new", "area": "Library meetup point", "desc": "Two volumes, no writing inside.",                        "photo": "📚", "sellerId": "U004", "status": "Reserved",  "date": "2026-07-17" },
-    { "id": "GL-007", "title": "Desk lamp LED",            "cat": "Electronics", "price": 150,  "cond": "Good",     "area": "Student union",        "desc": "Warm/cool light modes, USB powered.",                    "photo": "📱", "sellerId": "U001", "status": "Available", "date": "2026-07-18" },
-    { "id": "GL-008", "title": "Winter jacket size M",     "cat": "Clothing",    "price": 300,  "cond": "Good",     "area": "Dorm B lobby",         "desc": "Warm jacket, perfect for exchange semester abroad.",     "photo": "👕", "sellerId": "U002", "status": "Sold",      "date": "2026-07-17", "soldDate": "2026-07-21" }
-  ],
-  "requests": [
-    { "id": "CR-001", "listingId": "GL-002", "buyerId": "U004", "status": "Accepted", "date": "2026-07-16" },
-    { "id": "CR-002", "listingId": "GL-001", "buyerId": "U002", "status": "Pending",  "date": "2026-07-18" },
-    { "id": "CR-003", "listingId": "GL-008", "buyerId": "U004", "status": "Accepted", "date": "2026-07-20" },
-    { "id": "CR-004", "listingId": "GL-003", "buyerId": "U004", "status": "Declined", "date": "2026-07-19" }
-  ]
-}
+ListingID,Category,ItemName,PriceTHB,Condition,PickupArea,DatePosted,SellerType,Status,Description
+GL-001,Furniture,Wooden study desk,800,Good,The Next 2 Apartment lobby,2026-06-20,Graduating student,Available,Solid desk with drawer. Must go before June 30 flight.
+GL-002,Appliances,Mini fridge 45L,1500,Like new,Building 6,2026-06-21,International student,Reserved,Used one semester. Includes small freezer box.
+GL-003,Appliances,Air fryer 5L,900,Good,ICT building,2026-06-21,Second-year student,Available,Used for one year. Cleaned and works perfectly.
+GL-004,Furniture,Office chair with wheels,450,Fair,U Campus,2026-06-22,Graduating student,Sold,Small scratch on armrest. Very comfortable.
+GL-005,Appliances,Electric kettle 1.5L,200,Good,The Next 2 Apartment,2026-06-23,Dorm resident,Available,Boils fast. Selling because moving to condo with kitchen.
+GL-006,Furniture,4-tier bookshelf,600,Good,Condo near Gate 4,2026-06-24,International student,Available,Easy to disassemble for transport.
+GL-007,Other,LED desk lamp,150,Like new,Library meetup,2026-06-25,First-year student,Sold,Warm and white light modes. USB powered.
+GL-008,Sneakers,Sneakers size 42,1200,Like new,Library meetup,2026-06-26,Second-year student,Reserved,Worn three times. Original box included.
