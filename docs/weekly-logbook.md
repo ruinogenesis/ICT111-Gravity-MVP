@@ -58,7 +58,7 @@ We rejected the Cafe Inventory Tracker (NUF total 8) and the Content Planner (NU
 - Commit link: [commit](https://github.com/ruinogenesis/ICT111-Gravity-MVP/commits/main/)
 
 ### Plan for Lab 03
-We will prepare customer discovery questions focused on how RSU students currently buy and sell used items when moving, and how frustrating the scattered Facebook/LINE groups are. We will identify target respondents (recent movers, dorm residents, graduating and international students), run short interviews or a survey, and collect evidence to confirm the problem is real before designing the prototype.
+We will prepare customer discovery questions focused on how RSU students currently buy and sell used items when moving, and how frustrating the scattered Facebook/LINE groups are. We will identify target respondents (recent movers, students living in apartments and condos, graduating and international students), run short interviews or a survey, and collect evidence to confirm the problem is real before designing the prototype.
 
 ---
 
@@ -446,7 +446,7 @@ Landing page communicates FR-01/FR-02 value accurately; links to the v0.3 protot
 
 ## Problems Found
 - No backend means no real cross-channel analytics — solved honestly: browser-local demo counters labelled as such, real numbers tracked manually in the CSV.
-- Course timing vs. real move-out peak season — measured with classmates/dorm students now; peak-season plan documented for the final report.
+- Course timing vs. real move-out peak season — measured with classmates/students living in apartments and condos now; peak-season plan documented for the final report.
 
 ## Next Action Before Lab 13
 Commit landing page + docs, capture landing-page.png and call-to-action.png, verify Pages serves /landing-page/, soft-launch to class chat, then prepare Lab 13 sales scenario, demo script, and user-testing plan (recruit from AM-04 respondents).
@@ -526,7 +526,7 @@ Final audit of all FR-01–16 + NFR-01–05: Completed. FR-14 flipped from Parti
 None blocking. Remaining pre-submission actions are tracked in /docs/final-submission-checklist.md: commit prototype/data.json and final-prototype-link.md, capture the six final-*.png screenshots, flip FR-14 to Completed in feature-implementation-status.md, replace the risk-register.csv placeholders, and run the final link check after the last Pages rebuild.
 
 ## Next Action
-Submit the repository link to the lecturer before 11:59 PM, 31 July 2026. Post-course direction (final-reflection §6): real backend and authentication, real photo upload, then a pilot with one dorm building at the December move-out peak.
+Submit the repository link to the lecturer before 11:59 PM, 31 July 2026. Post-course direction (final-reflection §6): real backend and authentication, real photo upload, then a pilot with one apartment building at the December move-out peak.
 
 ## Semester Close
 Labs 01–14 complete. Evidence chain intact end to end: Lab 03 evidence E01–E05 → requirements FR-01–16 / NFR-01–05 → user stories US-01–12 → MVP features F01–F16 → screens S-01–S-08 → prototype v1.0 → two validation rounds → final traceability matrix.
