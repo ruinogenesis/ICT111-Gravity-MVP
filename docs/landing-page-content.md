@@ -4,13 +4,13 @@
 Gravity — RSU Student Secondhand Marketplace
 
 ## Target User
-RSU students in two roles: sellers moving out (graduating, exchange, and leaving students under time pressure — primary persona Su Su) and buyers moving in (new and continuing students looking for affordable used furniture, appliances, and textbooks).
+RSU students in two roles: sellers moving out (graduating, exchange, and leaving students under time pressure — primary persona Su Su) and buyers moving in (new and continuing students looking for affordable used furniture, appliances, electronics, and clothing).
 
 ## Headline
 "Moving out of RSU? Don't throw it away — sell it in minutes."
 
 ## Subheadline
-Gravity is the secondhand marketplace only for verified RSU students. Post your furniture, appliances, and textbooks once — the students moving in are already looking for them.
+Gravity is the secondhand marketplace only for verified RSU students. Post your furniture, appliances, monitors, sneakers and designer clothes once — the students moving in are already looking for them.
 
 ## Problem Statement
 Based on Lab 03 evidence (15 respondents): buy/sell posts are scattered across unsearchable Facebook and LINE groups (11/15, E01), sellers under move-out time pressure spend 30–90 minutes per item (E02), and working items end up given away or discarded (7/15, E03) while new students buy the same things new. Lab 08 validation confirmed the solution direction: 93.3% task success, 4.40/5 interest.
