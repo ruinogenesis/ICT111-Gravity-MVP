@@ -1,4 +1,4 @@
-var categories = ["Furniture", "Appliances", "Textbooks", "Electronics", "Clothing", "Other"];
+var categories = ["Furniture", "Appliances", "Electronics", "Clothing", "Sneakers", "Other"];
 
 var users = [];
 var listings = [];
@@ -19,14 +19,17 @@ function seedUsers() {
 
 function seedListings() {
   return [
-    { id: "GL-001", title: "Wooden study desk", cat: "Furniture", price: 800, cond: "Good", area: "Dorm A lobby", desc: "Solid desk with drawer. Must go before June 30 flight.", photo: "🛋", sellerId: "U001", status: "Available", date: "2026-07-14", soldDate: "" },
-    { id: "GL-002", title: "Mini fridge 45L", cat: "Appliances", price: 1500, cond: "Like new", area: "Building 6", desc: "Used one semester. Includes small freezer box.", photo: "🧊", sellerId: "U001", status: "Reserved", date: "2026-07-15", soldDate: "" },
-    { id: "GL-003", title: "ICT111 textbook", cat: "Textbooks", price: 250, cond: "Good", area: "ICT building", desc: "Light highlights in chapters 1-4.", photo: "📚", sellerId: "U002", status: "Available", date: "2026-07-15", soldDate: "" },
-    { id: "GL-004", title: "Office chair with wheels", cat: "Furniture", price: 450, cond: "Fair", area: "Dorm B lobby", desc: "Small scratch on armrest. Very comfortable.", photo: "🛋", sellerId: "U004", status: "Sold", date: "2026-07-16", soldDate: "2026-07-19" },
-    { id: "GL-005", title: "Electric kettle 1.5L", cat: "Appliances", price: 200, cond: "Good", area: "Dorm A lobby", desc: "Works perfectly.", photo: "🍳", sellerId: "U002", status: "Available", date: "2026-07-16", soldDate: "" },
-    { id: "GL-006", title: "Calculus textbook set", cat: "Textbooks", price: 400, cond: "Like new", area: "Library meetup point", desc: "Two volumes, no writing inside.", photo: "📚", sellerId: "U004", status: "Reserved", date: "2026-07-17", soldDate: "" },
-    { id: "GL-007", title: "Desk lamp LED", cat: "Electronics", price: 150, cond: "Good", area: "Student union", desc: "Warm and cool light modes, USB powered.", photo: "📱", sellerId: "U001", status: "Available", date: "2026-07-18", soldDate: "" },
-    { id: "GL-008", title: "Winter jacket size M", cat: "Clothing", price: 300, cond: "Good", area: "Dorm B lobby", desc: "Warm jacket, perfect for exchange semester abroad.", photo: "👕", sellerId: "U002", status: "Sold", date: "2026-07-17", soldDate: "2026-07-21" }
+    { id: "GL-001", title: "Wooden study desk", cat: "Furniture", price: 800, cond: "Good", area: "The Next 2 Apartment lobby", desc: "Solid desk with drawer. Must go before June 30 flight.", photo: "\ud83d\udecb", sellerId: "U001", status: "Available", date: "2026-07-14", soldDate: "" },
+    { id: "GL-002", title: "Mini fridge 45L", cat: "Appliances", price: 1500, cond: "Like new", area: "Building 6", desc: "Used one semester. Includes small freezer box.", photo: "\ud83e\uddca", sellerId: "U001", status: "Reserved", date: "2026-07-15", soldDate: "" },
+    { id: "GL-003", title: "Air fryer 5L", cat: "Appliances", price: 900, cond: "Good", area: "ICT building", desc: "Used for one year. Cleaned, works perfectly.", photo: "\ud83e\uddca", sellerId: "U002", status: "Available", date: "2026-07-15", soldDate: "" },
+    { id: "GL-004", title: "Office chair with wheels", cat: "Furniture", price: 450, cond: "Fair", area: "U Campus lobby", desc: "Small scratch on armrest. Very comfortable.", photo: "\ud83d\udecb", sellerId: "U004", status: "Sold", date: "2026-07-16", soldDate: "2026-07-19" },
+    { id: "GL-005", title: "Electric kettle 1.5L", cat: "Appliances", price: 200, cond: "Good", area: "The Next 2 Apartment lobby", desc: "Works perfectly.", photo: "\ud83c\udf73", sellerId: "U002", status: "Available", date: "2026-07-16", soldDate: "" },
+    { id: "GL-006", title: "Sneakers size 42", cat: "Sneakers", price: 1200, cond: "Like new", area: "Library meetup point", desc: "Worn three times. Original box included.", photo: "\ud83d\udc5f", sellerId: "U004", status: "Reserved", date: "2026-07-17", soldDate: "" },
+    { id: "GL-007", title: "Desk lamp LED", cat: "Electronics", price: 150, cond: "Good", area: "Student union", desc: "Warm and cool light modes, USB powered.", photo: "\ud83d\udcf1", sellerId: "U001", status: "Available", date: "2026-07-18", soldDate: "" },
+    { id: "GL-008", title: "Winter jacket size M", cat: "Clothing", price: 300, cond: "Good", area: "U Campus lobby", desc: "Warm jacket, perfect for exchange semester abroad.", photo: "\ud83d\udc55", sellerId: "U002", status: "Sold", date: "2026-07-17", soldDate: "2026-07-21" },
+    { id: "GL-009", title: "Monitor 24 inch", cat: "Electronics", price: 2200, cond: "Good", area: "ICT building", desc: "Full HD, HDMI cable included. Great for coursework.", photo: "\ud83d\udda5", sellerId: "U001", status: "Available", date: "2026-07-19", soldDate: "" },
+    { id: "GL-010", title: "UPS 800VA", cat: "Electronics", price: 1100, cond: "Good", area: "ICT building", desc: "Battery backup for desktop setup. Battery replaced this year.", photo: "\ud83d\udcf1", sellerId: "U004", status: "Available", date: "2026-07-19", soldDate: "" },
+    { id: "GL-011", title: "Designer jacket size S", cat: "Clothing", price: 1800, cond: "Like new", area: "Student union", desc: "Barely worn. Bought last season, moving out so it must go.", photo: "\ud83d\udc55", sellerId: "U002", status: "Available", date: "2026-07-20", soldDate: "" }
   ];
 }
 
@@ -384,7 +387,7 @@ function postListing() {
   if (duplicate === true) {
     var ok = confirm("A listing with the same title and category already exists. Post anyway as a separate item?");
     if (ok === false) {
-      showMessage("form-msg", "err", "Not posted — cancelled at the duplicate check.");
+      showMessage("form-msg", "err", "Not posted, cancelled at the duplicate check.");
       return;
     }
   }
@@ -419,7 +422,7 @@ function postListing() {
   document.getElementById("f-photo").value = "";
   document.getElementById("f-desc").value = "";
 
-  showMessage("form-msg", "ok", "Listing posted successfully — status: Available. Buyers can now find it on the Browse page.");
+  showMessage("form-msg", "ok", "Listing posted successfully, status: Available. Buyers can now find it on the Browse page.");
   renderList();
 }
 
@@ -438,7 +441,7 @@ function openDetail(id) {
   document.getElementById("d-date").textContent = item.date;
 
   if (item.desc === "") {
-    document.getElementById("d-desc").textContent = "—";
+    document.getElementById("d-desc").textContent = "";
   } else {
     document.getElementById("d-desc").textContent = item.desc;
   }
@@ -462,7 +465,7 @@ function openDetail(id) {
 
   var note = document.getElementById("d-status-note");
   if (item.status === "Reserved") {
-    note.textContent = "Reserved means a buyer already agreed with the seller. It is not final — if the deal falls through it becomes Available again. You cannot request contact while an item is Reserved.";
+    note.textContent = "Reserved means a buyer already agreed with the seller. It is not final, if the deal falls through it becomes Available again. You cannot request contact while an item is Reserved.";
   } else if (item.status === "Sold") {
     note.textContent = "This item has been sold.";
   } else {
@@ -579,13 +582,13 @@ function drawMyListings() {
 
   if (user === null) {
     intro.textContent = "Switch the demo role to Buyer or Seller to see your own listings and requests. Admin manages the whole marketplace from the Admin view.";
-    addRow(itemTable, "—");
-    addRow(requestTable, "—");
-    addRow(sentTable, "—");
+    addRow(itemTable, "");
+    addRow(requestTable, "");
+    addRow(sentTable, "");
     return;
   }
 
-  intro.textContent = "Signed in as " + user.name + " (demo). Update your own item statuses here — buyers see changes immediately.";
+  intro.textContent = "Signed in as " + user.name + " (demo). Update your own item statuses here, buyers see changes immediately.";
 
   var pending = 0;
   var incoming = 0;
@@ -597,9 +600,9 @@ function drawMyListings() {
     }
     incoming = incoming + 1;
     var buyer = getUser(request.buyerId);
-    var text = buyer.name + " → " + item.title + " [" + request.status + "]";
+    var text = buyer.name + " wants " + item.title + " [" + request.status + "]";
     if (request.status === "Accepted") {
-      text = text + " — buyer contact: " + buyer.email;
+      text = text + ", buyer contact: " + buyer.email;
     }
     if (request.status === "Pending") {
       pending = pending + 1;
@@ -632,10 +635,10 @@ function drawMyListings() {
         buttons.push(makeButton("Mark " + options[k], false, changeMyStatus, own.id, options[k]));
       }
     }
-    addRow(itemTable, own.title + " (" + own.price + " THB) — " + own.status, buttons);
+    addRow(itemTable, own.title + " (" + own.price + " THB), " + own.status, buttons);
   }
   if (mine === 0) {
-    addRow(itemTable, "You have no active listings — post one from Sell an item.");
+    addRow(itemTable, "You have no active listings, post one from Sell an item.");
   }
 
   var sent = 0;
@@ -646,9 +649,9 @@ function drawMyListings() {
     sent = sent + 1;
     var sentItem = getListing(requests[m].listingId);
     var sentSeller = getUser(sentItem.sellerId);
-    var sentText = sentItem.title + " — " + requests[m].status;
+    var sentText = sentItem.title + ", " + requests[m].status;
     if (requests[m].status === "Accepted") {
-      sentText = sentText + " — seller contact: " + sentSeller.email;
+      sentText = sentText + ", seller contact: " + sentSeller.email;
     }
     if (requests[m].status === "Pending") {
       sentText = sentText + " (waiting for the seller)";
@@ -675,7 +678,7 @@ function acceptRequest() {
   save();
   drawMyListings();
   var buyer = getUser(request.buyerId);
-  showMessage("my-msg", "ok", "Accepted — you and " + buyer.name + " can now see each other's RSU email. Nothing else is shared.");
+  showMessage("my-msg", "ok", "Accepted, you and " + buyer.name + " can now see each other's RSU email. Nothing else is shared.");
 }
 
 function declineRequest() {
@@ -752,7 +755,7 @@ function drawAdmin() {
     var request = requests[j];
     var item = getListing(request.listingId);
     var buyer = getUser(request.buyerId);
-    var text = request.id + ": " + buyer.name + " → " + item.title + " [" + request.status + "]";
+    var text = request.id + ": " + buyer.name + " wants " + item.title + " [" + request.status + "]";
     if (request.status === "Pending") {
       var accept = makeButton("Accept", false, adminAccept, request.id, "");
       var decline = makeButton("Decline", true, adminDecline, request.id, "");
@@ -771,7 +774,7 @@ function drawAdmin() {
     var buttons = [];
     for (var n = 0; n < options.length; n++) {
       if (options[n] !== listing.status) {
-        buttons.push(makeButton("→ " + options[n], false, adminChangeStatus, listing.id, options[n]));
+        buttons.push(makeButton("Set " + options[n], false, adminChangeStatus, listing.id, options[n]));
       }
     }
     buttons.push(makeButton("Remove", true, adminRemove, listing.id, ""));
@@ -914,7 +917,7 @@ function drawDashboard() {
     sellThrough = Math.round(sold / total * 1000) / 10;
   }
 
-  var topCategory = "—";
+  var topCategory = "";
   var topCount = 0;
   var categoryCounts = [];
   for (var c = 0; c < categories.length; c++) {
