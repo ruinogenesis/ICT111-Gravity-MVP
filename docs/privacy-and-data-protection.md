@@ -10,7 +10,7 @@ Full machine-readable version: `/data/data-inventory.csv`. Fields follow `/docs/
 | verified flag (Users) | Trust badge on listings (E05) | No | No | Keep | Boolean only — the in-person ID check stores **no ID images and no ID numbers** (locked decision) |
 | role, joined_date (Users) | Admin function and account management | No | No | Keep | Internal/admin-only |
 | title, category, price_thb, condition, description (Listings) | Core marketplace content (FR-03, FR-05–07) | No | No | Keep | Sellers instructed not to put personal info in free-text fields |
-| pickup_area (Listings) | Meetup context (E01) | Possibly | No | Keep with caution | General campus area only (e.g., "Dorm A lobby"), never a room number or private address — mirrors practice-case rule for "Location found" |
+| pickup_area (Listings) | Meetup context (E01) | Possibly | No | Keep with caution | General campus area only (e.g., "The Next 2 Apartment lobby"), never a room number or private address — mirrors practice-case rule for "Location found" |
 | photo (Listings, planned L10) | Top Lab 08 request | Possibly | No | Keep with caution | Item-only photos; instruction not to include people, faces, or room backgrounds |
 | status, dates (Listings) | Lifecycle tracking (FR-08) | No | No | Keep | Public |
 | request_status + IDs (ContactRequests) | Reveal-after-agree flow (FR-15) | No | No | Keep | Contact data itself is never in this table — only references |
