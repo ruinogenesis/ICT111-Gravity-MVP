@@ -17,10 +17,10 @@ Gravity
 | 6602963 | Eimyat Yadanar Mon | Technical and Business Lead | Manage repository structure and prototype feasibility, business aspects |
 
 ## Initial Problem Area
-Our team is interested in **how RSU students buy and sell used items when they move in and out of university**. Students who are leaving, graduating, or changing apartments need to clear furniture, appliances, textbooks, and other items quickly, while new and continuing students want those same things cheaply. Today this happens in scattered Facebook and LINE groups where listings are buried, unsearchable, and disorganised. We want to build a simple student-only marketplace that connects buyers and sellers directly.
+Our team is interested in **how RSU students buy and sell used items when they move in and out of university**. Students who are leaving, graduating, or moving dorms need to clear furniture, appliances, textbooks, and other items quickly, while new and continuing students want those same things cheaply. Today this happens in scattered Facebook and LINE groups where listings are buried, unsearchable, and disorganised. We want to build a simple student-only marketplace that connects buyers and sellers directly.
 
 ## Target Users
-Rangsit University students in two roles: **sellers** who are moving out, graduating, or leaving (especially international students) and need to clear their belongings, and **buyers** who are new or continuing students looking for cheap used furniture, appliances, and textbooks. During opportunity scanning the team also considered a degree progress tracker, a shared expense splitter, and a content planner, but selected the student marketplace because the problem is real and recurring, and we belong to the user group, which makes validation easy.
+Rangsit University students in two roles: **sellers** who are moving out, graduating, or leaving (especially international students) and need to clear their belongings, and **buyers** who are new or continuing students looking for cheap used furniture, appliances, electronics, and clothing. During opportunity scanning the team also considered a degree progress tracker, a shared expense splitter, and a content planner, but selected the student marketplace because the problem is real and recurring, and we belong to the user group, which makes validation easy.
 
 ## Selected IT Venture Direction
 After Lab 2 opportunity scanning, our team selected **Gravity**, a **peer-to-peer student marketplace**. The target users are RSU students who need to sell or buy used items when moving in or out, and who currently rely on messy, unsearchable Facebook and LINE groups. The platform connects buyers and sellers directly — sellers post listings, buyers browse, search, and filter, and the platform then connects the two parties so they finish the deal themselves. We deliberately do **not** hold inventory or process payments, which keeps the build feasible and avoids any advanced cybersecurity. A simple AI assistant helps sellers write listings and lets buyers search in natural language. To keep the marketplace trusted, access is limited to verified RSU students using a university email plus a one-time in-person student ID check (no ID card images are stored). This idea scored highest on our NUF matrix (New 3, Useful 5, Feasible 5 = 13).
@@ -28,7 +28,7 @@ After Lab 2 opportunity scanning, our team selected **Gravity**, a **peer-to-pee
 ## Customer Problem Discovery (Lab 03)
 In Lab 3, our team collected early problem evidence from target users to confirm whether the problem we selected in Lab 2 is real and important, not just team opinion.
 
-**Target Respondents.** We focused on RSU students who buy or sell used items around moving in or out: graduating and leaving students, new and continuing students, international students, and students living in apartments and condos. We gathered 15 early responses through a short survey and brief interviews (recorded in `/data/raw-responses.xlsx`).
+**Target Respondents.** We focused on RSU students who buy or sell used items around moving in or out: graduating and leaving students, new and continuing students, international students, and dorm residents. We gathered 15 early responses through a short survey and brief interviews (recorded in `/data/raw-responses.xlsx`).
 
 **Main Evidence Found.** The strongest, most repeated pattern was scattered, unsearchable buy/sell channels (11 of 15 respondents), followed by usable items being given away or discarded under time pressure (7 of 15) and measurable time loss of about 30–90 minutes per item. Current workarounds are Facebook groups, LINE chats, word of mouth, and noticeboards. A trust and safety concern about meeting strangers also appeared.
 
@@ -98,14 +98,14 @@ Most likely for our MVP: a **web application + marketplace/digital platform**, w
 In Lab 04 we converted the Lab 03 evidence into a concrete product definition: a primary persona, requirements mapped to the lecturer's fixed FR-01–FR-16, user stories with acceptance criteria, and a prioritized MVP feature list that becomes the baseline for the final prototype.
 
 ### Primary Target User
-RSU student **sellers** moving out under time pressure (especially graduating and international students) who must sell higher-value used items — furniture, appliances, textbooks — within days. Student **buyers** at move-in are served by the same MVP screens.
+RSU student **sellers** moving out under time pressure (especially graduating and international students) who must sell higher-value used items such as furniture, appliances, monitors and clothing within days. Student **buyers** at move-in are served by the same MVP screens.
 
 ### Persona Summary
 - **Persona name:** Su Su, Year 4 International Student
 - **User type:** Graduating student who must clear her room before flying home
 - **Main goal:** Post each item once and sell it within days to recover value instead of discarding it
 - **Main pain point:** Listings buried across scattered, unsearchable Facebook/LINE groups while under severe time pressure (E01, E02, E03)
-- **Current workaround:** Posting in 3+ Facebook/LINE groups, asking friends, condo friend groups — then giving items away or throwing them out
+- **Current workaround:** Posting in 3+ Facebook/LINE groups, asking friends, dorm noticeboard — then giving items away or throwing them out
 
 ### Key Requirements
 | Req ID | Requirement | Priority | Related Evidence |
@@ -339,7 +339,7 @@ Lab 12 landing page + go-to-market docs; Lab 13 user re-testing (target: PM-08 a
 Live at: https://ruinogenesis.github.io/ICT111-Gravity-MVP/landing-page/ (files in /landing-page/). Consistent with the prototype's visual identity; hero headline, Lab 03 evidence-based problem section, how-it-works, 5 features mapped to FR IDs, trust & privacy statement, and two CTAs linking to the working v0.3 prototype. The page collects no personal data — the interest counter is browser-local and labelled as such.
 
 ### Go-to-Market
-Four channels chosen from evidence (LINE apartment and class group chats per E01, QR posters in apartment lobbies per CS01, Instagram story, ICT111 class chat as feedback loop), each with a tailored message (/docs/marketing-message.md), expected action, and tracked metric. Launch sequence and risks in /docs/go-to-market-plan.md.
+Four channels chosen from evidence (LINE dorm/class groups per E01, QR posters in dorm lobbies per CS01, Instagram story, ICT111 class chat as feedback loop), each with a tailored message (/docs/marketing-message.md), expected action, and tracked metric. Launch sequence and risks in /docs/go-to-market-plan.md.
 
 ### Acquisition Metrics
 AM-01 views, AM-02 CTA click rate, AM-03 demo attempts, AM-04 feedback responses, AM-05 interest conversion, AM-06 best channel — formulas and honest-measurement notes in /docs/acquisition-metrics.md, tracking sheet in /data/acquisition-metrics.csv.
