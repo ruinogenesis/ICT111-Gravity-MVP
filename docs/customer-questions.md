@@ -4,7 +4,7 @@
 Gravity — A Peer-to-Peer Student Marketplace
 
 ## Target Respondent
-Rangsit University students who have recently bought or sold used items around moving in or out of university — including graduating/leaving students, new and continuing students, international students, and dorm residents.
+Rangsit University students who have recently bought or sold used items around moving in or out of university — including graduating/leaving students, new and continuing students, international students, and students living in apartments and condos.
 
 ## Consent and Context
 1. May we ask you a few questions for our ICT111 course project?
