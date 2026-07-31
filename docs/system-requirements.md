@@ -11,7 +11,7 @@
 | FR-03 | User input or data submission feature | "Create Listing" form: title, category, price, condition, description, photo reference, pickup area, and listing status. | E01, E03 |
 | FR-04 | Data storage or record management | Listings, users, and contact requests stored in a database/spreadsheet backend (e.g., Google Sheets/Airtable/MySQL depending on prototype platform); demo dataset included. | Course requirement |
 | FR-05 | View records / information list | Public listings page showing all Available items as cards/rows with photo, title, category, price, and status. | E01, E04 |
-| FR-06 | Search, filter, or category function | Search by keyword; filter by category (Furniture, Appliances, Textbooks, Other), price range, and status. | E01 — R004, R009, R015 |
+| FR-06 | Search, filter, or category function | Search by keyword; filter by category (Furniture, Appliances, Electronics, Clothing, Sneakers, Other), price range, and status. | E01 — R004, R009, R015 |
 | FR-07 | Detail view for each record | Listing detail page: full description, photos, condition, price, pickup area, seller's verified-student badge, and status. | E01, E05 |
 | FR-08 | Status or progress tracking | Every listing has a status: **Available → Reserved → Sold / Removed**. Buyers see live status; sellers update it. | E04 — R003, R012, R015 |
 | FR-09 | Admin or manager function | Admin view: verify new seller accounts (RSU email + one-time in-person student ID check), remove invalid/spam listings, and correct statuses. | E05, Lab 03 decision |
