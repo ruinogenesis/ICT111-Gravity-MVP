@@ -16,7 +16,7 @@ Before Lab 14 we want to learn three things: (1) did the Sprint 1–2 fixes actu
 | Task ID | User Task | Related Requirement | Success Criteria | Observation Focus |
 | --- | --- | --- | --- | --- |
 | T01 | Open the landing page, then the prototype, and explain what Gravity is for and who can use it | FR-01 | Mentions marketplace + RSU-only/verified without prompting | Does "verified RSU students only" land? (Lab 08 gap: RSU-only was missed) |
-| T02 | As seller: post a listing (given: desk, Furniture, 800 THB, Good, Dorm A lobby, photo) | FR-03, FR-10, FR-11 | Completes without help; sees success message | Field clarity, pickup-zone dropdown, photo placeholder understanding |
+| T02 | As seller: post a listing (given: desk, Furniture, 800 THB, Good, The Next 2 Apartment lobby, photo) | FR-03, FR-10, FR-11 | Completes without help; sees success message | Field clarity, pickup-zone dropdown, photo placeholder understanding |
 | T03 | As buyer: find a textbook under 300 THB using search/filter/sort | FR-05, FR-06 | Finds GL-003 within 90 s | Filter vs search discoverability (Lab 08: filter was overlooked) |
 | T04 | Open its detail view and say whether they'd trust this seller and why | FR-07, FR-15 | Mentions verified badge; notices no contact info shown | Trust signal comprehension |
 | T05 | Explain what Available / Reserved / Sold mean, and what happens to a Reserved item if the deal falls through | FR-08 | Correctly says Reserved is on-hold, not final | **Re-test of Lab 08 confusion #2** (explainer text + dimmed cards) |
