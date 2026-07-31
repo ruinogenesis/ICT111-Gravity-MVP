@@ -8,7 +8,7 @@ listing title,Wooden study desk,Core listing content (FR-03),No,No,Public,Keep,I
 category,Furniture,Search and filter (FR-06),No,No,Public,Keep,No privacy issue
 price_thb,800,Core listing content,No,No,Public,Keep,Positive integer validation (FR-10)
 condition,Good,Buyer decision info,No,No,Public,Keep,No privacy issue
-pickup_area,Dorm A lobby,Meetup context (E01),Possibly,No,Public,Keep with caution,General campus zone only; never room number or private address
+pickup_area,The Next 2 Apartment lobby,Meetup context (E01),Possibly,No,Public,Keep with caution,General campus zone only; never room number or private address
 description,Solid desk with drawer,Buyer decision info,Possibly,No,Public,Keep with caution,Instruction: no contact info or personal details in description
 photo (planned Sprint 1),item photo reference,Top Lab 08 tester request,Possibly,No,Public,Keep with caution,Item-only photos; no people faces or room backgrounds
 status,Available,Lifecycle tracking (FR-08),No,No,Public,Keep,Updated by seller/admin only
