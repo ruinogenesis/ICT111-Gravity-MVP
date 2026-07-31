@@ -16,9 +16,9 @@
 RSU student who must sell higher-value used items (furniture, appliances, textbooks) under time pressure before leaving the university.
 
 ## 3. Background and Context
-- **Where the problem happens:** In and around RSU dorms and nearby apartments, at the end of the semester when she must clear her room before her flight home.
+- **Where the problem happens:** In and around the apartments and condos around RSU, at the end of the semester when she must clear her room before her flight home.
 - **When it usually happens:** During move-out (graduation / end of contract) and, on the buyer side, during move-in at the start of each term. Pain peaks in a 1–2 week window.
-- **Digital tools already used:** Facebook buy/sell groups, LINE dorm and class groups, Instagram stories, word of mouth, and the physical dorm noticeboard. Comfortable with mobile web forms, search, and chat apps.
+- **Digital tools already used:** Facebook buy/sell groups, LINE apartment and class group chats, Instagram stories, word of mouth, and the physical condo friend groups. Comfortable with mobile web forms, search, and chat apps.
 
 ## 4. Goals
 - Sell a desk, mini fridge, and textbooks within a few days and recover some money instead of throwing items away (E02, E03).
@@ -39,10 +39,10 @@ RSU student who must sell higher-value used items (furniture, appliances, textbo
 | Current Alternative | Weakness / Limitation | Evidence |
 |---|---|---|
 | Facebook buy/sell groups | Posts buried in a day, no categories or filters, mixed audiences | R001, R003, R010, R015 |
-| LINE dorm/class groups | Small audience, slow replies, messages scroll away | R002, R008, R012 |
+| LINE apartment and class group chats | Small audience, slow replies, messages scroll away | R002, R008, R012 |
 | Asking friends / word of mouth | Tiny reach, unreliable, no record | R004, R005 |
-| Dorm noticeboard | Very low visibility, easy to miss | R011 |
-| Giving away or discarding items | Total loss of value; dorm staff confirm usable items are thrown out every term | R006, R003, R014 |
+| Condo friend groups | Very low visibility, easy to miss | R011 |
+| Giving away or discarding items | Total loss of value; apartment staff confirm usable items are thrown out every term | R006, R003, R014 |
 
 ## 7. Design Implications
 - **The system should support:** one central, persistent, searchable listing page with item categories and status (Available / Reserved / Sold); a fast mobile-friendly posting form (sellers are in a hurry); RSU-student-only access via university email verification; and a contact step that does not expose personal accounts until both sides agree.
