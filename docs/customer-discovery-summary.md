@@ -4,7 +4,7 @@
 Gravity — A Peer-to-Peer Student Marketplace
 
 ## Target Users Studied
-RSU students who buy or sell used items around moving in or out of university: graduating/leaving students, new and continuing students (buyers), international students, and dorm residents.
+RSU students who buy or sell used items around moving in or out of university: graduating/leaving students, new and continuing students (buyers), international students, and students living in apartments and condos.
 
 ## Number of Responses / Interviews
 15 early responses collected through a short survey and brief interviews (sample/early-stage evidence, recorded in /data/raw-responses.xlsx).
@@ -14,7 +14,7 @@ Buying and selling used items at RSU is spread across scattered, unsearchable Fa
 
 ## Main Current Workarounds
 - Facebook buy-sell groups (most common)
-- LINE and dorm/class group chats
+- LINE apartment and class group chats
 - Word of mouth and asking friends
 - Physical noticeboards
 - Giving items away or throwing them out when nothing sells in time
