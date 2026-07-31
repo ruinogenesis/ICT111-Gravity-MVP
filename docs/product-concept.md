@@ -4,7 +4,7 @@
 Gravity — RSU Student Secondhand Marketplace
 
 ## 2. Target User
-Primary user: RSU student **sellers** moving out under time pressure (especially graduating and international students) who must sell furniture, appliances, and textbooks within days (persona: Su Su, `/docs/user-persona.md`).
+Primary user: RSU student **sellers** moving out under time pressure (especially graduating and international students) who must sell furniture, appliances, electronics, and clothing within days (persona: Su Su, `/docs/user-persona.md`).
 Secondary users: RSU student **buyers** looking for cheap used items at move-in, and the Gravity team **admin** who verifies accounts and moderates listings.
 
 ## 3. Problem Statement
