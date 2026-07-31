@@ -27,4 +27,4 @@ Gravity — a verified-students-only secondhand marketplace. Post once into a se
 - Traceability: all 16 fixed requirements implemented and mapped (feature-implementation-status.md)
 
 ## 6. Ask / Closing
-"Everything you saw is live on GitHub Pages, tested with real students, and traceable to the requirements. Next step beyond the course: pilot with one dorm building at the end-of-semester move-out peak." Links: landing page, prototype, repository.
+"Everything you saw is live on GitHub Pages, tested with real students, and traceable to the requirements. Next step beyond the course: pilot with one apartment building at the end-of-semester move-out peak." Links: landing page, prototype, repository.
