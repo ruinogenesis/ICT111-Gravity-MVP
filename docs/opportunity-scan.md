@@ -10,7 +10,7 @@
 ## Opportunity Discovery Table
 | No. | Observed Problem | Target User | Current Alternative | Possible IT Solution | Feasible Technology |
 |---|---|---|---|---|---|
-| 1 | Students moving in/out of RSU need to sell or buy used furniture, appliances, and books, but listings are buried in messy Facebook/LINE groups with no search | RSU students (movers, new students, dorm residents) | Scattered Facebook/LINE buy-sell groups, word of mouth | Student secondhand marketplace that connects buyers and sellers (no inventory, no payment handling) | HTML/CSS/JS + Google Sheet/DB for listings |
+| 1 | Students moving in/out of RSU need to sell or buy used furniture, appliances, and books, but listings are buried in messy Facebook/LINE groups with no search | RSU students (movers, new students, students living in apartments and condos) | Scattered Facebook/LINE buy-sell groups, word of mouth | Student secondhand marketplace that connects buyers and sellers (no inventory, no payment handling) | HTML/CSS/JS + Google Sheet/DB for listings |
 | 2 | Students lose track of completed/remaining credits and prerequisite chains, risking delayed graduation | University students | PDF curriculum sheets, advisor meetings | Degree progress & prerequisite tracker | HTML/CSS/JS + JSON curriculum data |
 | 3 | Roommates and friend groups forget who paid shared costs and who still owes money | Students, roommates | Group-chat messages, one person's spreadsheet | Shared expense splitter | HTML/CSS/JS + Google Sheet |
 | 4 | First-year students miss assignment deadlines because reminders are scattered across LMS, chat, and email | First-year students | Manual notes, screenshots, chat reminders | Deadline reminder dashboard | HTML/CSS/JS + Google Sheet |
