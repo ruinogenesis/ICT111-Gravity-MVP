@@ -4,7 +4,7 @@
 Gravity — RSU Student Secondhand Marketplace
 
 ## 1. Customer Segments
-- **Student sellers under move-out pressure** (primary — persona Su Su): graduating and international students who must sell furniture, appliances, and textbooks within days (E02 — 6/15 respondents).
+- **Student sellers under move-out pressure** (primary — persona Su Su): graduating and international students who must sell furniture, appliances, electronics, and clothing within days (E02 — 6/15 respondents).
 - **Student buyers at move-in**: first-year and continuing students looking for affordable used items (R004, R009, R015).
 - **Gravity admin (team-operated)**: verifies student accounts and moderates listings to keep the marketplace trusted.
 
@@ -15,7 +15,7 @@ Segment details: `/data/customer-segments.csv`.
 
 ## 3. Channels
 - Mobile-friendly web app (primary channel — usable from any phone browser, no install).
-- QR code posters in dorm lobbies and elevators during move-in/move-out weeks (when the pain peaks).
+- QR code posters in apartment lobbies and elevators during move-in/move-out weeks (when the pain peaks).
 - Links shared in the same Facebook/LINE groups students already use — meeting users where they are today.
 - Word of mouth from successful deals; RSU student groups and international student association announcements.
 
@@ -28,7 +28,7 @@ Segment details: `/data/customer-segments.csv`.
 ## 5. Revenue Streams / Sustainability Logic
 Gravity is free for students in the MVP phase — the sustainability logic is value-based, not sales-based:
 - **Operational value:** reduces waste (working items reused instead of discarded) and saves students money and time — measurable value for the RSU community.
-- **Institutional value:** aligns with university sustainability goals; potential adoption or endorsement by student affairs or the dorm office.
+- **Institutional value:** aligns with university sustainability goals; potential adoption or endorsement by student affairs or the housing office.
 - **Future options (not in MVP):** optional featured-listing fee for faster visibility, or sponsorship from campus-adjacent businesses (secondhand shops, moving services). Payments between users remain out of scope by design.
 
 ## 6. Key Resources
@@ -46,7 +46,7 @@ Gravity is free for students in the MVP phase — the sustainability logic is va
 - Summarize activity in the dashboard; promote during move-in/move-out windows.
 
 ## 8. Key Partners
-- RSU dorm office and student affairs (poster placement, credibility, adoption path).
+- RSU housing office and student affairs (poster placement, credibility, adoption path).
 - International student association (reaches the highest-pain segment).
 - Existing Facebook/LINE group admins (channel partners, not competitors — they distribute the link).
 - ICT faculty (project supervision and feedback).
