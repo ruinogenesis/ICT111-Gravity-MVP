@@ -5,7 +5,7 @@ Gravity — A Peer-to-Peer Student Marketplace
 
 ## Target User
 Rangsit University students, in two roles:
-- **Sellers:** students who are moving out, graduating, or leaving — especially international students — who need to clear furniture, appliances, textbooks, and dorm items quickly.
+- **Sellers:** students who are moving out, graduating, or leaving — especially international students — who need to clear furniture, appliances, textbooks, and room items quickly.
 - **Buyers:** new and continuing students who want those same items cheaply instead of buying new.
 
 ## Problem Statement
@@ -33,6 +33,6 @@ The MVP is entirely software-based: a browser web app (HTML/CSS/JavaScript) with
 HTML/CSS/JS prototype (listings web app), with listing data stored in a Google Sheet or simple database.
 
 ## Initial Validation Plan for Lab 03
-- **Who will the team ask?** RSU students who have recently moved in or out, current dorm residents, and graduating/international students.
+- **Who will the team ask?** RSU students who have recently moved in or out, current students living in apartments and condos, and graduating/international students.
 - **What evidence will the team collect?** How they currently buy/sell used items, what frustrates them about Facebook/LINE groups, how often they buy or sell when moving, and whether they would use a dedicated student marketplace.
 - **What question must be answered first?** Is finding and selling used items when moving a real, frequent, painful problem for RSU students — painful enough that they would switch from Facebook groups to a dedicated marketplace?
