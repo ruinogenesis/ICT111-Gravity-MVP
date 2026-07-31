@@ -19,13 +19,13 @@ Free student connector — no payments, no delivery, no inventory (deliberate La
 Lab 08 (5 testers): 93.3% task success, 4.30 feedback, 4.40 interest → "continue with minor revisions". Lab 13 re-test (5 testers, stricter 8-task set): 90% strict / 93.75% with partials, ease 4.62; the two Lab 08 defects verified fixed (contact flow 2/5→4/5, Reserved →5/5); mobile passed on a real device. All four Lab 13 findings fixed in v1.0.
 
 ## 7. Go-to-Market
-Intercept the problem where it lives, when it peaks: LINE dorm/class groups (where the chaos is today), QR posters in dorm lobbies during move-out weeks, Instagram reshares, class-chat feedback loop. Channels, messages, and acquisition metrics AM-01–06 defined and tracked (Lab 12).
+Intercept the problem where it lives, when it peaks: LINE apartment and class group chats (where the chaos is today), QR posters in apartment lobbies during move-out weeks, Instagram reshares, class-chat feedback loop. Channels, messages, and acquisition metrics AM-01–06 defined and tracked (Lab 12).
 
 ## 8. Responsible Design (30 seconds, differentiator)
 Minimal data by design: no phone/social handles ever collected (RSU email is the single reveal channel), no ID images stored, PDPA-aligned; XSS found and fixed in code review; zero third-party assets; AI documentation assistance disclosed. Risk register R-01–09, all mitigated.
 
 ## 9. Next Improvement (post-course)
-Real backend + authentication, real photo upload, then the parked differentiators: AI listing helper, ratings after transaction volume. Pilot plan: one dorm building at the December move-out peak.
+Real backend + authentication, real photo upload, then the parked differentiators: AI listing helper, ratings after transaction volume. Pilot plan: one apartment building at the December move-out peak.
 
 ## 10. Close
 "We didn't build an idea — we built the requirement-based, twice-tested answer to a problem 15 classmates told us they have. Everything we claimed tonight is in the repository, traceable from evidence to requirement to screen to test result."
